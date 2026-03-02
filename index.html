@@ -209,8 +209,108 @@ footer{
     font-size:15px;
     line-height:1.6;
   }
+/* SIDEBAR */
+
+.sidebar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:260px;
+  height:100vh;
+  background:#0a2540;
+  color:white;
+  padding:30px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  z-index:1000;
+}
+
+.sidebar img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid white;
+  margin-bottom:15px;
+}
+
+.sidebar h2{
+  font-size:20px;
+  margin-bottom:5px;
+  text-align:center;
+}
+
+.sidebar p{
+  font-size:13px;
+  opacity:.85;
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.sidebar nav{
+  width:100%;
+}
+
+.sidebar nav a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:10px 15px;
+  margin-bottom:8px;
+  border-radius:6px;
+  font-size:15px;
+  transition:.3s;
+}
+
+.sidebar nav a:hover{
+  background:rgba(255,255,255,.12);
+}
+
+/* AJUSTE DO CONTEÚDO */
+
+body{
+  padding-left:260px;
+}
   
-@media(max-width:700px){
+/* SCROLL SUAVE */
+html{
+  scroll-behavior: smooth;
+}
+
+/* MENU ATIVO */
+
+.sidebar nav a.active{
+  background:rgba(255,255,255,.25);
+  font-weight:600;
+}
+  
+ /* LANGUAGE SWITCH */
+
+.lang-switch{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.lang-switch button{
+  background:rgba(255,255,255,.15);
+  border:none;
+  color:white;
+  padding:6px 10px;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:13px;
+  transition:.3s;
+}
+
+.lang-switch button:hover{
+  background:rgba(255,255,255,.3);
+}
+  
+/* MOBILE */
+
+@media(max-width:900px){
 
   header h1{
     font-size:30px;
@@ -220,12 +320,64 @@ footer{
     justify-content:center;
     text-align:center;
   }
-}
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:15px;
+  }
+
+  .sidebar img{
+    width:60px;
+    height:60px;
+    margin:0;
+  }
+
+  .sidebar nav{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  body{
+    padding-left:0;
+  }
+}  
 </style>
 </head>
 
 <body>
+<!-- SIDEBAR -->
 
+<div class="sidebar">
+  <!-- PT || EN -->
+  <div class="lang-switch">
+    <button onclick="setLang('pt')">🇧🇷 PT</button>
+    <button onclick="setLang('en')">🇺🇸 EN</button>
+  </div>
+  
+  <img src="foto.jpg" alt="José Marcelo Fiscina">
+
+  <h2>José Marcelo</h2>
+
+  <p>
+    Engenharia Digital<br>
+    Automação & Dados
+  </p>
+
+  <nav>
+    <a href="#sobre">👨‍💻 Sobre</a>
+    <a href="#skills">🚀 Competências</a>
+    <a href="#exp">💼 Experiência</a>
+    <a href="#cv">📄 Currículo</a>
+    <a href="#contato">📬 Contato</a>
+  </nav>
+
+</div>
+  
 <!-- HEADER -->
 
 <header>
@@ -236,8 +388,8 @@ footer{
 
     <div>
       <h1>José Marcelo Fiscina</h1>
-      <p>Engenharia • Automação • Dados • Integração de Sistemas</p>
-      <p>Indústria 4.0 • Monitoramento • Otimização • Transformação Digital</p>
+      <p data-key="subtitle1">Engenharia • Automação • Dados • Integração de Sistemas</p>
+      <p data-key="subtitle2">Indústria 4.0 • Monitoramento • Otimização • Transformação Digital</p>
     </div>
 
   </div>
@@ -247,15 +399,15 @@ footer{
 
 <!-- SOBRE -->
 
-<section>
+<section id="sobre">
   <h2>👨‍💻 Sobre Mim</h2>
 
-  <p>
+  <p data-key="about1">
     Engenheiro de Controle e Automação com mais de 10 anos de experiência
     em automação industrial, dados e integração de sistemas.
   </p>
 
-  <p>
+  <p data-key="about1">
     Atuação nos setores automobilístico e metalúrgico, com foco em
     performance, confiabilidade e transformação digital.
   </p>
@@ -267,7 +419,7 @@ footer{
 
 <!-- SKILLS -->
 
-<section>
+<section id="skills">
   <h2>🚀 Competências Técnicas</h2>
 
   <div class="grid">
@@ -321,7 +473,7 @@ footer{
 </section>
 
 <!-- PROJETOS -->
-<section>
+<section id="exp">
 <h2>💼 Experiência Profissional</h2>
 
 <!-- EXPERIÊNCIA 1 -->
@@ -439,7 +591,7 @@ footer{
 
 <!-- CV -->
 
-<section>
+<section id="cv">
 <h2>📄 Currículo</h2>
 
 <p>Baixe meu currículo completo em PDF:</p>
@@ -450,7 +602,7 @@ footer{
 
 <!-- CONTATO -->
 
-<section>
+<section id="contato">
 <h2>📬 Contato</h2>
 
 <p><strong>Email:</strong> fiscina.marcelo@gmail.com</p>
@@ -466,15 +618,48 @@ footer{
 </footer>
 
 <script>
+/* EXPANDIR EXPERIÊNCIA */
+
 function toggleExp(el){
+
+  document.querySelectorAll(".exp-details").forEach(d=>{
+    if(d !== el.querySelector(".exp-details")){
+      d.style.display = "none";
+    }
+  });
+
   const d = el.querySelector(".exp-details");
 
-  if(d.style.display === "block"){
-    d.style.display = "none";
-  }else{
-    d.style.display = "block";
-  }
+  d.style.display = d.style.display === "block" ? "none" : "block";
 }
+
+/* MENU ATIVO */
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".sidebar nav a");
+
+window.addEventListener("scroll", ()=>{
+
+  let current = "";
+
+  sections.forEach(sec=>{
+    const top = sec.offsetTop - 120;
+    const height = sec.offsetHeight;
+
+    if(pageYOffset >= top && pageYOffset < top + height){
+      current = sec.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(a=>{
+    a.classList.remove("active");
+
+    if(a.getAttribute("href") === "#" + current){
+      a.classList.add("active");
+    }
+  });
+
+});
 </script>
 
 </body>
