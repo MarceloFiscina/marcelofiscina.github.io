@@ -169,6 +169,47 @@ footer{
   font-size:14px;
 }
 
+  /* EXPERIÊNCIA */
+  
+  .exp-item{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:5px solid #0a2540;
+    cursor:pointer;
+    transition:.3s;
+  }
+  
+  .exp-item:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+  }
+  
+  .exp-item h3{
+    margin-bottom:5px;
+    color:#0a2540;
+  }
+  
+  .exp-period{
+    font-size:14px;
+    color:#475569;
+    margin-bottom:10px;
+  }
+  
+  .exp-tags{
+    font-size:13px;
+    color:#64748b;
+    margin-bottom:10px;
+  }
+  
+  .exp-details{
+    display:none;
+    margin-top:15px;
+    font-size:15px;
+    line-height:1.6;
+  }
+  
 @media(max-width:700px){
 
   header h1{
@@ -291,56 +332,121 @@ footer{
 </section>
 
 <!-- PROJETOS -->
-
 <section>
-<h2>📂 Projetos Profissionais</h2>
+<h2>💼 Experiência Profissional</h2>
 
-<!-- PROJETO 1 -->
+<!-- EXPERIÊNCIA 1 -->
 
-<div class="project" onclick="toggle(this)">
-<h3>📊 Sistema de Monitoramento Industrial</h3>
-<div class="tags">Grafana • SQL • PLC • Python</div>
+<div class="exp-item" onclick="toggleExp(this)">
+  <h3>Coordenador de Automação — Markez Tecnologic</h3>
+  <div class="exp-period">2023 – Atual | Brasil / México</div>
+  <div class="exp-tags">
+    Automotivo • Gestão • VASS • STLA • Integração Digital
+  </div>
 
-<div class="details">
-Desenvolvimento de plataforma para coleta e visualização de dados
-de produção em tempo real, integrando CLPs Siemens/Rockwell
-com banco SQL e dashboards no Grafana.
-<br><br>
-<strong>Resultados:</strong> Redução de paradas, aumento da confiabilidade
-e melhoria na tomada de decisão.
-</div>
-</div>
+  <div class="exp-details">
+    Atuação na coordenação técnica de equipes multidisciplinares em projetos globais
+    para montadoras, liderando startups, validações técnicas e padronização
+    de sistemas sob padrões internacionais.
+    <br><br>
 
-<!-- PROJETO 2 -->
+    <strong>Principais Atividades:</strong>
+    <ul>
+      <li>Coordenação de times técnicos e fornecedores</li>
+      <li>Revisão de projetos elétricos e redes industriais</li>
+      <li>Integração entre automação, dados e sistemas corporativos</li>
+      <li>Desenvolvimento de dashboards em Grafana</li>
+      <li>Padronização de processos com Draw.io</li>
+    </ul>
 
-<div class="project" onclick="toggle(this)">
-<h3>⚙️ Automação de Workflows Operacionais</h3>
-<div class="tags">Node-RED • n8n • APIs • SQL</div>
-
-<div class="details">
-Criação de fluxos automatizados para integração entre sistemas
-industriais e corporativos, reduzindo tarefas manuais
-e aumentando rastreabilidade.
-<br><br>
-<strong>Resultados:</strong> Ganho de produtividade e padronização.
-</div>
+    <strong>Tecnologias:</strong>
+    PLC Siemens/Rockwell • SCADA • Python • SQL • Node-RED • Grafana
+  </div>
 </div>
 
-<!-- PROJETO 3 -->
+<!-- EXPERIÊNCIA 2 -->
 
-<div class="project" onclick="toggle(this)">
-<h3>🔗 Integração Chão de Fábrica → ERP</h3>
-<div class="tags">Python • SQL • Node.js • APIs</div>
+<div class="exp-item" onclick="toggleExp(this)">
+  <h3>Engenheiro de Controle e Automação — JMF</h3>
+  <div class="exp-period">2021 – 2023 | Brasil</div>
+  <div class="exp-tags">
+    Metalurgia • Dados • Supervisão • Integração
+  </div>
 
-<div class="details">
-Implementação de arquitetura para envio automático de dados
-de produção, qualidade e manutenção para ERP.
-<br><br>
-<strong>Resultados:</strong> Melhoria do controle gerencial.
+  <div class="exp-details">
+    Desenvolvimento e comissionamento de sistemas industriais para fornos
+    e abastecimento de produção, com foco em confiabilidade e rastreabilidade.
+    <br><br>
+
+    <strong>Principais Atividades:</strong>
+    <ul>
+      <li>Desenvolvimento de arquitetura de dados industrial</li>
+      <li>Automação de rotinas em Python</li>
+      <li>Integração com banco de dados SQL</li>
+      <li>Implantação de supervisórios Elipse</li>
+      <li>Criação de relatórios técnicos</li>
+    </ul>
+
+    <strong>Tecnologias:</strong>
+    Python • SQL • Node.js • Elipse • PLC Siemens
+  </div>
 </div>
+
+<!-- EXPERIÊNCIA 3 -->
+
+<div class="exp-item" onclick="toggleExp(this)">
+  <h3>Programador PLC — Markez Robótica</h3>
+  <div class="exp-period">2015 – 2021 | Brasil</div>
+  <div class="exp-tags">
+    Automotivo • Robótica • Comissionamento
+  </div>
+
+  <div class="exp-details">
+    Atuação em desenvolvimento, comissionamento e startup de linhas automotivas,
+    com foco em performance, estabilidade e melhoria contínua.
+    <br><br>
+
+    <strong>Principais Atividades:</strong>
+    <ul>
+      <li>Programação de CLPs e robôs industriais</li>
+      <li>Diagnóstico de falhas crônicas</li>
+      <li>Otimização de ciclo produtivo</li>
+      <li>Integração de sistemas de segurança</li>
+    </ul>
+
+    <strong>Tecnologias:</strong>
+    PLC Siemens/Rockwell • Fanuc • ABB • SCADA
+  </div>
+</div>
+
+<!-- EXPERIÊNCIA 4 -->
+
+<div class="exp-item" onclick="toggleExp(this)">
+  <h3>Programador PLC — Rapack Automação</h3>
+  <div class="exp-period">2014 – 2015 | Brasil</div>
+  <div class="exp-tags">
+    Startup • Automotivo • Produção
+  </div>
+
+  <div class="exp-details">
+    Participação no startup e início de produção de linhas automotivas
+    para novos modelos, garantindo estabilidade operacional.
+    <br><br>
+
+    <strong>Principais Atividades:</strong>
+    <ul>
+      <li>Startup de linhas de montagem</li>
+      <li>Programação em Step 7 e WinCC</li>
+      <li>Suporte técnico em campo</li>
+    </ul>
+
+    <strong>Tecnologias:</strong>
+    Step 7 • WinCC • PLC Siemens
+  </div>
 </div>
 
 </section>
+
 
 <!-- CV -->
 
