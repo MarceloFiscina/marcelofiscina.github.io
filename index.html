@@ -1,109 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>José Marcelo Fiscina | Engenharia & Automação</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<title>José Marcelo Fiscina | Engenharia Digital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: #0a2540;
-      color: #fff;
-      padding: 30px;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      background: #fff;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 
-    h2 {
-      color: #0a2540;
-    }
+body {
+  background: #f2f5f9;
+  color: #1f2933;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* HEADER */
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-    }
+header {
+  background: linear-gradient(135deg, #0a2540, #123a63);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    .btn {
-      display: inline-block;
-      background: #0a2540;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-  </style>
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* SECTIONS */
+
+section {
+  background: white;
+  margin-bottom: 30px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #0a2540;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+
+.card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #0a2540;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* LIST */
+
+ul {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  background: #0a2540;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #123a63;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
   <h1>José Marcelo Fiscina</h1>
   <p>Engenharia • Automação • Dados • Sistemas Digitais</p>
+  <p>Controle • Integração • Monitoramento • Otimização</p>
 </header>
 
+<div class="container">
+
+<!-- SOBRE -->
+
 <section>
-  <h2>Sobre Mim</h2>
+  <h2>👨‍💻 Sobre Mim</h2>
   <p>
-    Engenheiro de Controle e Automação com mais de 10 anos de experiência em
-    projetos industriais, integração de sistemas, dados e digitalização de processos.
-    Atuo desde o planejamento até a otimização de soluções tecnológicas.
+    Engenheiro de Controle e Automação com mais de 10 anos de experiência em projetos
+    industriais, automação, integração de dados e engenharia digital.
+    Atuo desde o planejamento até a implantação, monitoramento e melhoria contínua
+    de sistemas produtivos.
   </p>
 </section>
 
+<!-- SKILLS -->
+
 <section>
-  <h2>Competências</h2>
+  <h2>🚀 Competências Técnicas</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Automação</h3>
+      <p>PLC Siemens/Rockwell, SCADA, Robótica, Redes Industriais</p>
+    </div>
+
+    <div class="card">
+      <h3>Programação</h3>
+      <p>Python, JavaScript, SQL, Node.js</p>
+    </div>
+
+    <div class="card">
+      <h3>Integração</h3>
+      <p>Node-RED, n8n, APIs, Sistemas Industriais</p>
+    </div>
+
+    <div class="card">
+      <h3>Dados</h3>
+      <p>SQL Server, MySQL, PostgreSQL, Grafana</p>
+    </div>
+
+    <div class="card">
+      <h3>Processos</h3>
+      <p>Draw.io, EPLAN, Padronização Técnica</p>
+    </div>
+
+    <div class="card">
+      <h3>Gestão</h3>
+      <p>Coordenação, Projetos, Documentação</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJETOS -->
+
+<section>
+  <h2>📂 Projetos & Experiência</h2>
+
   <ul>
-    <li>Python, SQL, JavaScript</li>
-    <li>Node-RED, n8n, Node.js</li>
-    <li>Grafana, SCADA, PLC Siemens/Rockwell</li>
-    <li>Integração Industrial e Dados</li>
-    <li>Padronização (Draw.io, EPLAN)</li>
+    <li>📊 Desenvolvimento de dashboards industriais com Grafana</li>
+    <li>⚙️ Automação de processos com Node-RED e n8n</li>
+    <li>🔗 Integração máquina → banco → ERP</li>
+    <li>📈 Monitoramento de produção e eficiência</li>
+    <li>🛠️ Startup e comissionamento de linhas industriais</li>
+    <li>📋 Padronização de processos operacionais</li>
   </ul>
+
 </section>
 
-<section>
-  <h2>Projetos</h2>
-  <ul>
-    <li>📊 Dashboard industrial com Grafana</li>
-    <li>⚙️ Automação de rotinas com Node-RED</li>
-    <li>🔗 Integração máquina-banco-sistema</li>
-    <li>📈 Monitoramento de produção</li>
-  </ul>
-</section>
+<!-- CV -->
 
 <section>
-  <h2>Currículo</h2>
-  <a href="cv.pdf" class="btn">Baixar CV</a>
+  <h2>📄 Currículo</h2>
+
+  <p>Baixe meu currículo completo em PDF:</p>
+
+  <a href="cv.pdf" class="btn">📥 Download CV</a>
+
 </section>
 
+<!-- CONTATO -->
+
 <section>
-  <h2>Contato</h2>
-  <p>Email: fiscina.marcelo@gmail.com</p>
-  <p>LinkedIn: linkedin.com/in/marcelo-fiscina</p>
+  <h2>📬 Contato</h2>
+
+  <p><strong>Email:</strong> fiscina.marcelo@gmail.com</p>
+  <p><strong>Telefone:</strong> (75) 99882-8918</p>
+  <p><strong>LinkedIn:</strong> linkedin.com/in/marcelo-fiscina</p>
+  <p><strong>GitHub:</strong> github.com/seuusuario</p>
+
 </section>
+
+</div>
+
+<!-- FOOTER -->
 
 <footer>
-  © 2026 - José Marcelo Fiscina
+  © 2026 • José Marcelo Fiscina • Engenharia Digital & Automação
 </footer>
 
 </body>
