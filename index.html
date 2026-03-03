@@ -194,77 +194,21 @@ footer{
 .cv-box .btn{
   width:fit-content;
 }
-@media (min-width:769px){
+
+/* ===== MOBILE FIX DEFINITIVO ===== */
+@media (max-width:768px){
+
+  /* Remove espaço da sidebar */
   body{
-    padding-left:260px;
+    padding-left:0;
   }
-}  
-/* ===== MOBILE RESPONSIVO ===== */
-@media (max-width: 768px){
 
-  body, html{
-  width:100%;
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
-}
-
-.sidebar{
-  width:100% !important;
-  max-width:100% !important;
-  left:0;
-}
-
-header,
-.container{
-  width:100%;
-  margin:0 auto;
-}
-
-  /* Sidebar vira topo */
+  /* Esconde sidebar */
   .sidebar{
-    position:relative;
-    width:100%;
-    height:auto;
-    padding:20px 15px;
-    flex-direction:column;
+    display:none !important;
   }
 
-  .sidebar img{
-    width:80px;
-    height:80px;
-  }
-
-  .sidebar h2{
-    font-size:18px;
-  }
-
-  .sidebar p{
-    font-size:12px;
-  }
-
-  /* Menu horizontal */
-  .sidebar nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-  }
-
-  .sidebar nav a{
-    padding:6px 10px;
-    font-size:13px;
-    margin:0;
-  }
-
-  /* Idioma centralizado */
-  .lang-switch{
-    width:100%;
-    justify-content:center;
-    margin-top:10px;
-  }
-
-  /* Header ajustado */
+  /* Header centralizado */
   header{
     padding:40px 15px;
     text-align:center;
@@ -272,52 +216,20 @@ header,
 
   .header-content{
     flex-direction:column;
-    gap:15px;
+    align-items:center;
   }
 
   header img{
-    width:100px;
-    height:100px;
+    width:110px;
+    height:110px;
   }
 
-  /* Conteúdo */
+  /* Container ocupa tudo */
   .container{
-    padding:25px 15px;
+    padding:20px 15px;
   }
 
-  section{
-    padding:25px 20px;
-  }
-
-  section h2{
-    font-size:20px;
-  }
-
-  /* Cards */
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  /* Experiência */
-  .exp-item{
-    padding:20px;
-  }
-/* Esconder sidebar no mobile */
-  .sidebar{
-    display:none;
-  }
-  
-  /* Ajustar header */
-  header{
-    padding:40px 15px;
-    text-align:center;
-  }
-  
-  .header-content{
-    flex-direction:column;
-  }
 }
-
 </style>
 </head>
 
