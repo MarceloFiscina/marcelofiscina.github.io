@@ -1,895 +1,896 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>José Marcelo Nascimento Fiscina | Digital Engineering</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* ================= GLOBAL ================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-}
-
-body{
-  background:#f2f5f9;
-  color:#1f2933;
-  /*padding-left:260px;*/
-}
-
-html{scroll-behavior:smooth;}
-
-/* ================= SIDEBAR ================= */
-
-.sidebar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:260px;
-  height:100vh;
-  background:#0a2540;
-  color:white;
-  padding:60px 20px 30px; /* mais espaço em cima */
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  z-index:1000;
-}
-
-.sidebar img{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid white;
-  margin-bottom:20px;
-  margin-top:0; /* remove empurrão manual */
-}
-
-.sidebar h2{font-size:20px;margin-bottom:5px;text-align:center;}
-.sidebar p{font-size:13px;opacity:.85;text-align:center;margin-bottom:20px;}
-
-.lang-switch{
-  display:flex;
-  gap:10px;
-  margin-bottom:20px;
-}
-
-.lang-switch button{
-  background:rgba(255,255,255,.15);
-  border:none;
-  color:white;
-  padding:6px 10px;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-.sidebar nav{width:100%;}
-
-.sidebar nav a{
-  display:block;
-  color:white;
-  text-decoration:none;
-  padding:10px 15px;
-  margin-bottom:8px;
-  border-radius:6px;
-  transition:.3s;
-}
-
-.sidebar nav a:hover,
-.sidebar nav a.active{
-  background:rgba(255,255,255,.25);
-}
-
-/* ================= HEADER ================= */
-
-header{
-  background:linear-gradient(135deg,#0a2540,#123a63);
-  color:white;
-  padding:70px 20px;
-}
-
-.header-content{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-/* ================= LAYOUT ================= */
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-section{
-  background:white;
-  margin-bottom:30px;
-  padding:40px;
-  border-radius:14px;
-  box-shadow:0 5px 25px rgba(0,0,0,.06);
-}
-
-section h2{
-  color:#0a2540;
-  margin-bottom:25px;
-}
-
-/* ================= GRID ================= */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:#f8fafc;
-  padding:20px;
-  border-radius:10px;
-  border-left:5px solid #0a2540;
-}
-
-/* ================= EXPERIENCE ================= */
-
-.exp-item{
-  background:#f8fafc;
-  border-radius:12px;
-  padding:25px;
-  margin-bottom:20px;
-  border-left:5px solid #0a2540;
-  cursor:pointer;
-}
-
-.exp-details{display:none;margin-top:15px;line-height:1.6;}
-
-/* ================= BUTTON ================= */
-
-.btn{
-  background:#0a2540;
-  color:white;
-  padding:12px 22px;
-  border-radius:6px;
-  text-decoration:none;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  text-align:center;
-  padding:25px;
-  color:#6b7280;
-}
+  <meta charset="UTF-8">
+  <title>José Marcelo Nascimento Fiscina | Digital Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-/* CV SECTION FIX */
-
-.cv-box{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  margin-top:10px;
-}
-
-.cv-box p{
-  margin:0;
-}
-
-.cv-box .btn{
-  width:fit-content;
-}
-/* Esconde foto do header no desktop */
-header img {
-  display: none;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-.sidebar nav{
-  margin-top:80px;
-}
-
-/* ================= PROJECTS ================= */
+  <style>
+  
+  /* ================= GLOBAL ================= */
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+  }
+  
+  body{
+    background:#f2f5f9;
+    color:#1f2933;
+    /*padding-left:260px;*/
+  }
+  
+  html{scroll-behavior:smooth;}
+  
+  /* ================= SIDEBAR ================= */
+  
+  .sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:260px;
+    height:100vh;
+    background:#0a2540;
+    color:white;
+    padding:60px 20px 30px; /* mais espaço em cima */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    z-index:1000;
+  }
+  
+  .sidebar img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+    margin-bottom:20px;
+    margin-top:0; /* remove empurrão manual */
+  }
+  
+  .sidebar h2{font-size:20px;margin-bottom:5px;text-align:center;}
+  .sidebar p{font-size:13px;opacity:.85;text-align:center;margin-bottom:20px;}
+  
+  .lang-switch{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+  }
+  
+  .lang-switch button{
+    background:rgba(255,255,255,.15);
+    border:none;
+    color:white;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+  }
+  
+  .sidebar nav{width:100%;}
+  
+  .sidebar nav a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    margin-bottom:8px;
+    border-radius:6px;
+    transition:.3s;
+  }
+  
+  .sidebar nav a:hover,
+  .sidebar nav a.active{
+    background:rgba(255,255,255,.25);
+  }
+  
+  /* ================= HEADER ================= */
+  
+  header{
+    background:linear-gradient(135deg,#0a2540,#123a63);
+    color:white;
+    padding:70px 20px;
+  }
+  
+  .header-content{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+  }
+  
+  /* ================= LAYOUT ================= */
+  
+  .container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+  }
+  
+  section{
+    background:white;
+    margin-bottom:30px;
+    padding:40px;
+    border-radius:14px;
+    box-shadow:0 5px 25px rgba(0,0,0,.06);
+  }
+  
+  section h2{
+    color:#0a2540;
+    margin-bottom:25px;
+  }
+  
+  /* ================= GRID ================= */
+  
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+  }
+  
+  .card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:10px;
+    border-left:5px solid #0a2540;
+  }
+  
+  /* ================= EXPERIENCE ================= */
+  
+  .exp-item{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:5px solid #0a2540;
+    cursor:pointer;
+  }
+  
+  .exp-details{display:none;margin-top:15px;line-height:1.6;}
+  
+  /* ================= BUTTON ================= */
+  
+  .btn{
+    background:#0a2540;
+    color:white;
+    padding:12px 22px;
+    border-radius:6px;
+    text-decoration:none;
+  }
+  
+  /* ================= FOOTER ================= */
+  
+  footer{
+    text-align:center;
+    padding:25px;
+    color:#6b7280;
+  }
+    
+  /* CV SECTION FIX */
+  
+  .cv-box{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:10px;
+  }
+  
+  .cv-box p{
+    margin:0;
+  }
+  
+  .cv-box .btn{
+    width:fit-content;
+  }
+  /* Esconde foto do header no desktop */
+  header img {
+    display: none;
+  }
+    
+  .sidebar nav{
+    margin-top:80px;
+  }
+  
+ /* ================= PROJECTS ================= */
 
 .projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
 }
 
 .project-card{
   background:#f8fafc;
-  border-radius:14px;
+  border-radius:12px;
   overflow:hidden;
   cursor:pointer;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  text-align:center;
   transition:.3s;
+  box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
 .project-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  transform:translateY(-5px);
 }
 
 .project-card img{
   width:100%;
-  height:180px;
+  height:140px;
   object-fit:cover;
 }
 
 .project-card h3{
-  padding:15px 15px 5px;
-  color:#0a2540;
+  padding:12px;
+  font-size:16px;
 }
 
-.project-card p{
-  padding:0 15px;
-  font-size:14px;
-  color:#475569;
-}
 
-.project-card span{
-  display:block;
-  padding:10px 15px 15px;
-  font-size:13px;
-  font-weight:500;
-  color:#0a2540;
-}  
-
-/* ================= MODAL ================= */
-
-.modal{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.6);
-  z-index:2000;
-}
-
-.modal-content{
-  background:white;
-  max-width:700px;
-  margin:60px auto;
-  padding:30px;
-  border-radius:12px;
-  position:relative;
-}
-
-.modal-content img{
-  width:100%;
-  border-radius:10px;
-  margin:15px 0;
-}
-
-.close{
-  position:absolute;
-  top:15px;
-  right:20px;
-  font-size:26px;
-  cursor:pointer;
-}
+  /* ================= MODAL ================= */
   
-/* ===== MOBILE FIX DEFINITIVO ===== */
-@media (max-width:768px){
-  
-  .header-content {
-    flex-direction: column;
+  .modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.8);
   }
   
-  header img {
-    display: block;
-    margin: 0 auto 15px auto;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid white;
-  }
-  
-  /* Remove espaço da sidebar */
-  body{
-    padding-left:0;
-  }
-
-  /* Esconde sidebar */
-  .sidebar{
-    display:none !important;
-  }
-
-  /* Header centralizado */
-  header{
-    padding:40px 15px;
+  .modal-content{
+    background:white;
+    max-width:800px;
+    margin:5% auto;
+    padding:25px;
+    border-radius:14px;
     text-align:center;
+    position:relative;
   }
-
-  .header-content{
-    flex-direction:column;
-    align-items:center;
+  
+  .modal-content img{
+    width:100%;
+    max-height:400px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
   }
-
-  header img{
-    width:110px;
-    height:110px;
+  
+  .close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
   }
-
-  /* Container ocupa tudo */
-  .container{
-    padding:20px 15px;
+    
+  /* ===== MOBILE FIX DEFINITIVO ===== */
+  @media (max-width:768px){
+    
+    .header-content {
+      flex-direction: column;
+    }
+    
+    header img {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    
+    /* Remove espaço da sidebar */
+    body{
+      padding-left:0;
+    }
+  
+    /* Esconde sidebar */
+    .sidebar{
+      display:none !important;
+    }
+  
+    /* Header centralizado */
+    header{
+      padding:40px 15px;
+      text-align:center;
+    }
+  
+    .header-content{
+      flex-direction:column;
+      align-items:center;
+    }
+  
+    header img{
+      width:110px;
+      height:110px;
+    }
+  
+    /* Container ocupa tudo */
+    .container{
+      padding:20px 15px;
+    }
+  
   }
-
-}
-</style>
-</head>
-
-<body>
-
-<!-- ================= SIDEBAR ================= -->
-
-<div class="sidebar">
-
-
-  <img src="foto.jpg">
-<!-- 
-  <h2>Marcelo Fiscina</h2>
-
-  <p data-key="profile">
-    Engenharia<br>Automação & Dados
-  </p>
- -->
-  <nav>
-    <a href="#sobre" data-key="menu_about">Sobre</a>
-    <a href="#skills" data-key="menu_skills">Competências</a>
-    <a href="#exp" data-key="menu_exp">Experiência</a>
-    <a href="#cv" data-key="menu_cv">Currículo</a>
-    <a href="#contato" data-key="menu_contact">Contato</a>
-    <div class="lang-switch">
-      <button onclick="setLang('pt')">🇧🇷 PT</button>
-      <button onclick="setLang('en')">🇺🇸 EN</button>
-    </div>
-  </nav>
-
-</div>
-
-<!-- ================= HEADER ================= -->
-
-<header>
-
-  <div class="header-content">
-
+  </style>
+  </head>
+  
+  <body>
+  
+  <!-- ================= SIDEBAR ================= -->
+  
+  <div class="sidebar">
+  
+  
     <img src="foto.jpg">
-
-    <div>
-      <h1>José Marcelo Nascimento Fiscina</h1>
-
-      <p data-key="subtitle1"></p>
-      <p data-key="subtitle2"></p>
+  <!-- 
+    <h2>Marcelo Fiscina</h2>
+  
+    <p data-key="profile">
+      Engenharia<br>Automação & Dados
+    </p>
+   -->
+    <nav>
+      <a href="#sobre" data-key="menu_about">Sobre</a>
+      <a href="#skills" data-key="menu_skills">Competências</a>
+      <a href="#exp" data-key="menu_exp">Experiência</a>
+      <a href="#cv" data-key="menu_cv">Currículo</a>
+      <a href="#contato" data-key="menu_contact">Contato</a>
+      <div class="lang-switch">
+        <button onclick="setLang('pt')">🇧🇷 PT</button>
+        <button onclick="setLang('en')">🇺🇸 EN</button>
+      </div>
+    </nav>
+  
+  </div>
+  
+  <!-- ================= HEADER ================= -->
+  
+  <header>
+  
+    <div class="header-content">
+  
+      <img src="foto.jpg">
+  
+      <div>
+        <h1>José Marcelo Nascimento Fiscina</h1>
+  
+        <p data-key="subtitle1"></p>
+        <p data-key="subtitle2"></p>
+      </div>
+  
     </div>
-
-  </div>
-
-</header>
-
-<div class="container">
-
-<!-- ================= ABOUT ================= -->
-
-<section id="sobre">
-
-<h2 data-key="sec_about"></h2>
-
-<p data-key="about1"></p>
-<p data-key="about2"></p>
-<p data-key="about3"></p>
-
-</section>
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills">
-
-<h2 data-key="sec_skills"></h2>
-
-<div class="grid">
-
-<div class="card"><h3 data-key="s1"></h3><p>Siemens, Rockwell, Schneider</p></div>
-<div class="card"><h3 data-key="s2"></h3><p>Elipse, WinCC</p></div>
-<div class="card"><h3 data-key="s3"></h3><p>Fanuc, ABB, Kuka, Comau</p></div>
-<div class="card"><h3 data-key="s4"></h3><p>Python, JavaScript, SQL</p></div>
-<div class="card"><h3 data-key="s5"></h3><p>Node-RED, n8n, APIs</p></div>
-<div class="card"><h3 data-key="s6"></h3><p>SQL Server, MySQL, PostgreSQL</p></div>
-<div class="card"><h3 data-key="s7"></h3><p>Draw.io, EPLAN</p></div>
-<div class="card"><h3 data-key="s8"></h3><p>Grafana</p></div>
-<div class="card"><h3 data-key="s9"></h3><p>Coordenação, Projetos</p></div>
-
-</div>
-
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-
-<section id="exp">
-
-  <h2 data-key="sec_exp"></h2>
   
-  <div class="exp-item" onclick="toggleExp(this)">
-    <h3 data-key="he1">Automation Coordinator — Markez</h3>
-    <p data-key="e1"></p>
-    <div class="exp-details" data-key="ed1"></div>
-  </div>
+  </header>
   
-  <div class="exp-item" onclick="toggleExp(this)">
-    <h3 data-key="he2">Automation Engineer — JMF</h3>
-    <p data-key="e2"></p>
-    <div class="exp-details" data-key="ed2"></div>
-  </div>
+  <div class="container">
   
-  <div class="exp-item" onclick="toggleExp(this)">
-    <h3 data-key="he3">PLC Programmer — Markez Robotics</h3>
-    <p data-key="e3"></p>
-    <div class="exp-details" data-key="ed3"></div>
-  </div>
-  
-  <div class="exp-item" onclick="toggleExp(this)">
-    <h3 data-key="he4">PLC Programmer — Rapack</h3>
-    <p data-key="e4"></p>
-    <div class="exp-details" data-key="ed4"></div>
-  </div>
-
-</section>
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-  <h2>📁 Projetos</h2>
-
-  <div class="projects-grid">
-
-    <!-- PROJETO 1 -->
-    <div class="project-card" onclick="openProject(1)">
-      <img src="proj1.jpg" alt="Projeto Automação">
-      <h3>Integração de Linha Automotiva</h3>
-      <p>Automação completa com rastreabilidade</p>
-      <span>PLC • SCADA • SQL • Grafana</span>
-    </div>
-
-    <!-- PROJETO 2 -->
-    <div class="project-card" onclick="openProject(2)">
-      <img src="proj2.jpg" alt="Projeto Dados">
-      <h3>Plataforma Industrial de Dados</h3>
-      <p>Dashboards e analytics em tempo real</p>
-      <span>Python • Node-RED • APIs</span>
-    </div>
-
-    <!-- PROJETO 3 -->
-    <div class="project-card" onclick="openProject(3)">
-      <img src="proj3.jpg" alt="Projeto Robótica">
-      <h3>Célula Robotizada</h3>
-      <p>Comissionamento e otimização</p>
-      <span>Fanuc • ABB • Safety</span>
-    </div>
-
-  </div>
-
-</section>
-<!-- ================= CV ================= -->
-
-<section id="cv">
-
-  <h2 data-key="sec_cv"></h2>
-
-  <div class="cv-box">
-
-    <p data-key="cv_text"></p>
-
-    <a href="cv.pdf" class="btn" data-key="cv_btn"></a>
-
-  </div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contato">
-
-<h2 data-key="sec_contact"></h2>
-
-<p>Email: fiscina.marcelo@gmail.com</p>
-<p>Phone: +55 75 99882-8918</p>
-<p>LinkedIn: linkedin.com/in/marcelo-fiscina</p>
-
-</section>
-
-</div>
-
-<footer data-key="footer"></footer>
-
-<!-- ================= SCRIPT ================= -->
-
-<script>
-
-/* ================= EXPAND ================= */
-
-function toggleExp(el){
-
-  document.querySelectorAll(".exp-details").forEach(d=>{
-    if(d!==el.querySelector(".exp-details")){
-      d.style.display="none";
-    }
-  });
-
-  const d=el.querySelector(".exp-details");
-
-  d.style.display=d.style.display==="block"?"none":"block";
-}
-
-/* ================= TRANSLATIONS ================= */
-
-const translations = {
-
-pt:{
-
-subtitle1:"Engenharia • Automação • Dados • Integração de Sistemas",
-subtitle2:"Indústria 4.0 • Monitoramento • Otimização • Transformação Digital",
-
-profile:"Engenharia<br>Controle,Automação & Dados",
-
-menu_about:"Sobre",
-menu_skills:"Competências",
-menu_exp:"Experiência",
-menu_cv:"Currículo",
-menu_contact:"Contato",
-
-sec_about:"👨‍💻 Sobre Mim",
-sec_skills:"🚀 Competências Técnicas",
-sec_exp:"💼 Experiência Profissional",
-sec_cv:"📄 Currículo",
-sec_contact:"📬 Contato",
-
-about1:"Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.",
-about2:"Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital.",
-about3:"Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.",
-
-s1:"Programação de CLPs",
-s2:"Sistemas SCADA",
-s3:"Integração de Robôs",
-s4:"Programação",
-s5:"Integração de Sistemas",
-s6:"Banco de Dados",
-s7:"Processos",
-s8:"Monitoramento",
-s9:"Gestão",
-
-e1:"2023–Atual | Brasil / México",
-e2:"2021–2023 | Brasil",
-e3:"2015–2021 | Brasil",
-e4:"2014–2015 | Brasil",
-
-he1:"Coordenador de Automação — Markez",
-he2:"Engenheiro de Automação — JMF",
-he3:"Programador de PLC Sênior— Markez Robotics",
-he4:"Programador de PLC Junior — Rapack",
-  
-ed1:`
-    Atuação na coordenação técnica de equipes multidisciplinares em projetos globais
-    para montadoras, liderando startups, validações técnicas e padronização
-    de sistemas sob padrões internacionais.
-    <br><br>
-
-    <strong>Principais Atividades:</strong>
-    <ul>
-      <li>Coordenação de times técnicos e fornecedores</li>
-      <li>Revisão de projetos elétricos e redes industriais</li>
-      <li>Integração entre automação, dados e sistemas corporativos</li>
-      <li>Desenvolvimento de dashboards em Grafana</li>
-      <li>Padronização de processos com Draw.io</li>
-    </ul>
-    <br><br>
+    <!-- ================= ABOUT ================= -->
     
-    <strong>Tecnologias:</strong>
-    PLC Siemens/Rockwell • SCADA • Python • SQL • Node-RED • Grafana
-`,
-ed2:`
-    Desenvolvimento e comissionamento de sistemas industriais para fornos
-    e abastecimento de produção, com foco em confiabilidade e rastreabilidade.
-    <br><br>
-
-    <strong>Principais Atividades:</strong>
-    <ul>
-      <li>Desenvolvimento de arquitetura de dados industrial</li>
-      <li>Automação de rotinas em Python</li>
-      <li>Integração com banco de dados SQL</li>
-      <li>Implantação de supervisórios Elipse</li>
-      <li>Criação de relatórios técnicos</li>
-    </ul>
-    <br><br>
+    <section id="sobre">
+      
+      <h2 data-key="sec_about"></h2>
+      
+      <p data-key="about1"></p>
+      <p data-key="about2"></p>
+      <p data-key="about3"></p>
     
-    <strong>Tecnologias:</strong>
-    Python • SQL • Node.js • Elipse • PLC Siemens
-`,
-ed3:`
-    Atuação em desenvolvimento, comissionamento e startup de linhas automotivas,
-    com foco em performance, estabilidade e melhoria contínua.
-    <br><br>
-
-    <strong>Principais Atividades:</strong>
-    <ul>
-      <li>Programação de CLPs e robôs industriais</li>
-      <li>Diagnóstico de falhas crônicas</li>
-      <li>Otimização de ciclo produtivo</li>
-      <li>Integração de sistemas de segurança</li>
-    </ul>
-    <br><br>
+    </section>
     
-
-    <strong>Tecnologias:</strong>
-    PLC Siemens/Rockwell • Fanuc • ABB • SCADA
-  `,
-ed4:`
-    Participação no startup e início de produção de linhas automotivas
-    para novos modelos, garantindo estabilidade operacional.
-    <br><br>
-
-    <strong>Principais Atividades:</strong>
-    <ul>
-      <li>Startup de linhas de montagem</li>
-      <li>Programação em Step 7 e WinCC</li>
-      <li>Suporte técnico em campo</li>
-    </ul>
-    <br><br>
+    <!-- ================= SKILLS ================= -->
     
-
-    <strong>Tecnologias:</strong>
-    Step 7 • WinCC • PLC Siemens
-`,
-
-cv_text:"Baixe meu currículo completo em PDF:",
-cv_btn:"📥 Download CV",
-
-footer:"© 2026 • José Marcelo Fiscina • Engenharia Controle & Automação"
-
-},
-
-en:{
-
-subtitle1:"Engineering • Automation • Data • Systems Integration",
-subtitle2:"Industry 4.0 • Monitoring • Optimization • Digital Transformation",
-
-profile:"Engineering<br>Control,Automation & Data",
-
-menu_about:"About",
-menu_skills:"Skills",
-menu_exp:"Experience",
-menu_cv:"Resume",
-menu_contact:"Contact",
-
-sec_about:"👨‍💻 About Me",
-sec_skills:"🚀 Technical Skills",
-sec_exp:"💼 Professional Experience",
-sec_cv:"📄 Resume",
-sec_contact:"📬 Contact",
-
-about1:"Control and Automation Engineer with over 10 years of experience in industrial automation, data and systems integration.",
-about2:"Experience in automotive and metallurgical sectors focused on performance, reliability and digital transformation.",
-about3:"Specialist in PLCs, SCADA, Python, SQL, Node-RED, n8n and Grafana.",
-
-s1:"PLC Programming",
-s2:"SCADA Systems",
-s3:"Robotics Integration",
-s4:"Programming",
-s5:"Systems Integration",
-s6:"Databases",
-s7:"Processes",
-s8:"Monitoring",
-s9:"Management",
-
-e1:"2023–Present | Brazil / Mexico",
-e2:"2021–2023 | Brazil",
-e3:"2015–2021 | Brazil",
-e4:"2014–2015 | Brazil",
-
-he1:"Automation Coordinator — Markez",
-he2:"Automation Engineer — JMF",
-he3:"PLC Programmer — Markez Robotics",
-he4:"PLC Programmer — Rapack",
-  
-ed1:`
-    Technical coordination of multidisciplinary teams in global projects
-    for automakers, leading startups, technical validations and system
-    standardization under international standards.
-    <br><br>
-    
-    <strong>Main Activities:</strong>
-    <ul>
-      <li>Technical team and supplier coordination</li>
-      <li>Electrical design and industrial network review</li>
-      <li>Automation, data and corporate systems integration</li>
-      <li>Grafana dashboard development</li>
-      <li>Process standardization using Draw.io</li>
-    </ul>
-    <br><br>
+    <section id="skills">
+      
+      <h2 data-key="sec_skills"></h2>
+      
+      <div class="grid">
         
+        <div class="card"><h3 data-key="s1"></h3><p>Siemens, Rockwell, Schneider</p></div>
+        <div class="card"><h3 data-key="s2"></h3><p>Elipse, WinCC</p></div>
+        <div class="card"><h3 data-key="s3"></h3><p>Fanuc, ABB, Kuka, Comau</p></div>
+        <div class="card"><h3 data-key="s4"></h3><p>Python, JavaScript, SQL</p></div>
+        <div class="card"><h3 data-key="s5"></h3><p>Node-RED, n8n, APIs</p></div>
+        <div class="card"><h3 data-key="s6"></h3><p>SQL Server, MySQL, PostgreSQL</p></div>
+        <div class="card"><h3 data-key="s7"></h3><p>Draw.io, EPLAN</p></div>
+        <div class="card"><h3 data-key="s8"></h3><p>Grafana</p></div>
+        <div class="card"><h3 data-key="s9"></h3><p>Coordenação, Projetos</p></div>
+      
+      </div>
     
-    <strong>Technologies:</strong>
-    PLC Siemens, Rockwell, SCADA, Python, SQL, Node-RED, Grafana
-`,
-
-ed2:`
-    Development and commissioning of industrial systems for furnaces
-    and production supply, focused on reliability and traceability.
-    <br><br>
+    </section>
     
-    <strong>Main Activities:</strong>
-    <ul>
-      <li>Industrial data architecture development</li>
-      <li>Python automation routines</li>
-      <li>SQL database integration</li>
-      <li>Elipse SCADA implementation</li>
-      <li>Technical report creation</li>
-    </ul>
-    <br><br>
+    <!-- ================= EXPERIENCE ================= -->
     
+    <section id="exp">
     
-    <strong>Technologies:</strong>
-    Python, SQL, Node.js, Elipse, PLC Siemens
-`,
-
-ed3:`
-    Development, commissioning and startup of automotive production lines,
-    focused on performance, stability and continuous improvement.
-    <br><br>
+      <h2 data-key="sec_exp"></h2>
+      
+      <div class="exp-item" onclick="toggleExp(this)">
+        <h3 data-key="he1">Automation Coordinator — Markez</h3>
+        <p data-key="e1"></p>
+        <div class="exp-details" data-key="ed1"></div>
+      </div>
+      
+      <div class="exp-item" onclick="toggleExp(this)">
+        <h3 data-key="he2">Automation Engineer — JMF</h3>
+        <p data-key="e2"></p>
+        <div class="exp-details" data-key="ed2"></div>
+      </div>
+      
+      <div class="exp-item" onclick="toggleExp(this)">
+        <h3 data-key="he3">PLC Programmer — Markez Robotics</h3>
+        <p data-key="e3"></p>
+        <div class="exp-details" data-key="ed3"></div>
+      </div>
+      
+      <div class="exp-item" onclick="toggleExp(this)">
+        <h3 data-key="he4">PLC Programmer — Rapack</h3>
+        <p data-key="e4"></p>
+        <div class="exp-details" data-key="ed4"></div>
+      </div>
     
-    <strong>Main Activities:</strong>
-    <ul>
-      <li>PLC and robotics programming</li>
-      <li>Chronic failure diagnosis</li>
-      <li>Production cycle optimization</li>
-      <li>Safety systems integration</li>
-    </ul>
-    <br><br>
-    
-    
-    <strong>Technologies:</strong>
-    PLC Siemens, Rockwell, Fanuc, ABB, SCADA
-`,
-
-ed4:`
-    Participation in startup and launch of automotive production lines
-    for new vehicle models, ensuring operational stability.
-    <br><br>
-    
-    <strong>Main Activities:</strong>
-    <ul>
-      <li>Assembly line startup</li>
-      <li>Step 7 and WinCC programming</li>
-      <li>On-site technical support</li>
-    </ul>
-    <br><br>
-    
-    
-    <strong>Technologies:</strong>
-    Step 7, WinCC, PLC Siemens
-`,
-
-cv_text:"Download my complete resume in PDF:",
-cv_btn:"📥 Download Resume",
-
-footer:"© 2026 • José Marcelo Fiscina • Digital Engineering & Automation"
-
-}
-
-};
-
-/* ================= LANGUAGE ================= */
-
-function setLang(lang){
-
-  console.log("Mudando idioma para:", lang); // debug
-
-  document.querySelectorAll("[data-key]").forEach(el=>{
-
-    const key = el.getAttribute("data-key");
-
-    if(translations[lang][key]){
-      el.innerHTML = translations[lang][key];
-    }
-
-  });
-
-  localStorage.setItem("lang", lang);
-}
-
-/* GARANTE GLOBAL */
-window.setLang = setLang;
-
-/* AUTO LOAD */
-
-document.addEventListener("DOMContentLoaded", ()=>{
-
-  const saved = localStorage.getItem("lang") || "pt";
-
-  setLang(saved);
-
-});
-/* ================= PROJECT DATA ================= */
-
-const projects = {
-
-  1:{
-    title:"Integração de Linha Automotiva",
-    img:"proj1.jpg",
-    desc:"Projeto de automação completa de linha com integração MES, rastreabilidade e indicadores OEE.",
-    tech:"PLC Siemens, SCADA, SQL Server, Grafana",
-    result:"Redução de 18% no tempo de ciclo e aumento de 25% na rastreabilidade."
-  },
-
-  2:{
-    title:"Plataforma Industrial de Dados",
-    img:"proj2.jpg",
-    desc:"Centralização de dados industriais para BI, dashboards em tempo real e alertas automáticos.",
-    tech:"Python, Node-RED, REST API, PostgreSQL",
-    result:"Aumento de 40% na visibilidade operacional."
-  },
-
-  3:{
-    title:"Célula Robotizada",
-    img:"proj3.jpg",
-    desc:"Startup e otimização de célula robotizada com sistemas de segurança integrados.",
-    tech:"Fanuc, ABB, Safety PLC, Profisafe",
-    result:"Redução de falhas em 30% e aumento de produtividade."
-  }
-
-};
-
-/* ================= MODAL FUNCTIONS ================= */
-
-function openProject(id){
-
-  const p = projects[id];
-
-  document.getElementById("modalTitle").innerText = p.title;
-  document.getElementById("modalImg").src = p.img;
-  document.getElementById("modalDesc").innerText = p.desc;
-  document.getElementById("modalTech").innerText = p.tech;
-  document.getElementById("modalResult").innerText = p.result;
-
-  document.getElementById("projectModal").style.display="block";
-}
-
-function closeProject(){
-  document.getElementById("projectModal").style.display="none";
-}
-</script>
+    </section>
+    <!-- ================= PROJECTS ================= -->
   
-<!-- ================= PROJECT MODAL ================= -->
-
-<div id="projectModal" class="modal">
-
-  <div class="modal-content">
-
-    <span class="close" onclick="closeProject()">×</span>
-
-    <h2 id="modalTitle"></h2>
-
-    <img id="modalImg">
-
-    <p id="modalDesc"></p>
-
-    <p><strong>Tecnologias:</strong> <span id="modalTech"></span></p>
-
-    <p><strong>Resultados:</strong> <span id="modalResult"></span></p>
-
+    <section id="projects">
+    
+      <h2>📂 Projetos</h2>
+    
+      <div class="grid projects-grid">
+    
+        <div class="project-card" 
+             onclick="openProject(
+               'Jeep Renegade',
+               'renegade.jpg',
+               'Automação da linha de montagem com integração de robôs, PLCs e supervisório.',
+               'Step 7 • WinCC • KUKA • ABB • Profibus • Profinet'
+             )">
+    
+          <img src="renegade.jpg">
+          <h3>Jeep Renegade</h3>
+    
+        </div>
+    
+    
+        <div class="project-card"
+             onclick="openProject(
+               'Fiat Toro',
+               'toro.jpg',
+               'Integração e comissionamento da linha de produção.',
+               'Step 7 • WinCC • KUKA • ABB • Profibus • Profinet'
+             )">
+    
+          <img src="toro.jpg">
+          <h3>Fiat Toro</h3>
+    
+        </div>
+    
+    
+        <div class="project-card"
+             onclick="openProject(
+               'Jeep Compass',
+               'compass.jpg',
+               'Startup e otimização da linha automatizada.',
+               'Step 7 • WinCC • KUKA • ABB • Profibus • Profinet'
+             )">
+    
+          <img src="compass.jpg">
+          <h3>Jeep Compass</h3>
+    
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- ================= CV ================= -->
+    
+    <section id="cv">
+    
+      <h2 data-key="sec_cv"></h2>
+    
+      <div class="cv-box">
+    
+        <p data-key="cv_text"></p>
+    
+        <a href="cv.pdf" class="btn" data-key="cv_btn"></a>
+    
+      </div>
+    
+    </section>
+  
+    <!-- ================= CONTACT ================= -->
+    
+    <section id="contato">
+      
+      <h2 data-key="sec_contact"></h2>
+      
+      <p>Email: fiscina.marcelo@gmail.com</p>
+      <p>Phone: +55 75 99882-8918</p>
+      <p>LinkedIn: linkedin.com/in/marcelo-fiscina</p>
+    
+    </section>
+  
   </div>
-
-</div>
-</body>
+  
+  <footer data-key="footer"></footer>
+  
+  <!-- ================= SCRIPT ================= -->
+  
+  <script>
+  
+  /* ================= EXPAND ================= */
+  
+  function toggleExp(el){
+  
+    document.querySelectorAll(".exp-details").forEach(d=>{
+      if(d!==el.querySelector(".exp-details")){
+        d.style.display="none";
+      }
+    });
+  
+    const d=el.querySelector(".exp-details");
+  
+    d.style.display=d.style.display==="block"?"none":"block";
+  }
+  
+  /* ================= TRANSLATIONS ================= */
+  
+  const translations = {
+  
+  pt:{
+  
+  subtitle1:"Engenharia • Automação • Dados • Integração de Sistemas",
+  subtitle2:"Indústria 4.0 • Monitoramento • Otimização • Transformação Digital",
+  
+  profile:"Engenharia<br>Controle,Automação & Dados",
+  
+  menu_about:"Sobre",
+  menu_skills:"Competências",
+  menu_exp:"Experiência",
+  menu_cv:"Currículo",
+  menu_contact:"Contato",
+  
+  sec_about:"👨‍💻 Sobre Mim",
+  sec_skills:"🚀 Competências Técnicas",
+  sec_exp:"💼 Experiência Profissional",
+  sec_cv:"📄 Currículo",
+  sec_contact:"📬 Contato",
+  
+  about1:"Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.",
+  about2:"Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital.",
+  about3:"Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.",
+  
+  s1:"Programação de CLPs",
+  s2:"Sistemas SCADA",
+  s3:"Integração de Robôs",
+  s4:"Programação",
+  s5:"Integração de Sistemas",
+  s6:"Banco de Dados",
+  s7:"Processos",
+  s8:"Monitoramento",
+  s9:"Gestão",
+  
+  e1:"2023–Atual | Brasil / México",
+  e2:"2021–2023 | Brasil",
+  e3:"2015–2021 | Brasil",
+  e4:"2014–2015 | Brasil",
+  
+  he1:"Coordenador de Automação — Markez",
+  he2:"Engenheiro de Automação — JMF",
+  he3:"Programador de PLC Sênior— Markez Robotics",
+  he4:"Programador de PLC Junior — Rapack",
+    
+  ed1:`
+      Atuação na coordenação técnica de equipes multidisciplinares em projetos globais
+      para montadoras, liderando startups, validações técnicas e padronização
+      de sistemas sob padrões internacionais.
+      <br><br>
+  
+      <strong>Principais Atividades:</strong>
+      <ul>
+        <li>Coordenação de times técnicos e fornecedores</li>
+        <li>Revisão de projetos elétricos e redes industriais</li>
+        <li>Integração entre automação, dados e sistemas corporativos</li>
+        <li>Desenvolvimento de dashboards em Grafana</li>
+        <li>Padronização de processos com Draw.io</li>
+      </ul>
+      <br><br>
+      
+      <strong>Tecnologias:</strong>
+      PLC Siemens/Rockwell • SCADA • Python • SQL • Node-RED • Grafana
+  `,
+  ed2:`
+      Desenvolvimento e comissionamento de sistemas industriais para fornos
+      e abastecimento de produção, com foco em confiabilidade e rastreabilidade.
+      <br><br>
+  
+      <strong>Principais Atividades:</strong>
+      <ul>
+        <li>Desenvolvimento de arquitetura de dados industrial</li>
+        <li>Automação de rotinas em Python</li>
+        <li>Integração com banco de dados SQL</li>
+        <li>Implantação de supervisórios Elipse</li>
+        <li>Criação de relatórios técnicos</li>
+      </ul>
+      <br><br>
+      
+      <strong>Tecnologias:</strong>
+      Python • SQL • Node.js • Elipse • PLC Siemens
+  `,
+  ed3:`
+      Atuação em desenvolvimento, comissionamento e startup de linhas automotivas,
+      com foco em performance, estabilidade e melhoria contínua.
+      <br><br>
+  
+      <strong>Principais Atividades:</strong>
+      <ul>
+        <li>Programação de CLPs e robôs industriais</li>
+        <li>Diagnóstico de falhas crônicas</li>
+        <li>Otimização de ciclo produtivo</li>
+        <li>Integração de sistemas de segurança</li>
+      </ul>
+      <br><br>
+      
+  
+      <strong>Tecnologias:</strong>
+      PLC Siemens/Rockwell • Fanuc • ABB • SCADA
+    `,
+  ed4:`
+      Participação no startup e início de produção de linhas automotivas
+      para novos modelos, garantindo estabilidade operacional.
+      <br><br>
+  
+      <strong>Principais Atividades:</strong>
+      <ul>
+        <li>Startup de linhas de montagem</li>
+        <li>Programação em Step 7 e WinCC</li>
+        <li>Suporte técnico em campo</li>
+      </ul>
+      <br><br>
+      
+  
+      <strong>Tecnologias:</strong>
+      Step 7 • WinCC • PLC Siemens
+  `,
+  
+  cv_text:"Baixe meu currículo completo em PDF:",
+  cv_btn:"📥 Download CV",
+  
+  footer:"© 2026 • José Marcelo Fiscina • Engenharia Controle & Automação"
+  
+  },
+  
+  en:{
+  
+  subtitle1:"Engineering • Automation • Data • Systems Integration",
+  subtitle2:"Industry 4.0 • Monitoring • Optimization • Digital Transformation",
+  
+  profile:"Engineering<br>Control,Automation & Data",
+  
+  menu_about:"About",
+  menu_skills:"Skills",
+  menu_exp:"Experience",
+  menu_cv:"Resume",
+  menu_contact:"Contact",
+  
+  sec_about:"👨‍💻 About Me",
+  sec_skills:"🚀 Technical Skills",
+  sec_exp:"💼 Professional Experience",
+  sec_cv:"📄 Resume",
+  sec_contact:"📬 Contact",
+  
+  about1:"Control and Automation Engineer with over 10 years of experience in industrial automation, data and systems integration.",
+  about2:"Experience in automotive and metallurgical sectors focused on performance, reliability and digital transformation.",
+  about3:"Specialist in PLCs, SCADA, Python, SQL, Node-RED, n8n and Grafana.",
+  
+  s1:"PLC Programming",
+  s2:"SCADA Systems",
+  s3:"Robotics Integration",
+  s4:"Programming",
+  s5:"Systems Integration",
+  s6:"Databases",
+  s7:"Processes",
+  s8:"Monitoring",
+  s9:"Management",
+  
+  e1:"2023–Present | Brazil / Mexico",
+  e2:"2021–2023 | Brazil",
+  e3:"2015–2021 | Brazil",
+  e4:"2014–2015 | Brazil",
+  
+  he1:"Automation Coordinator — Markez",
+  he2:"Automation Engineer — JMF",
+  he3:"PLC Programmer — Markez Robotics",
+  he4:"PLC Programmer — Rapack",
+    
+  ed1:`
+      Technical coordination of multidisciplinary teams in global projects
+      for automakers, leading startups, technical validations and system
+      standardization under international standards.
+      <br><br>
+      
+      <strong>Main Activities:</strong>
+      <ul>
+        <li>Technical team and supplier coordination</li>
+        <li>Electrical design and industrial network review</li>
+        <li>Automation, data and corporate systems integration</li>
+        <li>Grafana dashboard development</li>
+        <li>Process standardization using Draw.io</li>
+      </ul>
+      <br><br>
+          
+      
+      <strong>Technologies:</strong>
+      PLC Siemens, Rockwell, SCADA, Python, SQL, Node-RED, Grafana
+  `,
+  
+  ed2:`
+      Development and commissioning of industrial systems for furnaces
+      and production supply, focused on reliability and traceability.
+      <br><br>
+      
+      <strong>Main Activities:</strong>
+      <ul>
+        <li>Industrial data architecture development</li>
+        <li>Python automation routines</li>
+        <li>SQL database integration</li>
+        <li>Elipse SCADA implementation</li>
+        <li>Technical report creation</li>
+      </ul>
+      <br><br>
+      
+      
+      <strong>Technologies:</strong>
+      Python, SQL, Node.js, Elipse, PLC Siemens
+  `,
+  
+  ed3:`
+      Development, commissioning and startup of automotive production lines,
+      focused on performance, stability and continuous improvement.
+      <br><br>
+      
+      <strong>Main Activities:</strong>
+      <ul>
+        <li>PLC and robotics programming</li>
+        <li>Chronic failure diagnosis</li>
+        <li>Production cycle optimization</li>
+        <li>Safety systems integration</li>
+      </ul>
+      <br><br>
+      
+      
+      <strong>Technologies:</strong>
+      PLC Siemens, Rockwell, Fanuc, ABB, SCADA
+  `,
+  
+  ed4:`
+      Participation in startup and launch of automotive production lines
+      for new vehicle models, ensuring operational stability.
+      <br><br>
+      
+      <strong>Main Activities:</strong>
+      <ul>
+        <li>Assembly line startup</li>
+        <li>Step 7 and WinCC programming</li>
+        <li>On-site technical support</li>
+      </ul>
+      <br><br>
+      
+      
+      <strong>Technologies:</strong>
+      Step 7, WinCC, PLC Siemens
+  `,
+  
+  cv_text:"Download my complete resume in PDF:",
+  cv_btn:"📥 Download Resume",
+  
+  footer:"© 2026 • José Marcelo Fiscina • Digital Engineering & Automation"
+  
+  }
+  
+  };
+  
+  /* ================= LANGUAGE ================= */
+  
+  function setLang(lang){
+  
+    console.log("Mudando idioma para:", lang); // debug
+  
+    document.querySelectorAll("[data-key]").forEach(el=>{
+  
+      const key = el.getAttribute("data-key");
+  
+      if(translations[lang][key]){
+        el.innerHTML = translations[lang][key];
+      }
+  
+    });
+  
+    localStorage.setItem("lang", lang);
+  }
+  
+  /* GARANTE GLOBAL */
+  window.setLang = setLang;
+  
+  /* AUTO LOAD */
+  
+  document.addEventListener("DOMContentLoaded", ()=>{
+  
+    const saved = localStorage.getItem("lang") || "pt";
+  
+    setLang(saved);
+  
+  });
+  /* ================= PROJECT DATA ================= */
+  
+  const projects = {
+  
+    1:{
+      title:"Integração de Linha Automotiva",
+      img:"proj1.jpg",
+      desc:"Projeto de automação completa de linha com integração MES, rastreabilidade e indicadores OEE.",
+      tech:"PLC Siemens, SCADA, SQL Server, Grafana",
+      result:"Redução de 18% no tempo de ciclo e aumento de 25% na rastreabilidade."
+    },
+  
+    2:{
+      title:"Plataforma Industrial de Dados",
+      img:"proj2.jpg",
+      desc:"Centralização de dados industriais para BI, dashboards em tempo real e alertas automáticos.",
+      tech:"Python, Node-RED, REST API, PostgreSQL",
+      result:"Aumento de 40% na visibilidade operacional."
+    },
+  
+    3:{
+      title:"Célula Robotizada",
+      img:"proj3.jpg",
+      desc:"Startup e otimização de célula robotizada com sistemas de segurança integrados.",
+      tech:"Fanuc, ABB, Safety PLC, Profisafe",
+      result:"Redução de falhas em 30% e aumento de produtividade."
+    }
+  
+  };
+  
+      /* ================= PROJECT MODAL ================= */
+    
+    function openProject(title, img, desc, tech){
+    
+      document.getElementById("modalTitle").innerText = title;
+      document.getElementById("modalImg").src = img;
+      document.getElementById("modalDesc").innerText = desc;
+      document.getElementById("modalTech").innerText = tech;
+    
+      document.getElementById("projectModal").style.display = "block";
+    }
+    
+    function closeProject(){
+      document.getElementById("projectModal").style.display = "none";
+    }
+  </script>
+   
+    <!-- ================= PROJECT MODAL ================= -->
+    
+    <div id="projectModal" class="modal">
+    
+      <span class="close" onclick="closeProject()">&times;</span>
+    
+      <div class="modal-content">
+    
+        <img id="modalImg">
+    
+        <h2 id="modalTitle"></h2>
+    
+        <p id="modalDesc"></p>
+    
+        <p><strong>Tecnologias:</strong> <span id="modalTech"></span></p>
+    
+      </div>
+    
+    </div>
+  </body>
 </html>
