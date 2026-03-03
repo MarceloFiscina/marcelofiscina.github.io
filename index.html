@@ -246,7 +246,28 @@
   margin-left:18px;
   margin-bottom:10px;
 }
+/* ===== PROJECT IMAGE ===== */
 
+.project-header{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.project-header img{
+  width:70px;
+  height:70px;
+  border-radius:8px;
+  object-fit:cover;
+  border:1px solid #e5e7eb;
+  transition:.3s;
+}
+
+/* Quando abrir, imagem cresce */
+.project-item.active .project-header img{
+  width:120px;
+  height:120px;
+}
   /* ===== MOBILE FIX DEFINITIVO ===== */
 @media(max-width:768px){
 
