@@ -194,13 +194,27 @@ footer{
 .cv-box .btn{
   width:fit-content;
 }
+/* Esconde foto do header no desktop */
+header img {
+  display: none;
+}
   
 .sidebar nav{
   margin-top:80px;
 }
 /* ===== MOBILE FIX DEFINITIVO ===== */
 @media (max-width:768px){
-
+  .header-content {
+    flex-direction: column;
+  }
+  header img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
   /* Remove espaço da sidebar */
   body{
     padding-left:0;
@@ -242,9 +256,9 @@ footer{
 
 <div class="sidebar">
 
-<!-- 
-  <img src="foto.jpg">
 
+  <img src="foto.jpg">
+<!-- 
   <h2>Marcelo Fiscina</h2>
 
   <p data-key="profile">
