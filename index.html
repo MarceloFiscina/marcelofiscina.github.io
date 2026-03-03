@@ -200,44 +200,55 @@
 /* ================= PROJECTS ================= */
 
 .projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
 }
 
-/* Card */
+/* CARD EM LINHA */
 .project-card{
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:15px;
+
   background:#f8fafc;
-  border-radius:14px;
-  padding:20px 15px 25px;
-  text-align:center;
+  border-radius:12px;
+  padding:15px;
   cursor:pointer;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
   transition:.3s;
 }
 
 .project-card:hover{
-  transform:translateY(-6px);
+  transform:translateX(6px);
 }
 
-/* Imagem redonda */
+/* FOTO PEQUENA */
 .project-card img{
   width:90px;
   height:90px;
-  border-radius:50%;
+  border-radius:8px;
   object-fit:cover;
-  border:3px solid #0a2540;
-  margin-bottom:10px;
+  border:2px solid #0a2540;
 }
 
-.project-card h3{
+/* TEXTO DO CARD */
+.project-info h3{
   color:#0a2540;
-  margin:8px 0 4px;
+  margin-bottom:5px;
 }
 
-.project-card p{
+.project-info p{
   font-size:14px;
   color:#475569;
+  margin-bottom:4px;
+}
+
+.project-info span{
+  font-size:13px;
+  font-weight:500;
+  color:#0a2540;
 }
 
 
@@ -247,37 +258,45 @@
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
+  background:rgba(0,0,0,.7);
   z-index:3000;
   padding:20px;
 }
 
 .modal-content{
   background:white;
-  max-width:850px;
+  max-width:900px;
   margin:auto;
   border-radius:14px;
   padding:30px;
   position:relative;
 
   display:grid;
-  grid-template-columns:300px 1fr;
+  grid-template-columns:320px 1fr;
   gap:25px;
 }
 
+/* FOTO GRANDE */
 .modal-content img{
   width:100%;
-  border-radius:10px;
+  border-radius:12px;
   object-fit:cover;
 }
 
-.modal-content h2{
+/* TEXTO MODAL */
+
+.modal-text h2{
+  color:#0a2540;
   margin-bottom:10px;
 }
 
-.modal-content p{
+.modal-text p{
   line-height:1.6;
-  margin-bottom:10px;
+  margin-bottom:12px;
+}
+
+.modal-text strong{
+  color:#0a2540;
 }
 
 .close{
@@ -289,6 +308,24 @@
 }
 
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .project-card{
+    grid-template-columns:70px 1fr;
+  }
+
+  .project-card img{
+    width:70px;
+    height:70px;
+  }
+
+  .modal-content{
+    grid-template-columns:1fr;
+  }
+
+}
 /* MOBILE */
 @media(max-width:768px){
 
@@ -463,8 +500,6 @@
       </div>
     
     </section>
-    <!-- ================= PROJECTS ================= -->
-
 <section id="projects">
 
   <h2 data-key="sec_projects">📁 Projetos</h2>
@@ -473,23 +508,41 @@
 
     <!-- PROJETO 1 -->
     <div class="project-card" onclick="openProject(1)">
+
       <img src="proj1.jpg">
-      <h3 data-key="p1_title"></h3>
-      <p data-key="p1_sub"></p>
+
+      <div class="project-info">
+        <h3 data-key="p1_title"></h3>
+        <p data-key="p1_desc"></p>
+        <span data-key="p1_tech"></span>
+      </div>
+
     </div>
 
     <!-- PROJETO 2 -->
     <div class="project-card" onclick="openProject(2)">
+
       <img src="proj2.jpg">
-      <h3 data-key="p2_title"></h3>
-      <p data-key="p2_sub"></p>
+
+      <div class="project-info">
+        <h3 data-key="p2_title"></h3>
+        <p data-key="p2_desc"></p>
+        <span data-key="p2_tech"></span>
+      </div>
+
     </div>
 
     <!-- PROJETO 3 -->
     <div class="project-card" onclick="openProject(3)">
+
       <img src="proj3.jpg">
-      <h3 data-key="p3_title"></h3>
-      <p data-key="p3_sub"></p>
+
+      <div class="project-info">
+        <h3 data-key="p3_title"></h3>
+        <p data-key="p3_desc"></p>
+        <span data-key="p3_tech"></span>
+      </div>
+
     </div>
 
   </div>
@@ -667,14 +720,22 @@
   `,
   sec_projects:"📁 Projetos",
 
+  lbl_desc:"Descrição:",
+  lbl_tech:"Tecnologias:",
+  lbl_act:"Atividades:",
+  lbl_res:"Resultados:",
+  
   p1_title:"Jeep Renegade",
-  p1_sub:"Automação de Linha",
+  p1_desc:"Automação da linha",
+  p1_tech:"Step 7 • WinCC • Robôs",
   
   p2_title:"Fiat Toro",
-  p2_sub:"Integração Industrial",
+  p2_desc:"Integração industrial",
+  p2_tech:"PLC • SCADA",
   
   p3_title:"Jeep Compass",
-  p3_sub:"Startup e Comissionamento",
+  p3_desc:"Startup e otimização",
+  p3_tech:"Automação • Robótica",
   
   cv_text:"Baixe meu currículo completo em PDF:",
   cv_btn:"📥 Download CV",
@@ -804,16 +865,24 @@
       Step 7, WinCC, PLC Siemens
   `,
 
-    sec_projects:"📁 Projects",
-
+  sec_projects:"📁 Projects",
+  
+  lbl_desc:"Description:",
+  lbl_tech:"Technologies:",
+  lbl_act:"Activities:",
+  lbl_res:"Results:",
+  
   p1_title:"Jeep Renegade",
-  p1_sub:"Production Line Automation",
+  p1_desc:"Line automation",
+  p1_tech:"Step 7 • WinCC • Robotics",
   
   p2_title:"Fiat Toro",
-  p2_sub:"Industrial Integration",
+  p2_desc:"Industrial integration",
+  p2_tech:"PLC • SCADA",
   
   p3_title:"Jeep Compass",
-  p3_sub:"Startup & Commissioning",
+  p3_desc:"Startup and optimization",
+  p3_tech:"Automation • Robotics",
   
   cv_text:"Download my complete resume in PDF:",
   cv_btn:"📥 Download Resume",
@@ -864,73 +933,77 @@ const projects = {
 
     pt:{
       title:"Linha Jeep Renegade",
-      desc:"Automação e integração completa de linha automotiva com rastreabilidade.",
+      desc:"Automação completa da linha de montagem.",
       tech:"Step 7, WinCC, KUKA, ABB, Profibus, Profinet",
-      result:"Aumento de produtividade e estabilidade operacional."
+      act:"Programação PLC, integração robótica, comissionamento, redes industriais.",
+      result:"Aumento de produtividade, redução de falhas."
     },
 
     en:{
       title:"Jeep Renegade Production Line",
-      desc:"Full automation and integration of automotive production line with traceability.",
+      desc:"Full automation of assembly line.",
       tech:"Step 7, WinCC, KUKA, ABB, Profibus, Profinet",
-      result:"Improved productivity and operational stability."
+      act:"PLC programming, robotics integration, commissioning, industrial networks.",
+      result:"Higher productivity, reduced failures."
     }
   },
-
 
   2:{
     img:"proj2.jpg",
 
     pt:{
       title:"Linha Fiat Toro",
-      desc:"Integração robótica e supervisão industrial.",
-      tech:"PLC Siemens, SCADA, Robotics, Networks",
-      result:"Redução de falhas e melhoria no fluxo."
+      desc:"Integração industrial e supervisão.",
+      tech:"PLC Siemens, SCADA, Networks",
+      act:"Startup, testes, validações, documentação.",
+      result:"Estabilidade operacional."
     },
 
     en:{
       title:"Fiat Toro Production Line",
-      desc:"Robotics integration and industrial supervision.",
-      tech:"PLC Siemens, SCADA, Robotics, Networks",
-      result:"Failure reduction and improved flow."
+      desc:"Industrial integration and supervision.",
+      tech:"PLC Siemens, SCADA, Networks",
+      act:"Startup, testing, validation, documentation.",
+      result:"Operational stability."
     }
   },
-
 
   3:{
     img:"proj3.jpg",
 
     pt:{
       title:"Linha Jeep Compass",
-      desc:"Startup e otimização de sistemas produtivos.",
+      desc:"Comissionamento e otimização.",
       tech:"Automation, Robotics, Safety PLC",
-      result:"Maior confiabilidade operacional."
+      act:"Integração, validação de segurança, ajustes de ciclo.",
+      result:"Maior confiabilidade."
     },
 
     en:{
       title:"Jeep Compass Production Line",
-      desc:"Startup and optimization of production systems.",
+      desc:"Commissioning and optimization.",
       tech:"Automation, Robotics, Safety PLC",
-      result:"Higher operational reliability."
+      act:"Integration, safety validation, cycle adjustment.",
+      result:"Higher reliability."
     }
   }
 
 };
-
 /* ================= MODAL FUNCTIONS ================= */
 function openProject(id){
 
   const lang = localStorage.getItem("lang") || "pt";
 
   const p = projects[id];
-  const data = p[lang];
+  const d = p[lang];
 
-  document.getElementById("modalTitle").innerText = data.title;
   document.getElementById("modalImg").src = p.img;
 
-  document.getElementById("modalDesc").innerText = data.desc;
-  document.getElementById("modalTech").innerText = data.tech;
-  document.getElementById("modalResult").innerText = data.result;
+  document.getElementById("modalTitle").innerText = d.title;
+  document.getElementById("modalDesc").innerText = d.desc;
+  document.getElementById("modalTech").innerText = d.tech;
+  document.getElementById("modalAct").innerText = d.act;
+  document.getElementById("modalResult").innerText = d.result;
 
   document.getElementById("projectModal").style.display="flex";
 }
@@ -941,25 +1014,34 @@ function closeProject(){
   </script>
    
    <!-- ================= PROJECT MODAL ================= -->
-
-    <div id="projectModal" class="modal">
-    
-      <div class="modal-content">
-    
-        <span class="close" onclick="closeProject()">×</span>
-    
+  <div id="projectModal" class="modal">
+  
+    <div class="modal-content">
+  
+      <span class="close" onclick="closeProject()">×</span>
+  
+      <img id="modalImg">
+  
+      <div class="modal-text">
+  
         <h2 id="modalTitle"></h2>
-    
-        <img id="modalImg">
-    
-        <p id="modalDesc"></p>
-    
-        <p><strong>Tecnologias:</strong> <span id="modalTech"></span></p>
-    
-        <p><strong>Resultados:</strong> <span id="modalResult"></span></p>
-    
+  
+        <p><strong data-key="lbl_desc">Descrição:</strong><br>
+           <span id="modalDesc"></span></p>
+  
+        <p><strong data-key="lbl_tech">Tecnologias:</strong><br>
+           <span id="modalTech"></span></p>
+  
+        <p><strong data-key="lbl_act">Atividades:</strong><br>
+           <span id="modalAct"></span></p>
+  
+        <p><strong data-key="lbl_res">Resultados:</strong><br>
+           <span id="modalResult"></span></p>
+  
       </div>
-    
+  
     </div>
+  
+  </div>
   </body>
 </html>
