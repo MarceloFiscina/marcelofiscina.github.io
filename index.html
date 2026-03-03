@@ -194,26 +194,54 @@ footer{
 .cv-box .btn{
   width:fit-content;
 }
-/* ================= MOBILE ================= */
+  
+/* ===== MOBILE RESPONSIVO ===== */
+@media (max-width: 768px) {
 
-@media(max-width:900px){
-
-  body{padding-left:0;}
-
-  .sidebar{
-    position:relative;
-    width:100%;
-    height:auto;
-    flex-direction:row;
-    justify-content:space-between;
+  /* Sidebar vira topo */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .sidebar img{width:60px;height:60px;}
+  /* Área principal ocupa tudo */
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
 
-  .sidebar nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+  /* Foto e nome centralizados */
+  .profile {
+    text-align: center;
+  }
+
+  .profile img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Menu em linha */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  /* Botões idioma */
+  .lang-buttons {
+    margin-top: 10px;
   }
 }
 
