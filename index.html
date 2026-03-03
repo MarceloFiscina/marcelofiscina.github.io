@@ -197,52 +197,52 @@
     margin-top:80px;
   }
   
- /* ================= PROJECTS ================= */
-    
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-    }
-    
-    .project-card{
-      background:#f8fafc;
-      border-radius:14px;
-      overflow:hidden;
-      cursor:pointer;
-      box-shadow:0 4px 15px rgba(0,0,0,.08);
-      transition:.3s;
-    }
-    
-    .project-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 8px 25px rgba(0,0,0,.15);
-    }
-    
-    .project-card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-    }
-    
-    .project-card h3{
-      padding:15px 15px 5px;
-      color:#0a2540;
-    }
-    
-    .project-card p{
-      padding:0 15px;
-      font-size:14px;
-      color:#475569;
-    }
-    
-    .project-card span{
-      display:block;
-      padding:10px 15px 15px;
-      font-size:13px;
-      font-weight:500;
-      color:#0a2540;
-    }
+/* ================= PROJECTS ================= */
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.project-card{
+  background:#f8fafc;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.project-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.project-card h3{
+  padding:15px 15px 5px;
+  color:#0a2540;
+}
+
+.project-card p{
+  padding:0 15px;
+  font-size:14px;
+  color:#475569;
+}
+
+.project-card span{
+  display:block;
+  padding:10px 15px 15px;
+  font-size:13px;
+  font-weight:500;
+  color:#0a2540;
+}
   /* ================= MODAL ================= */
    
         
@@ -819,55 +819,54 @@
     setLang(saved);
   
   });
-    
-   /* ================= PROJECT DATA ================= */
+/* ================= PROJECT DATA ================= */
 
-    const projects = {
-    
-      1:{
-        title:"Integração de Linha Automotiva",
-        img:"proj1.jpg",
-        desc:"Projeto de automação completa de linha com integração MES, rastreabilidade e indicadores OEE.",
-        tech:"PLC Siemens, SCADA, SQL Server, Grafana",
-        result:"Redução de 18% no tempo de ciclo e aumento de 25% na rastreabilidade."
-      },
-    
-      2:{
-        title:"Plataforma Industrial de Dados",
-        img:"proj2.jpg",
-        desc:"Centralização de dados industriais para BI, dashboards em tempo real e alertas automáticos.",
-        tech:"Python, Node-RED, REST API, PostgreSQL",
-        result:"Aumento de 40% na visibilidade operacional."
-      },
-    
-      3:{
-        title:"Célula Robotizada",
-        img:"proj3.jpg",
-        desc:"Startup e otimização de célula robotizada com sistemas de segurança integrados.",
-        tech:"Fanuc, ABB, Safety PLC, Profisafe",
-        result:"Redução de falhas em 30% e aumento de produtividade."
-      }
-    
-    };
-    
-    /* ================= MODAL FUNCTIONS ================= */
-    
-    function openProject(id){
-    
-      const p = projects[id];
-    
-      document.getElementById("modalTitle").innerText = p.title;
-      document.getElementById("modalImg").src = p.img;
-      document.getElementById("modalDesc").innerText = p.desc;
-      document.getElementById("modalTech").innerText = p.tech;
-      document.getElementById("modalResult").innerText = p.result;
-    
-      document.getElementById("projectModal").style.display="block";
-    }
-    
-    function closeProject(){
-      document.getElementById("projectModal").style.display="none";
-    }
+const projects = {
+
+  1:{
+    title:"Integração de Linha Automotiva",
+    img:"proj1.jpg",
+    desc:"Projeto de automação completa de linha com integração MES, rastreabilidade e indicadores OEE.",
+    tech:"PLC Siemens, SCADA, SQL Server, Grafana",
+    result:"Redução de 18% no tempo de ciclo e aumento de 25% na rastreabilidade."
+  },
+
+  2:{
+    title:"Plataforma Industrial de Dados",
+    img:"proj2.jpg",
+    desc:"Centralização de dados industriais para BI, dashboards em tempo real e alertas automáticos.",
+    tech:"Python, Node-RED, REST API, PostgreSQL",
+    result:"Aumento de 40% na visibilidade operacional."
+  },
+
+  3:{
+    title:"Célula Robotizada",
+    img:"proj3.jpg",
+    desc:"Startup e otimização de célula robotizada com sistemas de segurança integrados.",
+    tech:"Fanuc, ABB, Safety PLC, Profisafe",
+    result:"Redução de falhas em 30% e aumento de produtividade."
+  }
+
+};
+
+/* ================= MODAL FUNCTIONS ================= */
+
+function openProject(id){
+
+  const p = projects[id];
+
+  document.getElementById("modalTitle").innerText = p.title;
+  document.getElementById("modalImg").src = p.img;
+  document.getElementById("modalDesc").innerText = p.desc;
+  document.getElementById("modalTech").innerText = p.tech;
+  document.getElementById("modalResult").innerText = p.result;
+
+  document.getElementById("projectModal").style.display="block";
+}
+
+function closeProject(){
+  document.getElementById("projectModal").style.display="none";
+}
   </script>
    
    <!-- ================= PROJECT MODAL ================= -->
