@@ -231,9 +231,15 @@
 }
 
 .project-details{
-  display:none;
-  margin-top:15px;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+  margin-top:10px;
   line-height:1.6;
+}
+
+.project-item.active .project-details{
+  max-height:600px; /* pode ajustar depois */
 }
 
 .project-details ul{
@@ -524,18 +530,15 @@
     d.style.display=d.style.display==="block"?"none":"block";
   }
   /* ================= PROJECT TOGGLE ================= */
-
   function toggleProject(el){
   
-    document.querySelectorAll(".project-details").forEach(d=>{
-      if(d!==el.querySelector(".project-details")){
-        d.style.display="none";
+    document.querySelectorAll(".project-item").forEach(item=>{
+      if(item !== el){
+        item.classList.remove("active");
       }
     });
   
-    const d = el.querySelector(".project-details");
-  
-    d.style.display = d.style.display==="block" ? "none" : "block";
+    el.classList.toggle("active");
   }
   /* ================= TRANSLATIONS ================= */
   
