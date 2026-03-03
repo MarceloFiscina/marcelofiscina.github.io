@@ -196,56 +196,94 @@ footer{
 }
   
 /* ===== MOBILE RESPONSIVO ===== */
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
-  /* Sidebar vira topo */
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Área principal ocupa tudo */
-  .main-content {
-    margin-left: 0;
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Foto e nome centralizados */
-  .profile {
-    text-align: center;
-  }
-
-  .profile img {
-    width: 90px;
-    height: 90px;
-  }
-
-  /* Menu em linha */
-  .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
-  }
-
-  .menu a {
-    font-size: 14px;
-  }
-
-  /* Botões idioma */
-  .lang-buttons {
-    margin-top: 10px;
-  }
   body{
     padding-left:0;
   }
+
+  /* Sidebar vira topo */
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+    padding:20px 15px;
+    flex-direction:column;
+  }
+
+  .sidebar img{
+    width:80px;
+    height:80px;
+  }
+
+  .sidebar h2{
+    font-size:18px;
+  }
+
+  .sidebar p{
+    font-size:12px;
+  }
+
+  /* Menu horizontal */
+  .sidebar nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+  }
+
+  .sidebar nav a{
+    padding:6px 10px;
+    font-size:13px;
+    margin:0;
+  }
+
+  /* Idioma centralizado */
+  .lang-switch{
+    width:100%;
+    justify-content:center;
+    margin-top:10px;
+  }
+
+  /* Header ajustado */
+  header{
+    padding:40px 15px;
+    text-align:center;
+  }
+
+  .header-content{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  header img{
+    width:100px;
+    height:100px;
+  }
+
+  /* Conteúdo */
+  .container{
+    padding:25px 15px;
+  }
+
+  section{
+    padding:25px 20px;
+  }
+
+  section h2{
+    font-size:20px;
+  }
+
+  /* Cards */
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  /* Experiência */
+  .exp-item{
+    padding:20px;
+  }
+
 }
 
 </style>
