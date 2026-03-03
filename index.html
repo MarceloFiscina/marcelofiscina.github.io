@@ -104,13 +104,6 @@ header{
   flex-wrap:wrap;
 }
 
-header img{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  border:4px solid white;
-}
-
 /* ================= LAYOUT ================= */
 
 .container{
@@ -204,9 +197,11 @@ header img {
 }
 /* ===== MOBILE FIX DEFINITIVO ===== */
 @media (max-width:768px){
+  
   .header-content {
     flex-direction: column;
   }
+  
   header img {
     display: block;
     margin: 0 auto 15px auto;
@@ -215,6 +210,7 @@ header img {
     border-radius: 50%;
     border: 3px solid white;
   }
+  
   /* Remove espaço da sidebar */
   body{
     padding-left:0;
