@@ -201,14 +201,16 @@
 
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
 }
 
+/* Card */
 .project-card{
   background:#f8fafc;
   border-radius:14px;
-  overflow:hidden;
+  padding:20px 15px 25px;
+  text-align:center;
   cursor:pointer;
   box-shadow:0 4px 15px rgba(0,0,0,.08);
   transition:.3s;
@@ -216,69 +218,85 @@
 
 .project-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
+/* Imagem redonda */
 .project-card img{
-  width:100%;
-  height:180px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
   object-fit:cover;
+  border:3px solid #0a2540;
+  margin-bottom:10px;
 }
 
 .project-card h3{
-  padding:15px 15px 5px;
   color:#0a2540;
+  margin:8px 0 4px;
 }
 
 .project-card p{
-  padding:0 15px;
   font-size:14px;
   color:#475569;
 }
 
-.project-card span{
-  display:block;
-  padding:10px 15px 15px;
-  font-size:13px;
-  font-weight:500;
-  color:#0a2540;
+
+/* ================= MODAL ================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:3000;
+  padding:20px;
 }
-  /* ================= MODAL ================= */
-   
-        
-        .modal{
-          display:none;
-          position:fixed;
-          top:0;
-          left:0;
-          width:100%;
-          height:100%;
-          background:rgba(0,0,0,.6);
-          z-index:2000;
-        }
-        
-        .modal-content{
-          background:white;
-          max-width:700px;
-          margin:60px auto;
-          padding:30px;
-          border-radius:12px;
-          position:relative;
-        }
-        
-        .modal-content img{
-          width:100%;
-          border-radius:10px;
-          margin:15px 0;
-        }
-        
-        .close{
-          position:absolute;
-          top:15px;
-          right:20px;
-          font-size:26px;
-          cursor:pointer;
-        }
+
+.modal-content{
+  background:white;
+  max-width:850px;
+  margin:auto;
+  border-radius:14px;
+  padding:30px;
+  position:relative;
+
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:25px;
+}
+
+.modal-content img{
+  width:100%;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+.modal-content h2{
+  margin-bottom:10px;
+}
+
+.modal-content p{
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.close{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:26px;
+  cursor:pointer;
+}
+
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .modal-content{
+    grid-template-columns:1fr;
+  }
+
+}
   /* ===== MOBILE FIX DEFINITIVO ===== */
   @media (max-width:768px){
     
@@ -445,41 +463,38 @@
       </div>
     
     </section>
-            <!-- ================= PROJECTS ================= -->
-        
-        <section id="projects">
-        
-          <h2>📁 Projetos</h2>
-        
-          <div class="projects-grid">
-        
-            <!-- PROJETO 1 -->
-            <div class="project-card" onclick="openProject(1)">
-              <img src="proj1.jpg" alt="Projeto Automação">
-              <h3>Integração de Linha Automotiva</h3>
-              <p>Automação completa com rastreabilidade</p>
-              <span>PLC • SCADA • SQL • Grafana</span>
-            </div>
-        
-            <!-- PROJETO 2 -->
-            <div class="project-card" onclick="openProject(2)">
-              <img src="proj2.jpg" alt="Projeto Dados">
-              <h3>Plataforma Industrial de Dados</h3>
-              <p>Dashboards e analytics em tempo real</p>
-              <span>Python • Node-RED • APIs</span>
-            </div>
-        
-            <!-- PROJETO 3 -->
-            <div class="project-card" onclick="openProject(3)">
-              <img src="proj3.jpg" alt="Projeto Robótica">
-              <h3>Célula Robotizada</h3>
-              <p>Comissionamento e otimização</p>
-              <span>Fanuc • ABB • Safety</span>
-            </div>
-        
-          </div>
-        
-        </section>
+    <!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+  <h2 data-key="sec_projects">📁 Projetos</h2>
+
+  <div class="projects-grid">
+
+    <!-- PROJETO 1 -->
+    <div class="project-card" onclick="openProject(1)">
+      <img src="proj1.jpg">
+      <h3 data-key="p1_title"></h3>
+      <p data-key="p1_sub"></p>
+    </div>
+
+    <!-- PROJETO 2 -->
+    <div class="project-card" onclick="openProject(2)">
+      <img src="proj2.jpg">
+      <h3 data-key="p2_title"></h3>
+      <p data-key="p2_sub"></p>
+    </div>
+
+    <!-- PROJETO 3 -->
+    <div class="project-card" onclick="openProject(3)">
+      <img src="proj3.jpg">
+      <h3 data-key="p3_title"></h3>
+      <p data-key="p3_sub"></p>
+    </div>
+
+  </div>
+
+</section>
     <!-- ================= CV ================= -->
     
     <section id="cv">
@@ -650,6 +665,16 @@
       <strong>Tecnologias:</strong>
       Step 7 • WinCC • PLC Siemens
   `,
+  sec_projects:"📁 Projetos",
+
+  p1_title:"Jeep Renegade",
+  p1_sub:"Automação de Linha",
+  
+  p2_title:"Fiat Toro",
+  p2_sub:"Integração Industrial",
+  
+  p3_title:"Jeep Compass",
+  p3_sub:"Startup e Comissionamento",
   
   cv_text:"Baixe meu currículo completo em PDF:",
   cv_btn:"📥 Download CV",
@@ -778,6 +803,17 @@
       <strong>Technologies:</strong>
       Step 7, WinCC, PLC Siemens
   `,
+
+    sec_projects:"📁 Projects",
+
+  p1_title:"Jeep Renegade",
+  p1_sub:"Production Line Automation",
+  
+  p2_title:"Fiat Toro",
+  p2_sub:"Industrial Integration",
+  
+  p3_title:"Jeep Compass",
+  p3_sub:"Startup & Commissioning",
   
   cv_text:"Download my complete resume in PDF:",
   cv_btn:"📥 Download Resume",
@@ -824,44 +860,79 @@
 const projects = {
 
   1:{
-    title:"Integração de Linha Automotiva",
     img:"proj1.jpg",
-    desc:"Projeto de automação completa de linha com integração MES, rastreabilidade e indicadores OEE.",
-    tech:"PLC Siemens, SCADA, SQL Server, Grafana",
-    result:"Redução de 18% no tempo de ciclo e aumento de 25% na rastreabilidade."
+
+    pt:{
+      title:"Linha Jeep Renegade",
+      desc:"Automação e integração completa de linha automotiva com rastreabilidade.",
+      tech:"Step 7, WinCC, KUKA, ABB, Profibus, Profinet",
+      result:"Aumento de produtividade e estabilidade operacional."
+    },
+
+    en:{
+      title:"Jeep Renegade Production Line",
+      desc:"Full automation and integration of automotive production line with traceability.",
+      tech:"Step 7, WinCC, KUKA, ABB, Profibus, Profinet",
+      result:"Improved productivity and operational stability."
+    }
   },
+
 
   2:{
-    title:"Plataforma Industrial de Dados",
     img:"proj2.jpg",
-    desc:"Centralização de dados industriais para BI, dashboards em tempo real e alertas automáticos.",
-    tech:"Python, Node-RED, REST API, PostgreSQL",
-    result:"Aumento de 40% na visibilidade operacional."
+
+    pt:{
+      title:"Linha Fiat Toro",
+      desc:"Integração robótica e supervisão industrial.",
+      tech:"PLC Siemens, SCADA, Robotics, Networks",
+      result:"Redução de falhas e melhoria no fluxo."
+    },
+
+    en:{
+      title:"Fiat Toro Production Line",
+      desc:"Robotics integration and industrial supervision.",
+      tech:"PLC Siemens, SCADA, Robotics, Networks",
+      result:"Failure reduction and improved flow."
+    }
   },
 
+
   3:{
-    title:"Célula Robotizada",
     img:"proj3.jpg",
-    desc:"Startup e otimização de célula robotizada com sistemas de segurança integrados.",
-    tech:"Fanuc, ABB, Safety PLC, Profisafe",
-    result:"Redução de falhas em 30% e aumento de produtividade."
+
+    pt:{
+      title:"Linha Jeep Compass",
+      desc:"Startup e otimização de sistemas produtivos.",
+      tech:"Automation, Robotics, Safety PLC",
+      result:"Maior confiabilidade operacional."
+    },
+
+    en:{
+      title:"Jeep Compass Production Line",
+      desc:"Startup and optimization of production systems.",
+      tech:"Automation, Robotics, Safety PLC",
+      result:"Higher operational reliability."
+    }
   }
 
 };
 
 /* ================= MODAL FUNCTIONS ================= */
-
 function openProject(id){
 
+  const lang = localStorage.getItem("lang") || "pt";
+
   const p = projects[id];
+  const data = p[lang];
 
-  document.getElementById("modalTitle").innerText = p.title;
+  document.getElementById("modalTitle").innerText = data.title;
   document.getElementById("modalImg").src = p.img;
-  document.getElementById("modalDesc").innerText = p.desc;
-  document.getElementById("modalTech").innerText = p.tech;
-  document.getElementById("modalResult").innerText = p.result;
 
-  document.getElementById("projectModal").style.display="block";
+  document.getElementById("modalDesc").innerText = data.desc;
+  document.getElementById("modalTech").innerText = data.tech;
+  document.getElementById("modalResult").innerText = data.result;
+
+  document.getElementById("projectModal").style.display="flex";
 }
 
 function closeProject(){
