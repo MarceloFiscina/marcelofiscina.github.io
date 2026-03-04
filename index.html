@@ -8,332 +8,332 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
+    
+    /* ================= GLOBAL ================= */
+    
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+    }
+    
+    body{
+      background:#f2f5f9;
+      color:#1f2933;
+      /*padding-left:260px;*/
+    }
+    
+    html{scroll-behavior:smooth;}
+    
+    /* ================= SIDEBAR ================= */
+    
+    .sidebar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:260px;
+      height:100vh;
+      background:#0a2540;
+      color:white;
+      padding:60px 20px 30px; /* mais espaço em cima */
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      z-index:1000;
+    }
+    
+    .sidebar img{
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid white;
+      margin-bottom:20px;
+      margin-top:0; /* remove empurrão manual */
+    }
+    
+    .sidebar h2{font-size:20px;margin-bottom:5px;text-align:center;}
+    .sidebar p{font-size:13px;opacity:.85;text-align:center;margin-bottom:20px;}
+    
+    .lang-switch{
+      display:flex;
+      gap:10px;
+      margin-bottom:20px;
+    }
+    
+    .lang-switch button{
+      background:rgba(255,255,255,.15);
+      border:none;
+      color:white;
+      padding:6px 10px;
+      border-radius:5px;
+      cursor:pointer;
+    }
+    
+    .sidebar nav{width:100%;}
+    
+    .sidebar nav a{
+      display:block;
+      color:white;
+      text-decoration:none;
+      padding:10px 15px;
+      margin-bottom:8px;
+      border-radius:6px;
+      transition:.3s;
+    }
+    
+    .sidebar nav a:hover,
+    .sidebar nav a.active{
+      background:rgba(255,255,255,.25);
+    }
+    
+    /* ================= HEADER ================= */
+    
+    header{
+      background:linear-gradient(135deg,#0a2540,#123a63);
+      color:white;
+      padding:70px 20px;
+    }
+    
+    .header-content{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+    
+    /* ================= LAYOUT ================= */
+    
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+    
+    section{
+      background:white;
+      margin-bottom:30px;
+      padding:40px;
+      border-radius:14px;
+      box-shadow:0 5px 25px rgba(0,0,0,.06);
+    }
+    
+    section h2{
+      color:#0a2540;
+      margin-bottom:25px;
+    }
+    
+    /* ================= GRID ================= */
+    
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+    
+    .card{
+      background:#f8fafc;
+      padding:20px;
+      border-radius:10px;
+      border-left:5px solid #0a2540;
+    }
+    
+    /* ================= EXPERIENCE ================= */
+    
+    .exp-item{
+      background:#f8fafc;
+      border-radius:12px;
+      padding:25px;
+      margin-bottom:20px;
+      border-left:5px solid #0a2540;
+      cursor:pointer;
+    }
+    
+    .exp-details{display:none;margin-top:15px;line-height:1.6;}
+    
+    /* ================= BUTTON ================= */
+    
+    .btn{
+      background:#0a2540;
+      color:white;
+      padding:12px 22px;
+      border-radius:6px;
+      text-decoration:none;
+    }
+    
+    /* ================= FOOTER ================= */
+    
+    footer{
+      text-align:center;
+      padding:25px;
+      color:#6b7280;
+    }
+      
+    /* CV SECTION FIX */
+    
+    .cv-box{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      margin-top:10px;
+    }
+    
+    .cv-box p{
+      margin:0;
+    }
+    
+    .cv-box .btn{
+      width:fit-content;
+    }
+    /* Esconde foto do header no desktop */
+    header img {
+      display: none;
+    }
+      
+    .sidebar nav{
+      margin-top:80px;
+    }
+    
+  /* ================= PROJECTS (LIKE EXPERIENCE) ================= */
   
-  /* ================= GLOBAL ================= */
-  
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-  }
-  
-  body{
-    background:#f2f5f9;
-    color:#1f2933;
-    /*padding-left:260px;*/
-  }
-  
-  html{scroll-behavior:smooth;}
-  
-  /* ================= SIDEBAR ================= */
-  
-  .sidebar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:260px;
-    height:100vh;
-    background:#0a2540;
-    color:white;
-    padding:60px 20px 30px; /* mais espaço em cima */
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    z-index:1000;
-  }
-  
-  .sidebar img{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid white;
-    margin-bottom:20px;
-    margin-top:0; /* remove empurrão manual */
-  }
-  
-  .sidebar h2{font-size:20px;margin-bottom:5px;text-align:center;}
-  .sidebar p{font-size:13px;opacity:.85;text-align:center;margin-bottom:20px;}
-  
-  .lang-switch{
-    display:flex;
-    gap:10px;
-    margin-bottom:20px;
-  }
-  
-  .lang-switch button{
-    background:rgba(255,255,255,.15);
-    border:none;
-    color:white;
-    padding:6px 10px;
-    border-radius:5px;
+  .project-item{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
+    border-left:5px solid #2563eb;
     cursor:pointer;
-  }
-  
-  .sidebar nav{width:100%;}
-  
-  .sidebar nav a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:10px 15px;
-    margin-bottom:8px;
-    border-radius:6px;
     transition:.3s;
   }
   
-  .sidebar nav a:hover,
-  .sidebar nav a.active{
-    background:rgba(255,255,255,.25);
+  .project-item:hover{
+    background:#eef4ff;
   }
   
-  /* ================= HEADER ================= */
-  
-  header{
-    background:linear-gradient(135deg,#0a2540,#123a63);
-    color:white;
-    padding:70px 20px;
-  }
-  
-  .header-content{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:30px;
-    flex-wrap:wrap;
-  }
-  
-  /* ================= LAYOUT ================= */
-  
-  .container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-  }
-  
-  section{
-    background:white;
-    margin-bottom:30px;
-    padding:40px;
-    border-radius:14px;
-    box-shadow:0 5px 25px rgba(0,0,0,.06);
-  }
-  
-  section h2{
+  .project-item h3{
     color:#0a2540;
-    margin-bottom:25px;
+    margin-bottom:6px;
   }
   
-  /* ================= GRID ================= */
-  
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
+  .project-item .project-sub{
+    font-size:14px;
+    color:#475569;
+    margin-bottom:5px;
   }
   
-  .card{
-    background:#f8fafc;
-    padding:20px;
-    border-radius:10px;
-    border-left:5px solid #0a2540;
+  .project-item .project-tech{
+    font-size:13px;
+    font-weight:500;
+    color:#1e40af;
   }
   
-  /* ================= EXPERIENCE ================= */
-  
-  .exp-item{
-    background:#f8fafc;
-    border-radius:12px;
-    padding:25px;
-    margin-bottom:20px;
-    border-left:5px solid #0a2540;
-    cursor:pointer;
-  }
-  
-  .exp-details{display:none;margin-top:15px;line-height:1.6;}
-  
-  /* ================= BUTTON ================= */
-  
-  .btn{
-    background:#0a2540;
-    color:white;
-    padding:12px 22px;
-    border-radius:6px;
-    text-decoration:none;
-  }
-  
-  /* ================= FOOTER ================= */
-  
-  footer{
-    text-align:center;
-    padding:25px;
-    color:#6b7280;
-  }
-    
-  /* CV SECTION FIX */
-  
-  .cv-box{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+  .project-details{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
     margin-top:10px;
+    line-height:1.6;
   }
   
-  .cv-box p{
-    margin:0;
+  .project-item.active .project-details{
+    max-height:600px; /* pode ajustar depois */
   }
   
-  .cv-box .btn{
-    width:fit-content;
+  .project-details ul{
+    margin-left:18px;
+    margin-bottom:10px;
   }
-  /* Esconde foto do header no desktop */
-  header img {
-    display: none;
-  }
-    
-  .sidebar nav{
-    margin-top:80px;
+  /* ===== PROJECT IMAGE ===== */
+  
+  .project-header{
+    display:flex;
+    gap:15px;
+    align-items:center;
   }
   
-/* ================= PROJECTS (LIKE EXPERIENCE) ================= */
-
-.project-item{
-  background:#f8fafc;
-  border-radius:12px;
-  padding:22px;
-  margin-bottom:18px;
-  border-left:5px solid #2563eb;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.project-item:hover{
-  background:#eef4ff;
-}
-
-.project-item h3{
-  color:#0a2540;
-  margin-bottom:6px;
-}
-
-.project-item .project-sub{
-  font-size:14px;
-  color:#475569;
-  margin-bottom:5px;
-}
-
-.project-item .project-tech{
-  font-size:13px;
-  font-weight:500;
-  color:#1e40af;
-}
-
-.project-details{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .4s ease;
-  margin-top:10px;
-  line-height:1.6;
-}
-
-.project-item.active .project-details{
-  max-height:600px; /* pode ajustar depois */
-}
-
-.project-details ul{
-  margin-left:18px;
-  margin-bottom:10px;
-}
-/* ===== PROJECT IMAGE ===== */
-
-.project-header{
-  display:flex;
-  gap:15px;
-  align-items:center;
-}
-
-.project-header img{
-  width:70px;
-  height:70px;
-  border-radius:8px;
-  object-fit:cover;
-  border:1px solid #e5e7eb;
-  transition:.3s;
-}
-
-/* Quando abrir, imagem cresce */
-.project-item.active .project-header img{
-  width:120px;
-  height:120px;
-}
-  /* ===== MOBILE FIX DEFINITIVO ===== */
-@media(max-width:768px){
-
-  .project-card{
-    grid-template-columns:70px 1fr;
-  }
-
-  .project-card img{
+  .project-header img{
     width:70px;
     height:70px;
+    border-radius:8px;
+    object-fit:cover;
+    border:1px solid #e5e7eb;
+    transition:.3s;
   }
-
-  .modal-content{
-    grid-template-columns:1fr;
+  
+  /* Quando abrir, imagem cresce */
+  .project-item.active .project-header img{
+    width:120px;
+    height:120px;
   }
-
-
-  .modal-content{
-    grid-template-columns:1fr;
-  }
+    /* ===== MOBILE FIX DEFINITIVO ===== */
+  @media(max-width:768px){
+  
+    .project-card{
+      grid-template-columns:70px 1fr;
+    }
+  
+    .project-card img{
+      width:70px;
+      height:70px;
+    }
+  
+    .modal-content{
+      grid-template-columns:1fr;
+    }
+  
+  
+    .modal-content{
+      grid-template-columns:1fr;
+    }
+      
+      .header-content {
+        flex-direction: column;
+      }
+      
+      header img {
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 3px solid white;
+      }
+      
+      /* Remove espaço da sidebar */
+      body{
+        padding-left:0;
+      }
     
-    .header-content {
-      flex-direction: column;
-    }
+      /* Esconde sidebar */
+      .sidebar{
+        display:none !important;
+      }
     
-    header img {
-      display: block;
-      margin: 0 auto 15px auto;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 3px solid white;
-    }
+      /* Header centralizado */
+      header{
+        padding:40px 15px;
+        text-align:center;
+      }
     
-    /* Remove espaço da sidebar */
-    body{
-      padding-left:0;
+      .header-content{
+        flex-direction:column;
+        align-items:center;
+      }
+    
+      header img{
+        width:110px;
+        height:110px;
+      }
+    
+      /* Container ocupa tudo */
+      .container{
+        padding:20px 15px;
+      }
+    
     }
-  
-    /* Esconde sidebar */
-    .sidebar{
-      display:none !important;
-    }
-  
-    /* Header centralizado */
-    header{
-      padding:40px 15px;
-      text-align:center;
-    }
-  
-    .header-content{
-      flex-direction:column;
-      align-items:center;
-    }
-  
-    header img{
-      width:110px;
-      height:110px;
-    }
-  
-    /* Container ocupa tudo */
-    .container{
-      padding:20px 15px;
-    }
-  
-  }
   </style>
   </head>
   
