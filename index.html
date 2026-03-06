@@ -13,24 +13,25 @@
   <style>
     /* ===== VARIÁVEIS GLOBAIS ===== */
     :root {
-      --primary: #0a2540;
-      --primary-light: #1e3a5f;
-      --secondary: #2563eb;
-      --accent: #64ffda;
-      --text-dark: #1e293b;
-      --text-light: #64748b;
-      --background: #f8fafc;
-      --card-bg: #ffffff;
-      --border: #e2e8f0;
-      --success: #10b981;
-      --sidebar-width: 280px;
-      --header-height: 400px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-      --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.1);
-      --transition: all 0.3s ease;
+      --primary: #0a2540;        /* Azul escuro - cor principal */
+      --primary-light: #1e3a5f;   /* Azul médio - variação */
+      --secondary: #2563eb;       /* Azul vibrante - destaque */
+      --accent: #64ffda;          /* Verde água - cor de acento */
+      --text-dark: #1e293b;       /* Texto escuro */
+      --text-light: #64748b;      /* Texto claro */
+      --background: #f8fafc;      /* Fundo cinza claro */
+      --card-bg: #ffffff;          /* Fundo dos cards */
+      --border: #e2e8f0;          /* Cor das bordas */
+      --success: #10b981;          /* Verde para sucesso */
+      --sidebar-width: 280px;      /* Largura da sidebar */
+      --header-height: 400px;       /* Altura do header */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);     /* Sombra pequena */
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1); /* Sombra média */
+      --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.1); /* Sombra grande */
+      --transition: all 0.3s ease;  /* Transição suave */
     }
 
+    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -46,22 +47,23 @@
 
     /* ===== SIDEBAR ===== */
     .sidebar {
-      position: fixed;
+      position: fixed;              /* Fixa na lateral */
       top: 0;
       left: 0;
       width: var(--sidebar-width);
-      height: 100vh;
+      height: 100vh;                /* Altura total */
       background: var(--primary);
       color: white;
       padding: 2rem 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      z-index: 1000;
-      overflow-y: auto;
+      z-index: 1000;                /* Fica acima do conteúdo */
+      overflow-y: auto;              /* Scroll se necessário */
       box-shadow: var(--shadow-lg);
     }
 
+    /* Foto de perfil */
     .profile-img {
       width: 140px;
       height: 140px;
@@ -88,6 +90,7 @@
       font-weight: 400;
     }
 
+    /* Menu de navegação */
     .nav-menu {
       width: 100%;
       margin-top: 1rem;
@@ -121,6 +124,7 @@
       color: var(--primary);
     }
 
+    /* Botões de idioma */
     .lang-switch {
       display: flex;
       gap: 8px;
@@ -152,10 +156,11 @@
 
     /* ===== CONTEÚDO PRINCIPAL ===== */
     .main-content {
-      margin-left: var(--sidebar-width);
+      margin-left: var(--sidebar-width);  /* Espaço para a sidebar */
       min-height: 100vh;
     }
 
+    /* Header com gradiente */
     .hero {
       background: linear-gradient(135deg, var(--primary), var(--primary-light));
       color: white;
@@ -219,6 +224,7 @@
       padding: 3rem 2rem;
     }
 
+    /* Estilo das seções */
     section {
       background: var(--card-bg);
       border-radius: 20px;
@@ -249,6 +255,7 @@
       color: var(--secondary);
     }
 
+    /* Grid de skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -294,6 +301,7 @@
       box-shadow: var(--shadow-sm);
     }
 
+    /* Cards de experiência */
     .exp-card {
       background: var(--background);
       border-radius: 16px;
@@ -340,7 +348,7 @@
     }
 
     .exp-details {
-      display: none;
+      display: none;  /* Inicia oculto, expande ao clicar */
       margin-top: 1.5rem;
       padding-top: 1.5rem;
       border-top: 2px dashed var(--border);
@@ -371,6 +379,7 @@
       font-weight: 500;
     }
 
+    /* Grid de projetos */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -437,14 +446,14 @@
     }
 
     .project-details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
+      max-height: 0;        /* Inicia com altura 0 */
+      overflow: hidden;      /* Esconde conteúdo */
+      transition: max-height 0.5s ease;  /* Animação suave */
       margin-top: 1rem;
     }
 
     .project-card.active .project-details {
-      max-height: 500px;
+      max-height: 500px;    /* Quando ativo, expande */
     }
 
     .project-details ul {
@@ -466,6 +475,7 @@
       font-weight: 500;
     }
 
+    /* Seção de currículo com gradiente */
     .cv-section {
       text-align: center;
       background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -486,6 +496,7 @@
       margin: 0 auto;
     }
 
+    /* Botão estilizado */
     .btn {
       display: inline-block;
       background: var(--accent);
@@ -511,6 +522,7 @@
       margin-right: 8px;
     }
 
+    /* Informações de contato */
     .contact-info {
       display: flex;
       flex-direction: column;
@@ -562,16 +574,16 @@
     /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 968px) {
       .sidebar {
-        transform: translateX(-100%);
+        transform: translateX(-100%);  /* Esconde sidebar */
         transition: var(--transition);
       }
 
       .sidebar.active {
-        transform: translateX(0);
+        transform: translateX(0);      /* Mostra quando ativo */
       }
 
       .main-content {
-        margin-left: 0;
+        margin-left: 0;                /* Remove margem */
       }
 
       footer {
@@ -579,11 +591,11 @@
       }
 
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem;               /* Fonte menor no mobile */
       }
 
       .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;     /* Uma coluna no mobile */
       }
     }
 
@@ -612,10 +624,11 @@
 
       .project-header img {
         width: 100%;
-        height: 160px;
+        height: 160px;                  /* Imagem maior no mobile */
       }
     }
 
+    /* Botão do menu mobile */
     .menu-toggle {
       display: none;
       position: fixed;
@@ -649,12 +662,13 @@
     <i class="fas fa-bars"></i>
   </button>
 
-  <!-- Sidebar -->
+  <!-- ===== SIDEBAR ===== -->
   <div class="sidebar" id="sidebar">
     <img src="img/foto.jpg" alt="José Marcelo Fiscina" class="profile-img">
     <h2>José Marcelo Fiscina</h2>
     <p class="profile-title" data-key="profile">Engenharia • Controle • Automação</p>
     
+    <!-- Menu de navegação -->
     <nav class="nav-menu">
       <a href="#sobre" class="nav-item" onclick="closeSidebar()"><i class="fas fa-user"></i> <span data-key="menu_about">Sobre</span></a>
       <a href="#skills" class="nav-item" onclick="closeSidebar()"><i class="fas fa-cog"></i> <span data-key="menu_skills">Competências</span></a>
@@ -664,13 +678,14 @@
       <a href="#contato" class="nav-item" onclick="closeSidebar()"><i class="fas fa-envelope"></i> <span data-key="menu_contact">Contato</span></a>
     </nav>
 
+    <!-- Botões de idioma -->
     <div class="lang-switch">
       <button class="lang-btn" onclick="setLang('pt')">🇧🇷 PT</button>
       <button class="lang-btn" onclick="setLang('en')">🇺🇸 EN</button>
     </div>
   </div>
 
-  <!-- Conteúdo Principal -->
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
   <div class="main-content">
     <!-- Hero Section -->
     <header class="hero">
@@ -679,6 +694,7 @@
         <p class="hero-subtitle" data-key="subtitle1">Engenheiro de Controle e Automação | Especialista em Indústria 4.0</p>
         <p class="hero-subtitle" style="font-size: 1rem;" data-key="subtitle2">Integração de Sistemas • Otimização • Transformação Digital</p>
         
+        <!-- Tags de tecnologia -->
         <div class="hero-tags">
           <span class="hero-tag">#Indústria4.0</span>
           <span class="hero-tag">#Automação</span>
@@ -690,7 +706,7 @@
     </header>
 
     <div class="container">
-      <!-- Sobre Mim -->
+      <!-- ===== SOBRE MIM ===== -->
       <section id="sobre">
         <h2><i class="fas fa-user-circle"></i> <span data-key="sec_about">Sobre Mim</span></h2>
         <p data-key="about1" style="margin-bottom: 1rem;">Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.</p>
@@ -698,11 +714,12 @@
         <p data-key="about3">Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.</p>
       </section>
 
-      <!-- Competências Técnicas -->
+      <!-- ===== COMPETÊNCIAS TÉCNICAS ===== -->
       <section id="skills">
         <h2><i class="fas fa-code"></i> <span data-key="sec_skills">Competências Técnicas</span></h2>
         
         <div class="skills-grid">
+          <!-- Card 1 - CLPs -->
           <div class="skill-card">
             <h3><i class="fas fa-microchip"></i> <span data-key="s1">Programação de CLPs</span></h3>
             <div class="skill-tags">
@@ -712,6 +729,7 @@
             </div>
           </div>
 
+          <!-- Card 2 - SCADA -->
           <div class="skill-card">
             <h3><i class="fas fa-tv"></i> <span data-key="s2">Sistemas SCADA</span></h3>
             <div class="skill-tags">
@@ -721,6 +739,7 @@
             </div>
           </div>
 
+          <!-- Card 3 - Robôs -->
           <div class="skill-card">
             <h3><i class="fas fa-robot"></i> <span data-key="s3">Integração de Robôs</span></h3>
             <div class="skill-tags">
@@ -731,6 +750,7 @@
             </div>
           </div>
 
+          <!-- Card 4 - Programação -->
           <div class="skill-card">
             <h3><i class="fab fa-python"></i> <span data-key="s4">Programação</span></h3>
             <div class="skill-tags">
@@ -741,6 +761,7 @@
             </div>
           </div>
 
+          <!-- Card 5 - Integração -->
           <div class="skill-card">
             <h3><i class="fas fa-network-wired"></i> <span data-key="s5">Integração de Sistemas</span></h3>
             <div class="skill-tags">
@@ -751,6 +772,7 @@
             </div>
           </div>
 
+          <!-- Card 6 - Banco de Dados -->
           <div class="skill-card">
             <h3><i class="fas fa-database"></i> <span data-key="s6">Banco de Dados</span></h3>
             <div class="skill-tags">
@@ -760,6 +782,7 @@
             </div>
           </div>
 
+          <!-- Card 7 - Processos -->
           <div class="skill-card">
             <h3><i class="fas fa-pencil-ruler"></i> <span data-key="s7">Processos</span></h3>
             <div class="skill-tags">
@@ -769,6 +792,7 @@
             </div>
           </div>
 
+          <!-- Card 8 - Monitoramento -->
           <div class="skill-card">
             <h3><i class="fas fa-chart-line"></i> <span data-key="s8">Monitoramento</span></h3>
             <div class="skill-tags">
@@ -778,6 +802,7 @@
             </div>
           </div>
 
+          <!-- Card 9 - Gestão -->
           <div class="skill-card">
             <h3><i class="fas fa-users"></i> <span data-key="s9">Gestão</span></h3>
             <div class="skill-tags">
@@ -789,7 +814,7 @@
         </div>
       </section>
       
-           <!-- ========== EXPERIÊNCIA PROFISSIONAL ========== -->
+      <!-- ===== EXPERIÊNCIA PROFISSIONAL ===== -->
       <section id="exp">
         <h2><i class="fas fa-briefcase"></i> <span data-key="sec_exp">Experiência Profissional</span></h2>
       
@@ -834,7 +859,7 @@
           <span class="exp-company">JMF</span>
           <div class="exp-details" data-key="ed2">
             <ul>
-              <li><strong data-key="exp2_architecture_title">Arquitetura de dados industriais:</strong> <span data-key="exp2_architecture">Projetei e implementei solução completa de coleta e armazenamento de dados para fornos de tratamento térmico, integrando CLPs Schneider (via Elispe E3 e Node.js) a bancos SQL Server, permitindo rastreabilidade completa de lotes e reduzindo refugo em 15%.</span></li>
+              <li><strong data-key="exp2_architecture_title">Arquitetura de dados industriais:</strong> <span data-key="exp2_architecture">Projetei e implementei solução completa de coleta e armazenamento de dados para fornos de tratamento térmico, integrando CLPs Schneider (via Elipse E3 e Node.js) a bancos SQL Server, permitindo rastreabilidade completa de lotes e reduzindo refugo em 15%.</span></li>
               <li><strong data-key="exp2_automation_title">Automação de processos:</strong> <span data-key="exp2_automation">Desenvolvi rotinas em Python para coleta automática de indicadores de produção (OEE, downtime), gerando relatórios em tempo real que melhoraram a tomada de decisão da gerência.</span></li>
               <li><strong data-key="exp2_scada_title">Modernização de supervisórios:</strong> <span data-key="exp2_scada">Liderei migração de 1 linha de abastecimento para Elipse SCADA com novos alarmes preditivos, resultando em redução de 20% em paradas não planejadas.</span></li>
               <li><strong data-key="exp2_training_title">Capacitação técnica:</strong> <span data-key="exp2_training">Criei documentação e treinamentos para operadores e time de manutenção, aumentando autonomia da equipe de chão de fábrica.</span></li>
@@ -924,7 +949,7 @@
         </div>
       </section>
 
-      <!-- Projetos -->
+      <!-- ===== PROJETOS ===== -->
       <section id="projects">
         <h2><i class="fas fa-project-diagram"></i> <span data-key="sec_projects">Projetos</span></h2>
 
@@ -1290,7 +1315,7 @@
         </div>
       </section>
 
-      <!-- Currículo -->
+      <!-- ===== CURRÍCULO ===== -->
       <section id="cv" class="cv-section">
         <h2><i class="fas fa-file-pdf"></i> <span data-key="sec_cv">Currículo</span></h2>
         <div class="cv-box">
@@ -1301,7 +1326,7 @@
         </div>
       </section>
 
-      <!-- Contato -->
+      <!-- ===== CONTATO ===== -->
       <section id="contato">
         <h2><i class="fas fa-envelope"></i> <span data-key="sec_contact">Contato</span></h2>
         
@@ -1322,33 +1347,43 @@
       </section>
     </div>
 
+    <!-- Rodapé -->
     <footer data-key="footer">
       © 2026 • José Marcelo Fiscina • Engenharia de Controle e Automação
     </footer>
   </div>
 
   <script>
-    // Traduções completas com todos os dados
+    // ===== TRADUÇÕES COMPLETAS PT/EN =====
     const translations = {
       pt: {
+        // Header
         subtitle1: "Engenheiro de Controle e Automação | Especialista em Indústria 4.0",
         subtitle2: "Integração de Sistemas • Otimização • Transformação Digital",
         profile: "Engenharia • Controle • Automação",
+        
+        // Menu
         menu_about: "Sobre",
         menu_skills: "Competências",
         menu_exp: "Experiência",
         menu_projetos: "Projetos",
         menu_cv: "Currículo",
         menu_contact: "Contato",
+        
+        // Seções
         sec_about: "Sobre Mim",
         sec_skills: "Competências Técnicas",
         sec_exp: "Experiência Profissional",
         sec_projects: "Projetos",
         sec_cv: "Currículo",
         sec_contact: "Contato",
+        
+        // Sobre
         about1: "Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.",
         about2: "Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital.",
         about3: "Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.",
+        
+        // Skills
         s1: "Programação de CLPs",
         s2: "Sistemas SCADA",
         s3: "Integração de Robôs",
@@ -1358,18 +1393,62 @@
         s7: "Processos",
         s8: "Monitoramento",
         s9: "Gestão",
+        
+        // Períodos
         e1: "2023–Atual | Brasil/México",
         e2: "2021–2023 | Brasil",
         e3: "2015–2021 | Brasil",
         e4: "2014–2015 | Brasil",
+        
+        // Títulos das experiências
         he1: "Coordenador de Automação — Markez",
         he2: "Engenheiro de Automação — JMF",
         he3: "Programador de PLC Sênior — Markez Robotics",
         he4: "Programador de PLC Junior — Rapack",
-        ed1: "<strong>Principais Atividades:</strong><br><ul><li>Coordenação de times técnicos e fornecedores</li><li>Revisão de projetos elétricos e redes industriais</li><li>Integração entre automação, dados e sistemas corporativos</li><li>Desenvolvimento de dashboards em Grafana</li><li>Padronização de processos com Draw.io</li></ul>",
-        ed2: "<strong>Principais Atividades:</strong><br><ul><li>Desenvolvimento de arquitetura de dados industrial</li><li>Automação de rotinas em Python</li><li>Integração com banco de dados SQL</li><li>Implantação de supervisórios Elipse</li><li>Criação de relatórios técnicos</li></ul>",
-        ed3: "<strong>Principais Atividades:</strong><br><ul><li>Programação de CLPs e robôs industriais</li><li>Diagnóstico de falhas crônicas</li><li>Otimização de ciclo produtivo</li><li>Integração de sistemas de segurança</li></ul>",
-        ed4: "<strong>Principais Atividades:</strong><br><ul><li>Startup de linhas de montagem</li><li>Programação em Step 7 e WinCC</li><li>Suporte técnico em campo</li></ul>",
+        
+        // ===== TRADUÇÕES DETALHADAS DAS EXPERIÊNCIAS =====
+        
+        // Experiência 1 - Markez
+        exp1_leadership_title: "Liderança técnica:",
+        exp1_leadership: "Coordeno equipes multidisciplinares (até 7 profissionais) em projetos globais para montadoras, gerenciando startups de linhas avaliadas em R$ 50M+ e garantindo entregas dentro do prazo e orçamento.",
+        exp1_integration_title: "Integração dados-automação:",
+        exp1_integration: "Projetei e implementei arquitetura de integração entre sistemas de automação (CLPs/SCADA) e camada de dados corporativos, desenvolvendo dashboards em Grafana que reduziram tempo de diagnóstico de falhas em 30%.",
+        exp1_standard_title: "Padronização e qualidade:",
+        exp1_standard: "Estabeleci novos padrões de projetos elétricos e documentação técnica com Draw.io, adotados como referência para 3 novas plantas, reduzindo retrabalho em 25%.",
+        exp1_international_title: "Projetos internacionais:",
+        exp1_international: "Atuei diretamente em plantas no México, coordenando integração com times locais e garantindo conformidade com padrões globais do cliente.",
+        
+        // Experiência 2 - JMF
+        exp2_architecture_title: "Arquitetura de dados industriais:",
+        exp2_architecture: "Projetei e implementei solução completa de coleta e armazenamento de dados para fornos de tratamento térmico, integrando CLPs Schneider (via Elipse E3 e Node.js) a bancos SQL Server, permitindo rastreabilidade completa de lotes e reduzindo refugo em 15%.",
+        exp2_automation_title: "Automação de processos:",
+        exp2_automation: "Desenvolvi rotinas em Python para coleta automática de indicadores de produção (OEE, downtime), gerando relatórios em tempo real que melhoraram a tomada de decisão da gerência.",
+        exp2_scada_title: "Modernização de supervisórios:",
+        exp2_scada: "Liderei migração de 1 linha de abastecimento para Elipse SCADA com novos alarmes preditivos, resultando em redução de 20% em paradas não planejadas.",
+        exp2_training_title: "Capacitação técnica:",
+        exp2_training: "Criei documentação e treinamentos para operadores e time de manutenção, aumentando autonomia da equipe de chão de fábrica.",
+        
+        // Experiência 3 - Markez Robotics
+        exp3_startup_title: "Startups de alta complexidade:",
+        exp3_startup: "Atuei no desenvolvimento e comissionamento de 5 grandes linhas automotivas (Jeep Renegade, Compass, Fiat Toro), programando mais de 20 CLPs Siemens e Rockwell, incluindo módulos safety e integração com mais de 30 robôs KUKA/ABB.",
+        exp3_failures_title: "Eliminação de falhas crônicas:",
+        exp3_failures: "Diagnostiquei causas raiz de falhas recorrentes em células robóticas, implementando melhorias que reduziram paradas por problemas crônicos em 40%.",
+        exp3_performance_title: "Otimização de performance:",
+        exp3_performance: "Analisei e otimizei tempos de ciclo em estações gargalo, entregando ganho de produtividade de 12% na linha de funilaria sem novos investimentos.",
+        exp3_safety_title: "Sistemas de segurança:",
+        exp3_safety: "Programei e validei sistemas Safety PLC integrados a robôs, garantindo certificação das linhas conforme normas internacionais.",
+        
+        // Experiência 4 - Rapack
+        exp4_startup_title: "Startup de linhas:",
+        exp4_startup: "Participei do ramp-up de 2 novas linhas de montagem automotiva, realizando programação em Step 7 e WinCC para garantir entrada em operação dentro do cronograma do cliente.",
+        exp4_support_title: "Suporte técnico em campo:",
+        exp4_support: "Atuei no suporte direto durante primeiro mês de produção, solucionando mais de 50 chamados e garantindo estabilidade operacional na fase crítica.",
+        exp4_doc_title: "Documentação técnica:",
+        exp4_doc: "Colaborei na criação de manuais de operação e documentação de programas, facilitando transferência de conhecimento para equipe de manutenção.",
+        exp4_electrical_title: "Projetos elétricos:",
+        exp4_electrical: "Criei projetos elétricos utilizando EPLAN, garantindo conformidade com normas técnicas.",
+        
+        // Títulos dos projetos
         pr1_title: "Jeep Renegade — Startup de Linha",
         pr2_title: "Fiat Toro — Startup de Linha",
         pr3_title: "Jeep Compass — Startup de Linha",
@@ -1382,29 +1461,44 @@
         pr10_title: "General Motors — Suporte à Engenharia",
         pr11_title: "Jetta — Startup de Linha",
         pr12_title: "Basalt — Startup de Linha",
+        
+        // CV
         cv_text: "Baixe meu currículo completo em PDF",
         cv_btn: "📥 Download CV",
+        
+        // Footer
         footer: "© 2026 • José Marcelo Fiscina • Engenharia de Controle e Automação"
       },
+      
+      // ===== VERSÃO EM INGLÊS =====
       en: {
+        // Header
         subtitle1: "Control and Automation Engineer | Industry 4.0 Specialist",
         subtitle2: "Systems Integration • Optimization • Digital Transformation",
         profile: "Engineering • Control • Automation",
+        
+        // Menu
         menu_about: "About",
         menu_skills: "Skills",
         menu_exp: "Experience",
         menu_projetos: "Projects",
         menu_cv: "Resume",
         menu_contact: "Contact",
+        
+        // Sections
         sec_about: "About Me",
         sec_skills: "Technical Skills",
         sec_exp: "Professional Experience",
         sec_projects: "Projects",
         sec_cv: "Resume",
         sec_contact: "Contact",
+        
+        // About
         about1: "Control and Automation Engineer with over 10 years of experience in industrial automation, data and systems integration.",
         about2: "Experience in automotive and metallurgical sectors, focused on performance, reliability and digital transformation.",
         about3: "Specialist in PLCs, SCADA, Python, SQL, Node-RED, n8n and Grafana.",
+        
+        // Skills
         s1: "PLC Programming",
         s2: "SCADA Systems",
         s3: "Robotics Integration",
@@ -1414,18 +1508,62 @@
         s7: "Processes",
         s8: "Monitoring",
         s9: "Management",
+        
+        // Periods
         e1: "2023–Present | Brazil/Mexico",
         e2: "2021–2023 | Brazil",
         e3: "2015–2021 | Brazil",
         e4: "2014–2015 | Brazil",
+        
+        // Experience Titles
         he1: "Automation Coordinator — Markez",
         he2: "Automation Engineer — JMF",
         he3: "Senior PLC Programmer — Markez Robotics",
         he4: "Junior PLC Programmer — Rapack",
-        ed1: "<strong>Main Activities:</strong><br><ul><li>Technical team and supplier coordination</li><li>Electrical design and industrial network review</li><li>Automation, data and corporate systems integration</li><li>Grafana dashboard development</li><li>Process standardization using Draw.io</li></ul>",
-        ed2: "<strong>Main Activities:</strong><br><ul><li>Industrial data architecture development</li><li>Python automation routines</li><li>SQL database integration</li><li>Elipse SCADA implementation</li><li>Technical report creation</li></ul>",
-        ed3: "<strong>Main Activities:</strong><br><ul><li>PLC and robotics programming</li><li>Chronic failure diagnosis</li><li>Production cycle optimization</li><li>Safety systems integration</li></ul>",
-        ed4: "<strong>Main Activities:</strong><br><ul><li>Assembly line startup</li><li>Step 7 and WinCC programming</li><li>On-site technical support</li></ul>",
+        
+        // ===== DETAILED EXPERIENCE TRANSLATIONS =====
+        
+        // Experience 1 - Markez
+        exp1_leadership_title: "Technical Leadership:",
+        exp1_leadership: "Lead multidisciplinary teams (up to 7 professionals) in global projects for automakers, managing line startups valued at R$ 50M+ and ensuring on-time, on-budget deliveries.",
+        exp1_integration_title: "Data-Automation Integration:",
+        exp1_integration: "Designed and implemented integration architecture between automation systems (PLCs/SCADA) and corporate data layer, developing Grafana dashboards that reduced fault diagnosis time by 30%.",
+        exp1_standard_title: "Standardization & Quality:",
+        exp1_standard: "Established new standards for electrical projects and technical documentation using Draw.io, adopted as reference for 3 new plants, reducing rework by 25%.",
+        exp1_international_title: "International Projects:",
+        exp1_international: "Worked directly in plants in Mexico, coordinating integration with local teams and ensuring compliance with global customer standards.",
+        
+        // Experience 2 - JMF
+        exp2_architecture_title: "Industrial Data Architecture:",
+        exp2_architecture: "Designed and implemented complete data collection and storage solution for heat treatment furnaces, integrating Schneider PLCs (via Elipse E3 and Node.js) with SQL Server databases, enabling complete batch traceability and reducing scrap by 15%.",
+        exp2_automation_title: "Process Automation:",
+        exp2_automation: "Developed Python routines for automatic collection of production indicators (OEE, downtime), generating real-time reports that improved management decision-making.",
+        exp2_scada_title: "SCADA Modernization:",
+        exp2_scada: "Led migration of 1 supply line to Elipse SCADA with new predictive alarms, resulting in 20% reduction in unplanned downtime.",
+        exp2_training_title: "Technical Training:",
+        exp2_training: "Created documentation and training for operators and maintenance team, increasing shop floor team autonomy.",
+        
+        // Experience 3 - Markez Robotics
+        exp3_startup_title: "High-Complexity Startups:",
+        exp3_startup: "Worked on development and commissioning of 5 major automotive lines (Jeep Renegade, Compass, Fiat Toro), programming over 20 Siemens and Rockwell PLCs, including safety modules and integration with over 30 KUKA/ABB robots.",
+        exp3_failures_title: "Chronic Failure Elimination:",
+        exp3_failures: "Diagnosed root causes of recurring failures in robotic cells, implementing improvements that reduced downtime from chronic problems by 40%.",
+        exp3_performance_title: "Performance Optimization:",
+        exp3_performance: "Analyzed and optimized cycle times in bottleneck stations, delivering 12% productivity gain in the body shop line without new investments.",
+        exp3_safety_title: "Safety Systems:",
+        exp3_safety: "Programmed and validated Safety PLC systems integrated with robots, ensuring line certification according to international standards.",
+        
+        // Experience 4 - Rapack
+        exp4_startup_title: "Line Startups:",
+        exp4_startup: "Participated in ramp-up of 2 new automotive assembly lines, programming in Step 7 and WinCC to ensure operational startup within customer schedule.",
+        exp4_support_title: "Field Technical Support:",
+        exp4_support: "Provided direct support during first month of production, solving over 50 tickets and ensuring operational stability in the critical phase.",
+        exp4_doc_title: "Technical Documentation:",
+        exp4_doc: "Collaborated on creating operation manuals and program documentation, facilitating knowledge transfer to maintenance team.",
+        exp4_electrical_title: "Electrical Projects:",
+        exp4_electrical: "Created electrical projects using EPLAN, ensuring compliance with technical standards.",
+        
+        // Project Titles
         pr1_title: "Jeep Renegade — Line Startup",
         pr2_title: "Fiat Toro — Line Startup",
         pr3_title: "Jeep Compass — Line Startup",
@@ -1438,58 +1576,78 @@
         pr10_title: "General Motors — Engineering Support",
         pr11_title: "Jetta — Line Startup",
         pr12_title: "Basalt — Line Startup",
+        
+        // CV
         cv_text: "Download my complete resume in PDF",
         cv_btn: "📥 Download Resume",
+        
+        // Footer
         footer: "© 2026 • José Marcelo Fiscina • Control and Automation Engineering"
       }
     };
 
-    // Função para trocar idioma
+    // ===== FUNÇÃO PARA TROCAR IDIOMA =====
     function setLang(lang) {
+      // Seleciona todos os elementos com atributo data-key
       document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.getAttribute("data-key");
         if (translations[lang] && translations[lang][key]) {
-          if (key.includes('ed') || key.includes('details')) {
+          // Se for um elemento que pode conter HTML (como as descrições)
+          if (key.includes('exp') || key.includes('details') || key.includes('ed')) {
             el.innerHTML = translations[lang][key];
           } else {
             el.textContent = translations[lang][key];
           }
         }
       });
+      
+      // Salva a preferência do usuário
       localStorage.setItem("lang", lang);
       
+      // Atualiza a classe ativa dos botões
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
       });
       event.target.classList.add('active');
     }
 
-    // Carregar idioma salvo
+    // ===== CARREGA IDIOMA SALVO AO INICIAR =====
     document.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("lang") || "pt";
       setLang(saved);
     });
 
-    // Funções de toggle
+    // ===== FUNÇÕES DE EXPANSÃO =====
+    
+    // Expande/colapsa experiência
     function toggleExp(el) {
       const details = el.querySelector('.exp-details');
+      // Fecha todas as outras experiências
       document.querySelectorAll('.exp-details').forEach(d => {
         if (d !== details) d.style.display = 'none';
       });
+      // Alterna a experiência clicada
       details.style.display = details.style.display === 'block' ? 'none' : 'block';
     }
 
+    // Expande/colapsa projeto
     function toggleProject(el) {
+      // Fecha todos os outros projetos
       document.querySelectorAll('.project-card').forEach(card => {
         if (card !== el) card.classList.remove('active');
       });
+      // Alterna o projeto clicado
       el.classList.toggle('active');
     }
 
+    // ===== FUNÇÕES DA SIDEBAR =====
+    
+    // Abre/fecha sidebar no mobile
     function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('active');
     }
 
+    // Fecha sidebar após clicar em um link (mobile)
     function closeSidebar() {
       if (window.innerWidth <= 968) {
         document.getElementById('sidebar').classList.remove('active');
