@@ -159,6 +159,21 @@
       margin-left: var(--sidebar-width);  /* Espaço para a sidebar */
       min-height: 100vh;
     }
+   /* SOBRE */
+      .about-intro {
+        font-size: 1.1rem; color: var(--text-dark); margin-bottom: 1.2rem;
+        line-height: 1.8; border-left: 4px solid var(--accent); padding-left: 1rem;
+      }
+  
+      .about-new-focus {
+        background: linear-gradient(135deg, #f0faf7, #fff8f3);
+        border: 1px solid #c8f0e5; border-radius: 12px;
+        padding: 1.2rem 1.5rem; margin: 1.2rem 0; font-size: 0.95rem;
+      }
+  
+      .about-new-focus strong {
+        color: var(--accent-warm); display: block; margin-bottom: 0.4rem; font-size: 1rem;
+      }
 
     /* Header com gradiente */
     .hero {
@@ -666,7 +681,8 @@
   <div class="sidebar" id="sidebar">
     <img src="img/foto.jpg" alt="José Marcelo Fiscina" class="profile-img">
     <h2>José Marcelo Fiscina</h2>
-    <p class="profile-title" data-key="profile">Engenharia • Controle • Automação</p>
+    <p class="profile-title" data-key="profile">Engenheiro de Controle e Automação | Especialista em Indústria 4.0</p>
+    <p class="profile-title" style="font-size: 1rem;" data-key="subtitle2">Automação Industrial • Automação Residencial • IIoT</p>
     
     <!-- Menu de navegação -->
     <nav class="nav-menu">
@@ -692,15 +708,18 @@
       <div class="hero-content">
         <h1>José Marcelo Nascimento Fiscina</h1>
         <p class="hero-subtitle" data-key="subtitle1">Engenheiro de Controle e Automação | Especialista em Indústria 4.0</p>
-        <p class="hero-subtitle" style="font-size: 1rem;" data-key="subtitle2">Integração de Sistemas • Otimização • Transformação Digital</p>
+        <p class="hero-subtitle" style="font-size: 1rem;" data-key="subtitle2">Automação Industrial • Automação Residencial • IIoT</p>
         
         <!-- Tags de tecnologia -->
         <div class="hero-tags">
           <span class="hero-tag">#Indústria4.0</span>
-          <span class="hero-tag">#Automação</span>
+          <span class="hero-tag">#AutomaçãoIndustrial</span>
           <span class="hero-tag">#IIoT</span>
           <span class="hero-tag">#SCADA</span>
           <span class="hero-tag">#PLC</span>
+          <span class="hero-tag new">#SmartHome</span>
+          <span class="hero-tag new">#AutomaçãoResidencial</span>
+          <span class="hero-tag new">#NodeRED</span>
         </div>
       </div>
     </header>
@@ -709,9 +728,19 @@
       <!-- ===== SOBRE MIM ===== -->
       <section id="sobre">
         <h2><i class="fas fa-user-circle"></i> <span data-key="sec_about">Sobre Mim</span></h2>
+        <p class="about-intro" data-key="about_intro">Sou engenheiro apaixonado por conectar máquinas, dados e pessoas. Ao longo de 10 anos trabalhando em linhas automotivas e metalúrgicas de grandes montadoras, aprendi que automação bem feita não é só sobre tecnologia — é sobre confiabilidade, eficiência e transformação real de processos.</p>
+
         <p data-key="about1" style="margin-bottom: 1rem;">Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.</p>
         <p data-key="about2" style="margin-bottom: 1rem;">Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital.</p>
-        <p data-key="about3">Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.</p>
+        <p data-key="about3" style="margin-bottom: 1rem;">Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.</p>
+         <div class="about-new-focus">
+          <strong data-key="about_focus_title">🏠 Novo foco: Automação Residencial & IIoT</strong>
+          <span data-key="about_focus">Estou expandindo minha atuação para automação residencial e predial inteligente, integrando experiência industrial com tecnologias modernas como Home Assistant, MQTT, Zigbee, ESP32 e Node-RED para criar ambientes conectados, eficientes e personalizados.</span>
+        </div>
+         <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.95rem;">
+          <i class="fas fa-graduation-cap" style="color: var(--secondary); margin-right: 6px;"></i>
+          <span data-key="about_edu">Graduado em Engenharia de Controle e Automação</span>
+        </p>
       </section>
 
       <!-- ===== COMPETÊNCIAS TÉCNICAS ===== -->
