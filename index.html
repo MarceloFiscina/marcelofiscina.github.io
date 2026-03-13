@@ -70,6 +70,12 @@
       color: #6b7280;
     }
 
+    .nav-center {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
     .nav-menu {
       display: flex;
       gap: 2rem;
@@ -93,6 +99,37 @@
     .nav-menu a.active {
       color: #00d9a3;
       border-bottom-color: #00d9a3;
+    }
+
+    .language-selector {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0.5rem;
+      background-color: #f3f4f6;
+      border-radius: 0.5rem;
+    }
+
+    .lang-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: transparent;
+      color: #6b7280;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 0.375rem;
+      transition: all 0.3s ease;
+      font-size: 0.875rem;
+    }
+
+    .lang-btn.active {
+      background-color: white;
+      color: #00d9a3;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .lang-btn:hover {
+      color: #1a1a1a;
     }
 
     .mobile-menu-btn {
@@ -687,6 +724,11 @@
       .contact-btn {
         justify-content: center;
       }
+
+      .nav-center {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
@@ -697,16 +739,22 @@
         <div class="logo-box">M</div>
         <div class="logo-text">
           <h1>Marcelo</h1>
-          <p>Eng. Controle & Automação</p>
+          <p class="logo-subtitle">Eng. Controle & Automação</p>
         </div>
       </div>
-      <div class="nav-menu">
-        <a href="#home" class="nav-link active">Início</a>
-        <a href="#about" class="nav-link">Sobre</a>
-        <a href="#skills" class="nav-link">Competências</a>
-        <a href="#experience" class="nav-link">Experiência</a>
-        <a href="#projects" class="nav-link">Projetos</a>
-        <a href="#contact" class="nav-link">Contato</a>
+      <div class="nav-center">
+        <div class="nav-menu">
+          <a href="#home" class="nav-link active" data-pt="Início" data-en="Home">Início</a>
+          <a href="#about" class="nav-link" data-pt="Sobre" data-en="About">Sobre</a>
+          <a href="#skills" class="nav-link" data-pt="Competências" data-en="Skills">Competências</a>
+          <a href="#experience" class="nav-link" data-pt="Experiência" data-en="Experience">Experiência</a>
+          <a href="#projects" class="nav-link" data-pt="Projetos" data-en="Projects">Projetos</a>
+          <a href="#contact" class="nav-link" data-pt="Contato" data-en="Contact">Contato</a>
+        </div>
+        <div class="language-selector">
+          <button class="lang-btn active" data-lang="pt" onclick="changeLanguage('pt')">PT</button>
+          <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
+        </div>
       </div>
       <button class="mobile-menu-btn">☰</button>
     </nav>
@@ -716,11 +764,11 @@
     <div class="hero-content">
       <div class="hero-avatar">M</div>
       <h1>José Marcelo Fiscina</h1>
-      <p class="subtitle">Engenheiro de Controle e Automação | Especialista em Indústria 4.0</p>
-      <p class="description">Integração de Sistemas • Otimização • Transformação Digital</p>
+      <p class="subtitle" data-pt="Engenheiro de Controle e Automação | Especialista em Indústria 4.0" data-en="Control and Automation Engineer | Industry 4.0 Specialist">Engenheiro de Controle e Automação | Especialista em Indústria 4.0</p>
+      <p class="description" data-pt="Integração de Sistemas • Otimização • Transformação Digital" data-en="Systems Integration • Optimization • Digital Transformation">Integração de Sistemas • Otimização • Transformação Digital</p>
       <div class="hero-buttons">
-        <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">Ver Projetos</button>
-        <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contato</button>
+        <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" data-pt="Ver Projetos" data-en="View Projects">Ver Projetos</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-pt="Contato" data-en="Contact">Contato</button>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -732,34 +780,34 @@
 
   <section id="about">
     <div class="section-header">
-      <h2>Sobre Mim</h2>
+      <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
       <div class="divider"></div>
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.</p>
-        <p>Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital.</p>
-        <p>Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.</p>
+        <p data-pt="Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas." data-en="Control and Automation Engineer with over 10 years of experience in industrial automation, data and systems integration.">Engenheiro de Controle e Automação com mais de 10 anos de experiência em automação industrial, dados e integração de sistemas.</p>
+        <p data-pt="Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital." data-en="Experience in the automotive and metallurgical sectors, focusing on performance, reliability and digital transformation.">Atuação nos setores automobilístico e metalúrgico, com foco em performance, confiabilidade e transformação digital.</p>
+        <p data-pt="Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana." data-en="Specialist in PLCs, SCADA, Python, SQL, Node-RED, n8n and Grafana.">Especialista em CLPs, SCADA, Python, SQL, Node-RED, n8n e Grafana.</p>
         <p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f0faf7, #fff8f3); border-radius: 0.75rem; border-left: 4px solid #00d9a3;">
-          <strong style="color: #00d9a3; display: block; margin-bottom: 0.5rem;">🏠 Novo foco: Automação Residencial & IIoT</strong>
-          Estou expandindo minha atuação para automação residencial e predial inteligente, integrando experiência industrial com tecnologias modernas como Home Assistant, MQTT, Zigbee, ESP32 e Node-RED para criar ambientes conectados, eficientes e personalizados.
+          <strong style="color: #00d9a3; display: block; margin-bottom: 0.5rem;" data-pt="🏠 Novo foco: Automação Residencial & IIoT" data-en="🏠 New focus: Home Automation & IIoT">🏠 Novo foco: Automação Residencial & IIoT</strong>
+          <span data-pt="Estou expandindo minha atuação para automação residencial e predial inteligente, integrando experiência industrial com tecnologias modernas como Home Assistant, MQTT, Zigbee, ESP32 e Node-RED para criar ambientes conectados, eficientes e personalizados." data-en="I am expanding my work to intelligent residential and building automation, integrating industrial experience with modern technologies like Home Assistant, MQTT, Zigbee, ESP32 and Node-RED to create connected, efficient and personalized environments.">Estou expandindo minha atuação para automação residencial e predial inteligente, integrando experiência industrial com tecnologias modernas como Home Assistant, MQTT, Zigbee, ESP32 e Node-RED para criar ambientes conectados, eficientes e personalizados.</span>
         </p>
         <div class="about-buttons">
-          <a href="https://drive.google.com/file/d/15Ux0j12XTmQOlmjkQYcKhf0HQJ2BUEL9/view?usp=sharing" class="btn btn-primary" target="_blank">Baixar CV</a>
-          <a href="https://linkedin.com/in/marcelo-fiscina" class="btn btn-secondary" target="_blank">LinkedIn</a>
+          <a href="https://drive.google.com/file/d/15Ux0j12XTmQOlmjkQYcKhf0HQJ2BUEL9/view?usp=sharing" class="btn btn-primary" target="_blank" data-pt="Baixar CV" data-en="Download CV">Baixar CV</a>
+          <a href="https://linkedin.com/in/marcelo-fiscina" class="btn btn-secondary" target="_blank" data-pt="LinkedIn" data-en="LinkedIn">LinkedIn</a>
         </div>
       </div>
       <div class="about-stats">
         <div class="stat-number">+10</div>
-        <div class="stat-label">Anos de Experiência</div>
+        <div class="stat-label" data-pt="Anos de Experiência" data-en="Years of Experience">Anos de Experiência</div>
         <div class="progress-item">
-          <div class="progress-label">Projetos Concluídos</div>
+          <div class="progress-label" data-pt="Projetos Concluídos" data-en="Completed Projects">Projetos Concluídos</div>
           <div class="progress-bar">
             <div class="progress-fill" style="width: 95%"></div>
           </div>
         </div>
         <div class="progress-item">
-          <div class="progress-label">Satisfação de Clientes</div>
+          <div class="progress-label" data-pt="Satisfação de Clientes" data-en="Customer Satisfaction">Satisfação de Clientes</div>
           <div class="progress-bar">
             <div class="progress-fill" style="width: 100%"></div>
           </div>
@@ -770,12 +818,12 @@
 
   <section id="skills" class="bg-light">
     <div class="section-header">
-      <h2>Competências Técnicas</h2>
+      <h2 data-pt="Competências Técnicas" data-en="Technical Skills">Competências Técnicas</h2>
       <div class="divider"></div>
     </div>
     <div class="skills-grid">
       <div class="skill-card">
-        <h3>Programação de CLPs</h3>
+        <h3 data-pt="Programação de CLPs" data-en="PLC Programming">Programação de CLPs</h3>
         <div class="skill-tags">
           <span class="skill-tag">Siemens Step 7</span>
           <span class="skill-tag">Siemens TIA Portal</span>
@@ -784,25 +832,25 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3>Sistemas SCADA</h3>
+        <h3 data-pt="Sistemas SCADA" data-en="SCADA Systems">Sistemas SCADA</h3>
         <div class="skill-tags">
           <span class="skill-tag">WinCC</span>
           <span class="skill-tag">FactoryTalk</span>
           <span class="skill-tag">Elipse SCADA</span>
-          <span class="skill-tag">Supervisão Industrial</span>
+          <span class="skill-tag" data-pt="Supervisão Industrial" data-en="Industrial Supervision">Supervisão Industrial</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>Integração de Robôs</h3>
+        <h3 data-pt="Integração de Robôs" data-en="Robot Integration">Integração de Robôs</h3>
         <div class="skill-tags">
           <span class="skill-tag">KUKA</span>
           <span class="skill-tag">ABB</span>
           <span class="skill-tag">FANUC</span>
-          <span class="skill-tag">Integração Robótica</span>
+          <span class="skill-tag" data-pt="Integração Robótica" data-en="Robotic Integration">Integração Robótica</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>Programação</h3>
+        <h3 data-pt="Programação" data-en="Programming">Programação</h3>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
           <span class="skill-tag">Node.js</span>
@@ -811,7 +859,7 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3>Redes Industriais</h3>
+        <h3 data-pt="Redes Industriais" data-en="Industrial Networks">Redes Industriais</h3>
         <div class="skill-tags">
           <span class="skill-tag">Profibus</span>
           <span class="skill-tag">Profinet</span>
@@ -820,16 +868,16 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3>Banco de Dados</h3>
+        <h3 data-pt="Banco de Dados" data-en="Databases">Banco de Dados</h3>
         <div class="skill-tags">
           <span class="skill-tag">SQL Server</span>
           <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Arquitetura de Dados</span>
+          <span class="skill-tag" data-pt="Arquitetura de Dados" data-en="Data Architecture">Arquitetura de Dados</span>
           <span class="skill-tag">OEE</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>IIoT & Monitoramento</h3>
+        <h3 data-pt="IIoT & Monitoramento" data-en="IIoT & Monitoring">IIoT & Monitoramento</h3>
         <div class="skill-tags">
           <span class="skill-tag">Node-RED</span>
           <span class="skill-tag">Grafana</span>
@@ -838,7 +886,7 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3>Automação Residencial</h3>
+        <h3 data-pt="Automação Residencial" data-en="Home Automation">Automação Residencial</h3>
         <div class="skill-tags">
           <span class="skill-tag">Home Assistant</span>
           <span class="skill-tag">Zigbee</span>
@@ -847,30 +895,30 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3>Hardware IoT</h3>
+        <h3 data-pt="Hardware IoT" data-en="IoT Hardware">Hardware IoT</h3>
         <div class="skill-tags">
           <span class="skill-tag">Arduino</span>
           <span class="skill-tag">Raspberry Pi</span>
-          <span class="skill-tag">Sensores</span>
-          <span class="skill-tag">Atuadores</span>
+          <span class="skill-tag" data-pt="Sensores" data-en="Sensors">Sensores</span>
+          <span class="skill-tag" data-pt="Atuadores" data-en="Actuators">Atuadores</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>Documentação</h3>
+        <h3 data-pt="Documentação" data-en="Documentation">Documentação</h3>
         <div class="skill-tags">
           <span class="skill-tag">EPLAN</span>
           <span class="skill-tag">Draw.io</span>
-          <span class="skill-tag">Projetos Elétricos</span>
-          <span class="skill-tag">Manuais Técnicos</span>
+          <span class="skill-tag" data-pt="Projetos Elétricos" data-en="Electrical Projects">Projetos Elétricos</span>
+          <span class="skill-tag" data-pt="Manuais Técnicos" data-en="Technical Manuals">Manuais Técnicos</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>Gestão</h3>
+        <h3 data-pt="Gestão" data-en="Management">Gestão</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Liderança Técnica</span>
-          <span class="skill-tag">Gestão de Projetos</span>
-          <span class="skill-tag">Startups de Linhas</span>
-          <span class="skill-tag">Treinamento</span>
+          <span class="skill-tag" data-pt="Liderança Técnica" data-en="Technical Leadership">Liderança Técnica</span>
+          <span class="skill-tag" data-pt="Gestão de Projetos" data-en="Project Management">Gestão de Projetos</span>
+          <span class="skill-tag" data-pt="Startups de Linhas" data-en="Line Startups">Startups de Linhas</span>
+          <span class="skill-tag" data-pt="Treinamento" data-en="Training">Treinamento</span>
         </div>
       </div>
     </div>
@@ -878,111 +926,111 @@
 
   <section id="experience">
     <div class="section-header">
-      <h2>Experiência Profissional</h2>
+      <h2 data-pt="Experiência Profissional" data-en="Professional Experience">Experiência Profissional</h2>
       <div class="divider"></div>
     </div>
     <div class="experience-list">
       <div class="experience-card" onclick="this.classList.toggle('expanded')">
         <div class="experience-header">
           <div class="experience-info">
-            <h3>Coordenador de Automação</h3>
+            <h3 data-pt="Coordenador de Automação" data-en="Automation Coordinator">Coordenador de Automação</h3>
             <div class="experience-company">Markez</div>
-            <div class="experience-period">2023–2025 | Brasil/México</div>
+            <div class="experience-period" data-pt="2023–2025 | Brasil/México" data-en="2023–2025 | Brazil/Mexico">2023–2025 | Brasil/México</div>
           </div>
           <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
         <div class="experience-details">
-          <strong>Liderança técnica:</strong>
-          <p>Coordeno equipes multidisciplinares (até 7 profissionais) em projetos globais para montadoras, gerenciando startups de linhas avaliadas em R$ 50M+ e garantindo entregas dentro do prazo e orçamento.</p>
+          <strong data-pt="Liderança técnica:" data-en="Technical leadership:">Liderança técnica:</strong>
+          <p data-pt="Coordeno equipes multidisciplinares (até 7 profissionais) em projetos globais para montadoras, gerenciando startups de linhas avaliadas em R$ 50M+ e garantindo entregas dentro do prazo e orçamento." data-en="I coordinate multidisciplinary teams (up to 7 professionals) in global projects for automakers, managing line startups valued at R$ 50M+ and ensuring on-time and on-budget delivery.">Coordeno equipes multidisciplinares (até 7 profissionais) em projetos globais para montadoras, gerenciando startups de linhas avaliadas em R$ 50M+ e garantindo entregas dentro do prazo e orçamento.</p>
           
-          <strong>Integração dados-automação:</strong>
-          <p>Projetei e implementei arquitetura de integração entre sistemas de automação (CLPs/SCADA) e camada de dados corporativos, desenvolvendo dashboards em Grafana que reduziram tempo de diagnóstico de falhas em 30%.</p>
+          <strong data-pt="Integração dados-automação:" data-en="Data-automation integration:">Integração dados-automação:</strong>
+          <p data-pt="Projetei e implementei arquitetura de integração entre sistemas de automação (CLPs/SCADA) e camada de dados corporativos, desenvolvendo dashboards em Grafana que reduziram tempo de diagnóstico de falhas em 30%." data-en="I designed and implemented integration architecture between automation systems (PLCs/SCADA) and corporate data layer, developing Grafana dashboards that reduced fault diagnosis time by 30%.">Projetei e implementei arquitetura de integração entre sistemas de automação (CLPs/SCADA) e camada de dados corporativos, desenvolvendo dashboards em Grafana que reduziram tempo de diagnóstico de falhas em 30%.</p>
           
-          <strong>Padronização e qualidade:</strong>
-          <p>Estabeleci novos padrões de projetos elétricos e documentação técnica com Draw.io, adotados como referência para 3 novas plantas, reduzindo retrabalho em 25%.</p>
+          <strong data-pt="Padronização e qualidade:" data-en="Standardization and quality:">Padronização e qualidade:</strong>
+          <p data-pt="Estabeleci novos padrões de projetos elétricos e documentação técnica com Draw.io, adotados como referência para 3 novas plantas, reduzindo retrabalho em 25%." data-en="I established new standards for electrical projects and technical documentation with Draw.io, adopted as a reference for 3 new plants, reducing rework by 25%.">Estabeleci novos padrões de projetos elétricos e documentação técnica com Draw.io, adotados como referência para 3 novas plantas, reduzindo retrabalho em 25%.</p>
           
-          <strong>Projetos internacionais:</strong>
-          <p>Atuei diretamente em plantas no México, coordenando integração com times locais e garantindo conformidade com padrões globais do cliente.</p>
+          <strong data-pt="Projetos internacionais:" data-en="International projects:">Projetos internacionais:</strong>
+          <p data-pt="Atuei diretamente em plantas no México, coordenando integração com times locais e garantindo conformidade com padrões globais do cliente." data-en="I worked directly in plants in Mexico, coordinating integration with local teams and ensuring compliance with client's global standards.">Atuei diretamente em plantas no México, coordenando integração com times locais e garantindo conformidade com padrões globais do cliente.</p>
         </div>
       </div>
 
       <div class="experience-card" onclick="this.classList.toggle('expanded')">
         <div class="experience-header">
           <div class="experience-info">
-            <h3>Engenheiro de Automação</h3>
+            <h3 data-pt="Engenheiro de Automação" data-en="Automation Engineer">Engenheiro de Automação</h3>
             <div class="experience-company">JMF</div>
-            <div class="experience-period">2021–2023 | Brasil</div>
+            <div class="experience-period" data-pt="2021–2023 | Brasil" data-en="2021–2023 | Brazil">2021–2023 | Brasil</div>
           </div>
           <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
         <div class="experience-details">
-          <strong>Arquitetura de dados industriais:</strong>
-          <p>Projetei e implementei solução completa de coleta e armazenamento de dados para fornos de tratamento térmico, integrando CLPs Schneider (via Elipse E3 e Node.js) a bancos SQL Server, permitindo rastreabilidade completa de lotes e reduzindo refugo em 15%.</p>
+          <strong data-pt="Arquitetura de dados industriais:" data-en="Industrial data architecture:">Arquitetura de dados industriais:</strong>
+          <p data-pt="Projetei e implementei solução completa de coleta e armazenamento de dados para fornos de tratamento térmico, integrando CLPs Schneider (via Elipse E3 e Node.js) a bancos SQL Server, permitindo rastreabilidade completa de lotes e reduzindo refugo em 15%." data-en="I designed and implemented a complete data collection and storage solution for heat treatment furnaces, integrating Schneider PLCs (via Elipse E3 and Node.js) with SQL Server databases, enabling complete batch traceability and reducing scrap by 15%.">Projetei e implementei solução completa de coleta e armazenamento de dados para fornos de tratamento térmico, integrando CLPs Schneider (via Elipse E3 e Node.js) a bancos SQL Server, permitindo rastreabilidade completa de lotes e reduzindo refugo em 15%.</p>
           
-          <strong>Automação de processos:</strong>
-          <p>Desenvolvi rotinas em Python para coleta automática de indicadores de produção (OEE, downtime), gerando relatórios em tempo real que melhoraram a tomada de decisão da gerência.</p>
+          <strong data-pt="Automação de processos:" data-en="Process automation:">Automação de processos:</strong>
+          <p data-pt="Desenvolvi rotinas em Python para coleta automática de indicadores de produção (OEE, downtime), gerando relatórios em tempo real que melhoraram a tomada de decisão da gerência." data-en="I developed Python routines for automatic collection of production indicators (OEE, downtime), generating real-time reports that improved management decision-making.">Desenvolvi rotinas em Python para coleta automática de indicadores de produção (OEE, downtime), gerando relatórios em tempo real que melhoraram a tomada de decisão da gerência.</p>
           
-          <strong>Modernização de supervisórios:</strong>
-          <p>Liderei migração de 1 linha de abastecimento para Elipse SCADA com novos alarmes preditivos, resultando em redução de 20% em paradas não planejadas.</p>
+          <strong data-pt="Modernização de supervisórios:" data-en="Modernization of supervisory systems:">Modernização de supervisórios:</strong>
+          <p data-pt="Liderei migração de 1 linha de abastecimento para Elipse SCADA com novos alarmes preditivos, resultando em redução de 20% em paradas não planejadas." data-en="I led the migration of 1 supply line to Elipse SCADA with new predictive alarms, resulting in a 20% reduction in unplanned downtime.">Liderei migração de 1 linha de abastecimento para Elipse SCADA com novos alarmes preditivos, resultando em redução de 20% em paradas não planejadas.</p>
           
-          <strong>Capacitação técnica:</strong>
-          <p>Criei documentação e treinamentos para operadores e time de manutenção, aumentando autonomia da equipe de chão de fábrica.</p>
+          <strong data-pt="Capacitação técnica:" data-en="Technical training:">Capacitação técnica:</strong>
+          <p data-pt="Criei documentação e treinamentos para operadores e time de manutenção, aumentando autonomia da equipe de chão de fábrica." data-en="I created documentation and training for operators and maintenance team, increasing autonomy of the shop floor team.">Criei documentação e treinamentos para operadores e time de manutenção, aumentando autonomia da equipe de chão de fábrica.</p>
         </div>
       </div>
 
       <div class="experience-card" onclick="this.classList.toggle('expanded')">
         <div class="experience-header">
           <div class="experience-info">
-            <h3>Programador de PLC Sênior</h3>
+            <h3 data-pt="Programador de PLC Sênior" data-en="Senior PLC Programmer">Programador de PLC Sênior</h3>
             <div class="experience-company">Markez Robotics</div>
-            <div class="experience-period">2015–2021 | Brasil</div>
+            <div class="experience-period" data-pt="2015–2021 | Brasil" data-en="2015–2021 | Brazil">2015–2021 | Brasil</div>
           </div>
           <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
         <div class="experience-details">
-          <strong>Startups de alta complexidade:</strong>
-          <p>Atuei no desenvolvimento e comissionamento de 5 grandes linhas automotivas (Jeep Renegade, Compass, Fiat Toro), programando mais de 20 CLPs Siemens e Rockwell, incluindo módulos safety e integração com mais de 30 robôs KUKA/ABB.</p>
+          <strong data-pt="Startups de alta complexidade:" data-en="High complexity startups:">Startups de alta complexidade:</strong>
+          <p data-pt="Atuei no desenvolvimento e comissionamento de 5 grandes linhas automotivas (Jeep Renegade, Compass, Fiat Toro), programando mais de 20 CLPs Siemens e Rockwell, incluindo módulos safety e integração com mais de 30 robôs KUKA/ABB." data-en="I worked on the development and commissioning of 5 large automotive lines (Jeep Renegade, Compass, Fiat Toro), programming over 20 Siemens and Rockwell PLCs, including safety modules and integration with over 30 KUKA/ABB robots.">Atuei no desenvolvimento e comissionamento de 5 grandes linhas automotivas (Jeep Renegade, Compass, Fiat Toro), programando mais de 20 CLPs Siemens e Rockwell, incluindo módulos safety e integração com mais de 30 robôs KUKA/ABB.</p>
           
-          <strong>Eliminação de falhas crônicas:</strong>
-          <p>Diagnostiquei causas raiz de falhas recorrentes em células robóticas, implementando melhorias que reduziram paradas por problemas crônicos em 40%.</p>
+          <strong data-pt="Eliminação de falhas crônicas:" data-en="Elimination of chronic failures:">Eliminação de falhas crônicas:</strong>
+          <p data-pt="Diagnostiquei causas raiz de falhas recorrentes em células robóticas, implementando melhorias que reduziram paradas por problemas crônicos em 40%." data-en="I diagnosed root causes of recurring failures in robotic cells, implementing improvements that reduced downtime from chronic problems by 40%.">Diagnostiquei causas raiz de falhas recorrentes em células robóticas, implementando melhorias que reduziram paradas por problemas crônicos em 40%.</p>
           
-          <strong>Otimização de performance:</strong>
-          <p>Analisei e otimizei tempos de ciclo em estações gargalo, entregando ganho de produtividade de 12% na linha de funilaria sem novos investimentos.</p>
+          <strong data-pt="Otimização de performance:" data-en="Performance optimization:">Otimização de performance:</strong>
+          <p data-pt="Analisei e otimizei tempos de ciclo em estações gargalo, entregando ganho de produtividade de 12% na linha de funilaria sem novos investimentos." data-en="I analyzed and optimized cycle times at bottleneck stations, delivering 12% productivity gains in the stamping line without new investments.">Analisei e otimizei tempos de ciclo em estações gargalo, entregando ganho de produtividade de 12% na linha de funilaria sem novos investimentos.</p>
           
-          <strong>Sistemas de segurança:</strong>
-          <p>Programei e validei sistemas Safety PLC integrados a robôs, garantindo certificação das linhas conforme normas internacionais.</p>
+          <strong data-pt="Sistemas de segurança:" data-en="Safety systems:">Sistemas de segurança:</strong>
+          <p data-pt="Programei e validei sistemas Safety PLC integrados a robôs, garantindo certificação das linhas conforme normas internacionais." data-en="I programmed and validated Safety PLC systems integrated with robots, ensuring line certification according to international standards.">Programei e validei sistemas Safety PLC integrados a robôs, garantindo certificação das linhas conforme normas internacionais.</p>
         </div>
       </div>
 
       <div class="experience-card" onclick="this.classList.toggle('expanded')">
         <div class="experience-header">
           <div class="experience-info">
-            <h3>Programador de PLC Junior</h3>
+            <h3 data-pt="Programador de PLC Junior" data-en="Junior PLC Programmer">Programador de PLC Junior</h3>
             <div class="experience-company">Rapack</div>
-            <div class="experience-period">2014–2015 | Brasil</div>
+            <div class="experience-period" data-pt="2014–2015 | Brasil" data-en="2014–2015 | Brazil">2014–2015 | Brasil</div>
           </div>
           <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
         <div class="experience-details">
-          <strong>Startup de linhas:</strong>
-          <p>Participei do ramp-up de 2 novas linhas de montagem automotiva, realizando programação em Step 7 e WinCC para garantir entrada em operação dentro do cronograma do cliente.</p>
+          <strong data-pt="Startup de linhas:" data-en="Line startup:">Startup de linhas:</strong>
+          <p data-pt="Participei do ramp-up de 2 novas linhas de montagem automotiva, realizando programação em Step 7 e WinCC para garantir entrada em operação dentro do cronograma do cliente." data-en="I participated in the ramp-up of 2 new automotive assembly lines, performing Step 7 and WinCC programming to ensure operation within the client's schedule.">Participei do ramp-up de 2 novas linhas de montagem automotiva, realizando programação em Step 7 e WinCC para garantir entrada em operação dentro do cronograma do cliente.</p>
           
-          <strong>Suporte técnico em campo:</strong>
-          <p>Atuei no suporte direto durante primeiro mês de produção, solucionando mais de 50 chamados e garantindo estabilidade operacional na fase crítica.</p>
+          <strong data-pt="Suporte técnico em campo:" data-en="On-site technical support:">Suporte técnico em campo:</strong>
+          <p data-pt="Atuei no suporte direto durante primeiro mês de produção, solucionando mais de 50 chamados e garantindo estabilidade operacional na fase crítica." data-en="I provided direct support during the first month of production, resolving over 50 calls and ensuring operational stability in the critical phase.">Atuei no suporte direto durante primeiro mês de produção, solucionando mais de 50 chamados e garantindo estabilidade operacional na fase crítica.</p>
           
-          <strong>Documentação técnica:</strong>
-          <p>Colaborei na criação de manuais de operação e documentação de programas, facilitando transferência de conhecimento para equipe de manutenção.</p>
+          <strong data-pt="Documentação técnica:" data-en="Technical documentation:">Documentação técnica:</strong>
+          <p data-pt="Colaborei na criação de manuais de operação e documentação de programas, facilitando transferência de conhecimento para equipe de manutenção." data-en="I collaborated in creating operation manuals and program documentation, facilitating knowledge transfer to the maintenance team.">Colaborei na criação de manuais de operação e documentação de programas, facilitando transferência de conhecimento para equipe de manutenção.</p>
           
-          <strong>Projetos elétricos:</strong>
-          <p>Criei projetos elétricos utilizando EPLAN, garantindo conformidade com normas técnicas.</p>
+          <strong data-pt="Projetos elétricos:" data-en="Electrical projects:">Projetos elétricos:</strong>
+          <p data-pt="Criei projetos elétricos utilizando EPLAN, garantindo conformidade com normas técnicas." data-en="I created electrical projects using EPLAN, ensuring compliance with technical standards.">Criei projetos elétricos utilizando EPLAN, garantindo conformidade com normas técnicas.</p>
         </div>
       </div>
     </div>
@@ -990,14 +1038,14 @@
 
   <section id="projects" class="bg-light">
     <div class="section-header">
-      <h2>Projetos</h2>
+      <h2 data-pt="Projetos" data-en="Projects">Projetos</h2>
       <div class="divider"></div>
     </div>
     <div class="projects-grid">
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Jeep Renegade — Startup de Linha</h3>
+        <h3 data-pt="Jeep Renegade — Startup de Linha" data-en="Jeep Renegade — Line Startup">Jeep Renegade — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade.</p>
+        <p class="project-description" data-pt="Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade." data-en="Development and commissioning of high-complexity automotive production line.">Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade.</p>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Safety</span>
@@ -1005,21 +1053,21 @@
           <span class="project-tag">Profinet</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Siemens com módulo safety (Step 7)</li>
-            <li>Configuração e programação de IHM (WinCC)</li>
-            <li>Integração robótica KUKA e ABB</li>
-            <li>Configuração de redes Profibus e Profinet</li>
-            <li>Suporte às áreas elétrica, mecânica e robótica</li>
+            <li data-pt="Programação PLC Siemens com módulo safety (Step 7)" data-en="Siemens PLC programming with safety module (Step 7)">Programação PLC Siemens com módulo safety (Step 7)</li>
+            <li data-pt="Configuração e programação de IHM (WinCC)" data-en="HMI configuration and programming (WinCC)">Configuração e programação de IHM (WinCC)</li>
+            <li data-pt="Integração robótica KUKA e ABB" data-en="KUKA and ABB robot integration">Integração robótica KUKA e ABB</li>
+            <li data-pt="Configuração de redes Profibus e Profinet" data-en="Profibus and Profinet network configuration">Configuração de redes Profibus e Profinet</li>
+            <li data-pt="Suporte às áreas elétrica, mecânica e robótica" data-en="Support to electrical, mechanical and robotic areas">Suporte às áreas elétrica, mecânica e robótica</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Fiat Toro — Startup de Linha</h3>
+        <h3 data-pt="Fiat Toro — Startup de Linha" data-en="Fiat Toro — Line Startup">Fiat Toro — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Implementação de sistema de controle integrado para linha de produção.</p>
+        <p class="project-description" data-pt="Implementação de sistema de controle integrado para linha de produção." data-en="Implementation of integrated control system for production line.">Implementação de sistema de controle integrado para linha de produção.</p>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Safety</span>
@@ -1027,21 +1075,21 @@
           <span class="project-tag">WinCC</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Siemens com módulo safety (Step 7)</li>
-            <li>Configuração e programação de IHM (WinCC)</li>
-            <li>Integração robótica KUKA e ABB</li>
-            <li>Configuração de redes Profibus e Profinet</li>
-            <li>Suporte técnico multidisciplinar</li>
+            <li data-pt="Programação PLC Siemens com módulo safety (Step 7)" data-en="Siemens PLC programming with safety module (Step 7)">Programação PLC Siemens com módulo safety (Step 7)</li>
+            <li data-pt="Configuração e programação de IHM (WinCC)" data-en="HMI configuration and programming (WinCC)">Configuração e programação de IHM (WinCC)</li>
+            <li data-pt="Integração robótica KUKA e ABB" data-en="KUKA and ABB robot integration">Integração robótica KUKA e ABB</li>
+            <li data-pt="Configuração de redes Profibus e Profinet" data-en="Profibus and Profinet network configuration">Configuração de redes Profibus e Profinet</li>
+            <li data-pt="Suporte técnico multidisciplinar" data-en="Multidisciplinary technical support">Suporte técnico multidisciplinar</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Jeep Compass — Startup de Linha</h3>
+        <h3 data-pt="Jeep Compass — Startup de Linha" data-en="Jeep Compass — Line Startup">Jeep Compass — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Desenvolvimento de sistema de automação para linha de montagem.</p>
+        <p class="project-description" data-pt="Desenvolvimento de sistema de automação para linha de montagem." data-en="Development of automation system for assembly line.">Desenvolvimento de sistema de automação para linha de montagem.</p>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Safety</span>
@@ -1049,21 +1097,21 @@
           <span class="project-tag">Profinet</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Siemens com módulo safety (Step 7)</li>
-            <li>Configuração e programação de IHM (WinCC)</li>
-            <li>Integração robótica KUKA e ABB</li>
-            <li>Configuração de redes Profibus e Profinet</li>
-            <li>Startup e validação funcional</li>
+            <li data-pt="Programação PLC Siemens com módulo safety (Step 7)" data-en="Siemens PLC programming with safety module (Step 7)">Programação PLC Siemens com módulo safety (Step 7)</li>
+            <li data-pt="Configuração e programação de IHM (WinCC)" data-en="HMI configuration and programming (WinCC)">Configuração e programação de IHM (WinCC)</li>
+            <li data-pt="Integração robótica KUKA e ABB" data-en="KUKA and ABB robot integration">Integração robótica KUKA e ABB</li>
+            <li data-pt="Configuração de redes Profibus e Profinet" data-en="Profibus and Profinet network configuration">Configuração de redes Profibus e Profinet</li>
+            <li data-pt="Startup e validação funcional" data-en="Startup and functional validation">Startup e validação funcional</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Ford Ka — Linha de Produção</h3>
+        <h3 data-pt="Ford Ka — Linha de Produção" data-en="Ford Ka — Production Line">Ford Ka — Linha de Produção</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Suporte e otimização de linha de produção em operação.</p>
+        <p class="project-description" data-pt="Suporte e otimização de linha de produção em operação." data-en="Support and optimization of production line in operation.">Suporte e otimização de linha de produção em operação.</p>
         <div class="project-tags">
           <span class="project-tag">Rockwell</span>
           <span class="project-tag">Safety</span>
@@ -1071,21 +1119,21 @@
           <span class="project-tag">FactoryTalk</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Rockwell (Studio 5000)</li>
-            <li>Programação Safety Pilz</li>
-            <li>Configuração de IHM FactoryTalk</li>
-            <li>Integração robótica KUKA KRC3 e KRC4</li>
-            <li>Otimização de tempos de ciclo</li>
+            <li data-pt="Programação PLC Rockwell (Studio 5000)" data-en="Rockwell PLC programming (Studio 5000)">Programação PLC Rockwell (Studio 5000)</li>
+            <li data-pt="Programação Safety Pilz" data-en="Pilz Safety programming">Programação Safety Pilz</li>
+            <li data-pt="Configuração de IHM FactoryTalk" data-en="FactoryTalk HMI configuration">Configuração de IHM FactoryTalk</li>
+            <li data-pt="Integração robótica KUKA KRC3 e KRC4" data-en="KUKA KRC3 and KRC4 robot integration">Integração robótica KUKA KRC3 e KRC4</li>
+            <li data-pt="Otimização de tempos de ciclo" data-en="Cycle time optimization">Otimização de tempos de ciclo</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Onix — Startup de Linha</h3>
+        <h3 data-pt="Onix — Startup de Linha" data-en="Onix — Line Startup">Onix — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Comissionamento de nova linha de produção.</p>
+        <p class="project-description" data-pt="Comissionamento de nova linha de produção." data-en="Commissioning of new production line.">Comissionamento de nova linha de produção.</p>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">TIA Portal</span>
@@ -1093,21 +1141,21 @@
           <span class="project-tag">SEW</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Siemens (Tia Portal 14.1)</li>
-            <li>Configuração de IHM (Tia Portal)</li>
-            <li>Startup de inversores SEW</li>
-            <li>Integração robótica ABB</li>
-            <li>Comissionamento da linha</li>
+            <li data-pt="Programação PLC Siemens (Tia Portal 14.1)" data-en="Siemens PLC programming (Tia Portal 14.1)">Programação PLC Siemens (Tia Portal 14.1)</li>
+            <li data-pt="Configuração de IHM (Tia Portal)" data-en="HMI configuration (Tia Portal)">Configuração de IHM (Tia Portal)</li>
+            <li data-pt="Startup de inversores SEW" data-en="SEW inverter startup">Startup de inversores SEW</li>
+            <li data-pt="Integração robótica ABB" data-en="ABB robot integration">Integração robótica ABB</li>
+            <li data-pt="Comissionamento da linha" data-en="Line commissioning">Comissionamento da linha</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Tracker — Startup e Produção</h3>
+        <h3 data-pt="Tracker — Startup e Produção" data-en="Tracker — Startup and Production">Tracker — Startup e Produção</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Implementação e suporte de linha de produção.</p>
+        <p class="project-description" data-pt="Implementação e suporte de linha de produção." data-en="Implementation and support of production line.">Implementação e suporte de linha de produção.</p>
         <div class="project-tags">
           <span class="project-tag">Rockwell</span>
           <span class="project-tag">Safety</span>
@@ -1115,21 +1163,21 @@
           <span class="project-tag">PowerFlex</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Rockwell Safety (Studio 5000)</li>
-            <li>Configuração de IHM Siemens (Tia Portal 14.1)</li>
-            <li>Integração FANUC</li>
-            <li>Configuração RFID</li>
-            <li>Startup de inversores PowerFlex</li>
+            <li data-pt="Programação PLC Rockwell Safety (Studio 5000)" data-en="Rockwell Safety PLC programming (Studio 5000)">Programação PLC Rockwell Safety (Studio 5000)</li>
+            <li data-pt="Configuração de IHM Siemens (Tia Portal 14.1)" data-en="Siemens HMI configuration (Tia Portal 14.1)">Configuração de IHM Siemens (Tia Portal 14.1)</li>
+            <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
+            <li data-pt="Configuração RFID" data-en="RFID configuration">Configuração RFID</li>
+            <li data-pt="Startup de inversores PowerFlex" data-en="PowerFlex inverter startup">Startup de inversores PowerFlex</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Spin — Startup e Produção</h3>
+        <h3 data-pt="Spin — Startup e Produção" data-en="Spin — Startup and Production">Spin — Startup e Produção</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Desenvolvimento e operação de linha de montagem.</p>
+        <p class="project-description" data-pt="Desenvolvimento e operação de linha de montagem." data-en="Development and operation of assembly line.">Desenvolvimento e operação de linha de montagem.</p>
         <div class="project-tags">
           <span class="project-tag">Rockwell</span>
           <span class="project-tag">Safety</span>
@@ -1137,43 +1185,43 @@
           <span class="project-tag">PowerFlex</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Rockwell Safety (Studio 5000)</li>
-            <li>Configuração de IHM Siemens (Tia Portal 14.1)</li>
-            <li>Integração FANUC</li>
-            <li>Startup de inversores PowerFlex</li>
-            <li>Otimização produtiva</li>
+            <li data-pt="Programação PLC Rockwell Safety (Studio 5000)" data-en="Rockwell Safety PLC programming (Studio 5000)">Programação PLC Rockwell Safety (Studio 5000)</li>
+            <li data-pt="Configuração de IHM Siemens (Tia Portal 14.1)" data-en="Siemens HMI configuration (Tia Portal 14.1)">Configuração de IHM Siemens (Tia Portal 14.1)</li>
+            <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
+            <li data-pt="Startup de inversores PowerFlex" data-en="PowerFlex inverter startup">Startup de inversores PowerFlex</li>
+            <li data-pt="Otimização produtiva" data-en="Production optimization">Otimização produtiva</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Latapack — Suporte Especializado</h3>
+        <h3 data-pt="Latapack — Suporte Especializado" data-en="Latapack — Specialized Support">Latapack — Suporte Especializado</h3>
         <p class="project-client">Markez</p>
-        <p class="project-description">Diagnóstico e melhoria de sistemas de automação.</p>
+        <p class="project-description" data-pt="Diagnóstico e melhoria de sistemas de automação." data-en="Diagnosis and improvement of automation systems.">Diagnóstico e melhoria de sistemas de automação.</p>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Profinet</span>
-          <span class="project-tag">Diagnóstico</span>
-          <span class="project-tag">Manutenção</span>
+          <span class="project-tag" data-pt="Diagnóstico" data-en="Diagnosis">Diagnóstico</span>
+          <span class="project-tag" data-pt="Manutenção" data-en="Maintenance">Manutenção</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Diagnóstico de falhas em PLC Siemens</li>
-            <li>Suporte em redes Profinet</li>
-            <li>Treinamento técnico</li>
-            <li>Padronização operacional</li>
-            <li>Implantação de melhorias contínuas</li>
+            <li data-pt="Diagnóstico de falhas em PLC Siemens" data-en="Siemens PLC failure diagnosis">Diagnóstico de falhas em PLC Siemens</li>
+            <li data-pt="Suporte em redes Profinet" data-en="Profinet network support">Suporte em redes Profinet</li>
+            <li data-pt="Treinamento técnico" data-en="Technical training">Treinamento técnico</li>
+            <li data-pt="Padronização operacional" data-en="Operational standardization">Padronização operacional</li>
+            <li data-pt="Implantação de melhorias contínuas" data-en="Implementation of continuous improvements">Implantação de melhorias contínuas</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Ferbasa — Fornos e Abastecimento</h3>
+        <h3 data-pt="Ferbasa — Fornos e Abastecimento" data-en="Ferbasa — Furnaces and Supply">Ferbasa — Fornos e Abastecimento</h3>
         <p class="project-client">JMF</p>
-        <p class="project-description">Arquitetura de dados e supervisão de processos industriais.</p>
+        <p class="project-description" data-pt="Arquitetura de dados e supervisão de processos industriais." data-en="Data architecture and supervision of industrial processes.">Arquitetura de dados e supervisão de processos industriais.</p>
         <div class="project-tags">
           <span class="project-tag">Schneider</span>
           <span class="project-tag">Elipse SCADA</span>
@@ -1181,42 +1229,42 @@
           <span class="project-tag">Grafana</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Schneider (Control Expert e EcoStruxure)</li>
-            <li>Configuração de IHM Weg e Delta</li>
-            <li>Integração Elipse SCADA</li>
-            <li>Controle PID</li>
-            <li>Arquitetura de dados industriais</li>
+            <li data-pt="Programação PLC Schneider (Control Expert e EcoStruxure)" data-en="Schneider PLC programming (Control Expert and EcoStruxure)">Programação PLC Schneider (Control Expert e EcoStruxure)</li>
+            <li data-pt="Configuração de IHM Weg e Delta" data-en="Weg and Delta HMI configuration">Configuração de IHM Weg e Delta</li>
+            <li data-pt="Integração Elipse SCADA" data-en="Elipse SCADA integration">Integração Elipse SCADA</li>
+            <li data-pt="Controle PID" data-en="PID control">Controle PID</li>
+            <li data-pt="Arquitetura de dados industriais" data-en="Industrial data architecture">Arquitetura de dados industriais</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>General Motors — Suporte à Engenharia</h3>
+        <h3 data-pt="General Motors — Suporte à Engenharia" data-en="General Motors — Engineering Support">General Motors — Suporte à Engenharia</h3>
         <p class="project-client">Markez</p>
-        <p class="project-description">Supervisão técnica e validação de projetos.</p>
+        <p class="project-description" data-pt="Supervisão técnica e validação de projetos." data-en="Technical supervision and project validation.">Supervisão técnica e validação de projetos.</p>
         <div class="project-tags">
-          <span class="project-tag">Supervisão</span>
-          <span class="project-tag">Validação</span>
+          <span class="project-tag" data-pt="Supervisão" data-en="Supervision">Supervisão</span>
+          <span class="project-tag" data-pt="Validação" data-en="Validation">Validação</span>
           <span class="project-tag">Checklists</span>
-          <span class="project-tag">Melhorias</span>
+          <span class="project-tag" data-pt="Melhorias" data-en="Improvements">Melhorias</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Supervisão de projetos</li>
-            <li>Validação técnica</li>
-            <li>Acompanhamento de melhorias</li>
-            <li>Elaboração de checklists</li>
+            <li data-pt="Supervisão de projetos" data-en="Project supervision">Supervisão de projetos</li>
+            <li data-pt="Validação técnica" data-en="Technical validation">Validação técnica</li>
+            <li data-pt="Acompanhamento de melhorias" data-en="Improvement monitoring">Acompanhamento de melhorias</li>
+            <li data-pt="Elaboração de checklists" data-en="Checklist preparation">Elaboração de checklists</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Jetta — Startup de Linha</h3>
+        <h3 data-pt="Jetta — Startup de Linha" data-en="Jetta — Line Startup">Jetta — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description">Implementação de linha de produção automotiva.</p>
+        <p class="project-description" data-pt="Implementação de linha de produção automotiva." data-en="Implementation of automotive production line.">Implementação de linha de produção automotiva.</p>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">TIA Portal</span>
@@ -1224,21 +1272,21 @@
           <span class="project-tag">Profinet</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Siemens (Step 7 e Tia Portal 16)</li>
-            <li>Configuração de IHM WinCC e TIA Portal 16</li>
-            <li>Integração FANUC</li>
-            <li>Configuração Profinet</li>
-            <li>Parametrização SEW</li>
+            <li data-pt="Programação PLC Siemens (Step 7 e Tia Portal 16)" data-en="Siemens PLC programming (Step 7 and Tia Portal 16)">Programação PLC Siemens (Step 7 e Tia Portal 16)</li>
+            <li data-pt="Configuração de IHM WinCC e TIA Portal 16" data-en="WinCC and TIA Portal 16 HMI configuration">Configuração de IHM WinCC e TIA Portal 16</li>
+            <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
+            <li data-pt="Configuração Profinet" data-en="Profinet configuration">Configuração Profinet</li>
+            <li data-pt="Parametrização SEW" data-en="SEW parameterization">Parametrização SEW</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <h3>Basalt — Startup de Linha</h3>
+        <h3 data-pt="Basalt — Startup de Linha" data-en="Basalt — Line Startup">Basalt — Startup de Linha</h3>
         <p class="project-client">PSA - Resende</p>
-        <p class="project-description">Adequação da linha produtiva para novo modelo.</p>
+        <p class="project-description" data-pt="Adequação da linha produtiva para novo modelo." data-en="Adaptation of production line for new model.">Adequação da linha produtiva para novo modelo.</p>
         <div class="project-tags">
           <span class="project-tag">Rockwell</span>
           <span class="project-tag">FANUC</span>
@@ -1246,13 +1294,13 @@
           <span class="project-tag">SMC</span>
         </div>
         <div class="project-details">
-          <strong>Atividades:</strong>
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li>Programação PLC Rockwell</li>
-            <li>Configuração FactoryTalk</li>
-            <li>Integração FANUC</li>
-            <li>Configuração DeviceNet</li>
-            <li>Integração pneumática SMC/Festo</li>
+            <li data-pt="Programação PLC Rockwell" data-en="Rockwell PLC programming">Programação PLC Rockwell</li>
+            <li data-pt="Configuração FactoryTalk" data-en="FactoryTalk configuration">Configuração FactoryTalk</li>
+            <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
+            <li data-pt="Configuração DeviceNet" data-en="DeviceNet configuration">Configuração DeviceNet</li>
+            <li data-pt="Integração pneumática SMC/Festo" data-en="SMC/Festo pneumatic integration">Integração pneumática SMC/Festo</li>
           </ul>
         </div>
       </div>
@@ -1261,15 +1309,15 @@
 
   <section id="contact" class="contact-section">
     <div class="section-header" style="justify-content: center; margin-bottom: 2rem;">
-      <h2>Vamos Conversar?</h2>
+      <h2 data-pt="Vamos Conversar?" data-en="Let's Talk?">Vamos Conversar?</h2>
     </div>
-    <p class="contact-description">Tenho interesse em projetos desafiadores e colaborações inovadoras. Sinta-se livre para entrar em contato!</p>
+    <p class="contact-description" data-pt="Tenho interesse em projetos desafiadores e colaborações inovadoras. Sinta-se livre para entrar em contato!" data-en="I'm interested in challenging projects and innovative collaborations. Feel free to get in touch!">Tenho interesse em projetos desafiadores e colaborações inovadoras. Sinta-se livre para entrar em contato!</p>
     <div class="contact-buttons">
-      <a href="mailto:fiscina.marcelo@gmail.com" class="contact-btn contact-btn-primary">
-        <span>📧</span> Email
+      <a href="mailto:fiscina.marcelo@gmail.com" class="contact-btn contact-btn-primary" data-pt="📧 Email" data-en="📧 Email">
+        <span>📧</span> <span class="btn-text" data-pt="Email" data-en="Email">Email</span>
       </a>
-      <a href="https://wa.me/5575998828918" class="contact-btn contact-btn-secondary" target="_blank">
-        <span>📱</span> WhatsApp
+      <a href="https://wa.me/5575998828918" class="contact-btn contact-btn-secondary" target="_blank" data-pt="📱 WhatsApp" data-en="📱 WhatsApp">
+        <span>📱</span> <span class="btn-text" data-pt="WhatsApp" data-en="WhatsApp">WhatsApp</span>
       </a>
     </div>
     <div class="social-links">
@@ -1277,11 +1325,39 @@
       <a href="https://github.com" class="social-icon" title="GitHub" target="_blank">⚙</a>
     </div>
     <div class="footer">
-      <p>© 2026 • José Marcelo Fiscina • Engenharia de Controle e Automação</p>
+      <p data-pt="© 2026 • José Marcelo Fiscina • Engenharia de Controle e Automação" data-en="© 2026 • José Marcelo Fiscina • Control and Automation Engineering">© 2026 • José Marcelo Fiscina • Engenharia de Controle e Automação</p>
     </div>
   </section>
 
   <script>
+    function changeLanguage(lang) {
+      // Atualizar botões ativos
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+      // Atualizar todos os elementos com data-pt e data-en
+      document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+        const text = lang === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+        if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+          el.textContent = text;
+        } else if (el.classList.contains('btn-text')) {
+          el.textContent = text;
+        } else {
+          el.textContent = text;
+        }
+      });
+
+      // Salvar preferência
+      localStorage.setItem('language', lang);
+    }
+
+    // Carregar idioma salvo
+    const savedLang = localStorage.getItem('language') || 'pt';
+    changeLanguage(savedLang);
+
+    // Navigation active state
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
