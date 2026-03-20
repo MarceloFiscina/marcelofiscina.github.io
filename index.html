@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
   <link rel="icon" type="image/jpg" href="img/foto.jpg">
   <title>José Marcelo Nascimento Fiscina | Engenheiro de Controle e Automação</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1402,6 +1400,33 @@
           </ul>
         </div>
       </div>
+
+      <div class="project-card" onclick="this.classList.toggle('expanded')">
+        <img src="img/j4u.jpg" alt="J4U" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="J4U New Model Launch & Production Support" data-en="J4U New Model Launch & Production Support">J4U New Model Launch & Production Support</h3>
+        <p class="project-client">STELLANTIS (Pernambuco)</p>
+        <p class="project-description" data-pt="Suporte crítico à produção 24/7 e resolução de falhas crônicas em linhas de produção." data-en="24/7 critical production support and resolution of chronic failures in production lines.">Suporte crítico à produção 24/7 e resolução de falhas crônicas em linhas de produção.</p>
+        <div class="project-tags">
+          <span class="project-tag">Siemens</span>
+          <span class="project-tag">SCADA WinCC</span>
+          <span class="project-tag">MES</span>
+          <span class="project-tag">CARs</span>
+          <span class="project-tag">OEE</span>
+        </div>
+        <div class="project-details">
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
+          <ul>
+            <li data-pt="Suporte crítico à produção 24/7 com resolução de falhas recorrentes" data-en="24/7 critical production support with resolution of recurring failures">Suporte crítico à produção 24/7 com resolução de falhas recorrentes</li>
+            <li data-pt="Otimização de produtividade e OEE das linhas" data-en="Productivity and OEE optimization of production lines">Otimização de produtividade e OEE das linhas</li>
+            <li data-pt="Participação no lançamento do modelo J4U" data-en="Participation in J4U model launch">Participação no lançamento do modelo J4U</li>
+            <li data-pt="Comissionamento e ramp-up da produção" data-en="Commissioning and production ramp-up">Comissionamento e ramp-up da produção</li>
+            <li data-pt="Programação PLC Siemens (TIA Portal)" data-en="Siemens PLC programming (TIA Portal)">Programação PLC Siemens (TIA Portal)</li>
+            <li data-pt="Configuração SCADA WinCC Explorer" data-en="SCADA WinCC Explorer configuration">Configuração SCADA WinCC Explorer</li>
+            <li data-pt="Integração MES e padrão CARs" data-en="MES integration and CARs standard">Integração MES e padrão CARs</li>
+            <li data-pt="Acionamentos Lenze e SEW" data-en="Lenze and SEW drives">Acionamentos Lenze e SEW</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1428,25 +1453,34 @@
   </section>
 
   <script>
-    function changeLanguage(lang) {
+     function changeLanguage(lang) {
       // Atualizar botões ativos
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-
-      // Atualizar todos os elementos com data-pt e data-en
-      document.querySelectorAll('[data-pt][data-en]').forEach(el => {
-        const text = lang === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
-        if (el.tagName === 'A' || el.tagName === 'BUTTON') {
-          el.textContent = text;
-        } else if (el.classList.contains('btn-text')) {
-          el.textContent = text;
-        } else {
-          el.textContent = text;
+      const langBtns = document.querySelectorAll('.lang-btn');
+      if (langBtns.length > 0) {
+        langBtns.forEach(btn => {
+          btn.classList.remove('active');
+        });
+        const activeLangBtn = document.querySelector(`[data-lang="${lang}"]`);
+        if (activeLangBtn) {
+          activeLangBtn.classList.add('active');
         }
-      });
-
+      }
+      // Atualizar todos os elementos com data-pt e data-en
+      const translatableElements = document.querySelectorAll('[data-pt][data-en]');
+      if (translatableElements.length > 0) {
+        translatableElements.forEach(el => {
+          const text = lang === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+          if (text) {
+            if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+              el.textContent = text;
+            } else if (el.classList.contains('btn-text')) {
+              el.textContent = text;
+            } else {
+              el.textContent = text;
+            }
+          }
+        });
+      }
       // Salvar preferência
       localStorage.setItem('language', lang);
     }
