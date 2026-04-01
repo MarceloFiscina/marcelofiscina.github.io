@@ -683,33 +683,59 @@
         transform: translateY(0);
       }
     }
+    /* Seção Projetos - igualar ao estilo da Experiência */
     
-    .project-details strong {
-      display: block;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #4b5563;
-      margin-bottom: 0.75rem;
+    /* Títulos dos projetos (h3) */
+    .projects h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #eaecef;
+        padding-bottom: 0.3rem;
     }
     
-    .project-details ul {
-      margin: 0 0 0 1.2rem;
-      padding: 0;
+    /* Descrição inicial do projeto (parágrafo após o título) */
+    .projects p:first-of-type {
+        color: #5a6a7a;
+        font-style: italic;
+        margin-bottom: 1rem;
     }
     
-    .project-details li {
-      font-size: 0.85rem;
-      line-height: 1.45;
-      margin-bottom: 0.6rem;
-      color: #2d3a4b;
+    /* Transforma o texto "Atividades:" em um subtítulo como nas experiências */
+    .projects strong:contains("Atividades") {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #2c3e50;
     }
     
-    .project-details li::marker {
-      color: #00d9a3;
+    /* Lista de atividades (ul) */
+    .projects ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
     }
-
     
+    /* Itens da lista */
+    .projects li {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Se você quiser uma linha de tecnologias como na experiência (opcional) */
+    .project-tech {
+        font-size: 0.9rem;
+        color: #3b6e8f;
+        border-top: 1px dashed #eaecef;
+        padding-top: 0.75rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
     .contact-section {
       background-color: #1a1a1a;
       color: white;
