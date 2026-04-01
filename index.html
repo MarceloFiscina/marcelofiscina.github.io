@@ -582,7 +582,25 @@
       font-size: 0.75rem;
       font-weight: 600;
     }
-
+     
+    .project-card .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+ 
+    .project-card .project-client {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #c0392b;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+    
     .contact-section {
       background-color: #1a1a1a;
       color: white;
@@ -1352,16 +1370,23 @@
       <div class="divider"></div>
     </div>
     <div class="projects-grid">
+      <!-- Jeep Renegade -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/renegade.jpg" alt="Jeep Renegade" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Jeep Renegade — Startup de Linha" data-en="Jeep Renegade — Line Startup">Jeep Renegade — Startup de Linha</h3>
+        <h3 data-pt="Jeep Renegade — Start-up e Liderança de Campo" data-en="Jeep Renegade — Start-up and Field Leadership">Jeep Compass — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade." data-en="Development and commissioning of high-complexity automotive production line.">Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade.</p>
+        <p class="project-description" data-pt="Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade com CLPs Siemens, integração robótica KUKA e ABB, e configuração de redes Profibus/Profinet." data-en="Development and commissioning of a high-complexity automotive production line with Siemens PLCs, KUKA and ABB robot integration, and Profibus/Profinet network configuration.">Desenvolvimento e comissionamento de linha de produção automotiva de alta complexidade com CLPs Siemens, integração robótica KUKA e ABB, e configuração de redes Profibus/Profinet.</p>
+        <div class="card-meta">
+          <p class="project-client">PMC Automotiva — Pernambuco</p>
+          <span class="project-dates">nov/2014 – nov/2015</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Safety</span>
           <span class="project-tag">KUKA</span>
+          <span class="project-tag">ABB</span>
           <span class="project-tag">Profinet</span>
+          <span class="project-tag">Profibus</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
@@ -1374,16 +1399,22 @@
           </ul>
         </div>
       </div>
-
+      
+      <!-- Fiat Toro -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/toro.jpg" alt="Fiat Toro" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Fiat Toro — Startup de Linha" data-en="Fiat Toro — Line Startup">Fiat Toro — Startup de Linha</h3>
+        <h3 data-pt="Fiat Toro — Start-up e Liderança de Campo" data-en="Fiat Toro — Start-up and Field Leadership">Jeep Compass — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Implementação de sistema de controle integrado para linha de produção." data-en="Implementation of integrated control system for production line.">Implementação de sistema de controle integrado para linha de produção.</p>
+        <p class="project-description" data-pt="Implementação de sistema de controle integrado para linha de produção com Siemens TIA Portal, IHM WinCC e integração robótica KUKA e ABB." data-en="Implementation of an integrated control system for production line with Siemens TIA Portal, WinCC HMI, and KUKA and ABB robot integration.">Implementação de sistema de controle integrado para linha de produção com Siemens TIA Portal, IHM WinCC e integração robótica KUKA e ABB.</p>
+        <div class="card-meta">
+          <p class="project-client">PMC Automotiva — Pernambuco</p>
+          <span class="project-dates">nov/2014 – nov/2015</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Safety</span>
           <span class="project-tag">KUKA</span>
+          <span class="project-tag">ABB</span>
           <span class="project-tag">WinCC</span>
         </div>
         <div class="project-details">
@@ -1397,17 +1428,23 @@
           </ul>
         </div>
       </div>
-
+      
+      <!-- Jeep Compass -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/compass.jpg" alt="Jeep Compass" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Jeep Compass — Startup de Linha" data-en="Jeep Compass — Line Startup">Jeep Compass — Startup de Linha</h3>
+        <h3 data-pt="Jeep Compass — Start-up e Liderança de Campo" data-en="Jeep Compass — Start-up and Field Leadership">Jeep Compass — Startup de Linha</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Desenvolvimento de sistema de automação para linha de montagem." data-en="Development of automation system for assembly line.">Desenvolvimento de sistema de automação para linha de montagem.</p>
+        <p class="project-description" data-pt="Desenvolvimento do sistema de automação para linha de montagem com CLPs Siemens, módulos safety, e integração robótica com redes Profibus/Profinet." data-en="Automation system development for assembly line with Siemens PLCs, safety modules, and robot integration via Profibus/Profinet networks.">Desenvolvimento do sistema de automação para linha de montagem com CLPs Siemens, módulos safety, e integração robótica com redes Profibus/Profinet.</p>
+        <div class="card-meta">
+          <p class="project-client">PMC Automotiva — Pernambuco</p>
+          <span class="project-dates">nov/2014 – nov/2015</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Safety</span>
           <span class="project-tag">KUKA</span>
-          <span class="project-tag">Profinet</span>
+          <span class="project-tag">ABB</span>
+          <span class="project-tag">WinCC</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
@@ -1421,20 +1458,27 @@
         </div>
       </div>
 
+      <!-- Ford B515/B562 - Camaçari -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/fordka.jpg" alt="Ford Ka" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Ford Ka — Linha de Produção" data-en="Ford Ka — Production Line">Ford Ka — Linha de Produção</h3>
+        <h3 data-pt="Projeto Ford Ka — Comissionamento e Otimização (Ford)" data-en="Project Ford Ka — Commissioning and Optimization (Ford)">Projeto B515/B562 — Comissionamento e Otimização (Ford)</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Suporte e otimização de linha de produção em operação." data-en="Support and optimization of production line in operation.">Suporte e otimização de linha de produção em operação.</p>
+        <p class="project-description" data-pt="Comissionamento de hardware e software para os modelos B515 e B562 com Allen-Bradley (Studio 5000 / FactoryTalk), seguindo o padrão DCP, incluindo diagnóstico e resolução de falhas complexas em mesas rotativas e sistemas eletromecânicos sem documentação disponível." data-en="Hardware and software commissioning for models B515 and B562 with Allen-Bradley (Studio 5000 / FactoryTalk), following the DCP standard, including diagnosis and resolution of complex failures in rotary tables and electromechanical systems without available documentation.">Comissionamento de hardware e software para os modelos B515 e B562 com Allen-Bradley (Studio 5000 / FactoryTalk), seguindo o padrão DCP, incluindo diagnóstico e resolução de falhas complexas em mesas rotativas e sistemas eletromecânicos sem documentação disponível.</p>
+        <div class="card-meta">
+          <p class="project-client">Ford — Camaçari, BA</p>
+          <span class="project-dates">nov/2015 – jun/2017</span>
+        </div>
         <div class="project-tags">
+          <span class="project-tag">DCP Standard</span>
           <span class="project-tag">Rockwell</span>
-          <span class="project-tag">Safety</span>
+          <span class="project-tag">PLC Pilz</span>
           <span class="project-tag">KUKA</span>
           <span class="project-tag">FactoryTalk</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
+            <li data-pt="Comissionamento conforme padrão DCP com Studio 5000 e FactoryTalk" data-en="Commissioning per DCP standard with Studio 5000 and FactoryTalk">Comissionamento conforme padrão DCP com Studio 5000 e FactoryTalk</li>
             <li data-pt="Programação PLC Rockwell (Studio 5000)" data-en="Rockwell PLC programming (Studio 5000)">Programação PLC Rockwell (Studio 5000)</li>
             <li data-pt="Programação Safety Pilz" data-en="Pilz Safety programming">Programação Safety Pilz</li>
             <li data-pt="Configuração de IHM FactoryTalk" data-en="FactoryTalk HMI configuration">Configuração de IHM FactoryTalk</li>
@@ -1444,11 +1488,16 @@
         </div>
       </div>
 
+      <!-- Onix - Gestamp Gravataí -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/onix.jpg" alt="Onix" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Onix — Startup de Linha" data-en="Onix — Line Startup">Onix — Startup de Linha</h3>
+        <h3 data-pt="Projeto Onix — Comissionamento e Interface com Cliente (Gestamp)" data-en="Project Onix — Commissioning and Client Interface (Gestamp)">Projeto Onix — Comissionamento e Interface com Cliente (Gestamp)</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Comissionamento de nova linha de produção." data-en="Commissioning of new production line.">Comissionamento de nova linha de produção.</p>
+        <p class="project-description" data-pt="Comissionamento completo com TIA Portal V13, atuando como principal ponto técnico com o cliente e reportando diretamente ao gerente da planta Gestamp. Desenvolvimento de lógica em LAD, SCL e Graph 7, além de integração de drives SEW e dispositivos SICK." data-en="Full commissioning with TIA Portal V13, acting as the primary technical contact with the client and reporting directly to the Gestamp plant manager. Logic development in LAD, SCL, and Graph 7, plus SEW drive and SICK device integration.">Comissionamento completo com TIA Portal V13, atuando como principal ponto técnico com o cliente e reportando diretamente ao gerente da planta Gestamp. Desenvolvimento de lógica em LAD, SCL e Graph 7, além de integração de drives SEW e dispositivos SICK.</p>
+        <div class="card-meta">
+          <p class="project-client">Gestamp — Gravataí, RS</p>
+          <span class="project-dates">jul/2017 – jun/2018</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">TIA Portal</span>
@@ -1458,66 +1507,92 @@
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
+            <li data-pt="Programação em Ladder (LAD), SCL e Graph 7 no TIA Portal V14.1" data-en="Ladder (LAD), SCL and Graph 7 programming in TIA Portal V14.1">Programação em Ladder (LAD), SCL e Graph 7 no TIA Portal V14.1</li>
             <li data-pt="Programação PLC Siemens (Tia Portal 14.1)" data-en="Siemens PLC programming (Tia Portal 14.1)">Programação PLC Siemens (Tia Portal 14.1)</li>
             <li data-pt="Configuração de IHM (Tia Portal)" data-en="HMI configuration (Tia Portal)">Configuração de IHM (Tia Portal)</li>
-            <li data-pt="Startup de inversores SEW" data-en="SEW inverter startup">Startup de inversores SEW</li>
+            <li data-pt="Configuração e startup de inversores SEW" data-en="SEW inverter startup">Startup de inversores SEW</li>
             <li data-pt="Integração robótica ABB" data-en="ABB robot integration">Integração robótica ABB</li>
             <li data-pt="Comissionamento da linha" data-en="Line commissioning">Comissionamento da linha</li>
+            <li data-pt="Interface técnica direta com o cliente e reporte ao gerente de planta" data-en="Direct technical interface with client and reporting to plant manager">Interface técnica direta com o cliente e reporte ao gerente de planta</li>
           </ul>
         </div>
       </div>
 
+      <!-- Tracker -> Gestamp Santa Isabel -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/tracker.jpg" alt="Tracker" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Tracker — Startup e Produção" data-en="Tracker — Startup and Production">Tracker — Startup e Produção</h3>
+        <h3 data-pt="Projeto Tracker — Comissionamento e Sistemas de Segurança (Gestamp)" data-en="Project Tracker — Commissioning and Safety Systems (Gestamp)">Projeto GEM — Comissionamento e Sistemas de Segurança (Gestamp)</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Implementação e suporte de linha de produção." data-en="Implementation and support of production line.">Implementação e suporte de linha de produção.</p>
+        <p class="project-description" data-pt="Comissionamento completo do sistema de controle com Siemens TIA Portal e Step 7, integração de inversores ABB/SEW e Safety PLC Siemens, além do desenvolvimento de IHM especializada para controle de máquina Tucker." data-en="Full control system commissioning with Siemens TIA Portal and Step 7, ABB/SEW inverter and Siemens Safety PLC integration, and development of specialized HMI for Tucker machine control.">Comissionamento completo do sistema de controle com Siemens TIA Portal e Step 7, integração de inversores ABB/SEW e Safety PLC Siemens, além do desenvolvimento de IHM especializada para controle de máquina Tucker.</p>
+        <div class="card-meta">
+          <p class="project-client">Gestamp — Santa Isabel, SP</p>
+          <span class="project-dates">jul/2018 – dez/2018</span>
+        </div>
         <div class="project-tags">
-          <span class="project-tag">Rockwell</span>
-          <span class="project-tag">Safety</span>
-          <span class="project-tag">FANUC</span>
-          <span class="project-tag">PowerFlex</span>
+          <span class="project-tag">Siemens TIA Portal</span>
+          <span class="project-tag">Safety PLC</span>
+          <span class="project-tag">ABB</span>
+          <span class="project-tag">SEW</span>
+          <span class="project-tag">Tucker</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
-            <li data-pt="Programação PLC Rockwell Safety (Studio 5000)" data-en="Rockwell Safety PLC programming (Studio 5000)">Programação PLC Rockwell Safety (Studio 5000)</li>
-            <li data-pt="Configuração de IHM Siemens (Tia Portal 14.1)" data-en="Siemens HMI configuration (Tia Portal 14.1)">Configuração de IHM Siemens (Tia Portal 14.1)</li>
-            <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
-            <li data-pt="Configuração RFID" data-en="RFID configuration">Configuração RFID</li>
-            <li data-pt="Startup de inversores PowerFlex" data-en="PowerFlex inverter startup">Startup de inversores PowerFlex</li>
+            
+            <li data-pt="Programação PLC Siemens (Step 7)" data-en="Siemens PLC programming (Step 7)">Programação PLC Siemens (Step 7)</li>
+            <li data-pt="Configuração de IHM (Tia Portal)" data-en="HMI configuration (Tia Portal)">Configuração de IHM (Tia Portal)</li>
+            <li data-pt="Startup de inversores ABB/SEW" data-en="ABB/SEW inverter startup">Startup de inversores SEW</li>
+            <li data-pt="Integração robótica ABB" data-en="ABB robot integration">Integração robótica ABB</li>
+            <li data-pt="Comissionamento da linha" data-en="Line commissioning">Comissionamento da linha</li>
+            <li data-pt="Desenvolvimento de lógica de controle e IHM para máquina Tucker" data-en="Control logic and HMI development for Tucker machine">Desenvolvimento de lógica de controle e IHM para máquina Tucker</li>
+            <li data-pt="Análise de diagramas elétricos e verificação da instalação em campo" data-en="Electrical diagram analysis and field installation verification">Análise de diagramas elétricos e verificação da instalação em campo</li>
           </ul>
         </div>
       </div>
-
+ 
+      <!-- SPIN - GM São Caetano 2018 -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/spin.jpg" alt="Spin" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Spin — Startup e Produção" data-en="Spin — Startup and Production">Spin — Startup e Produção</h3>
+         <h3 data-pt="Projeto Spin — Novo Modelo e Melhoria de OEE (GM)" data-en="Project Spin — New Model and OEE Improvement (GM)">Projeto GEM — Novo Modelo e Melhoria de OEE (GM)</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Desenvolvimento e operação de linha de montagem." data-en="Development and operation of assembly line.">Desenvolvimento e operação de linha de montagem.</p>
+        <p class="project-description" data-pt="Integração do novo modelo GEM nas células do Body Shop com foco na eliminação de microparadas recorrentes, otimização do tempo de ciclo e aumento significativo da disponibilidade da linha (OEE), dentro do padrão GCCS da GM." data-en="GEM model integration in Body Shop cells focused on eliminating recurring microstoppages, cycle time optimization, and significant improvement of line availability (OEE), following GM's GCCS standard.">Integração do novo modelo GEM nas células do Body Shop com foco na eliminação de microparadas recorrentes, otimização do tempo de ciclo e aumento significativo da disponibilidade da linha (OEE), dentro do padrão GCCS da GM.</p>
+        <div class="card-meta">
+          <p class="project-client">GM — São Caetano do Sul, SP</p>
+          <span class="project-dates">nov/2018 – jun/2019</span>
+        </div>
         <div class="project-tags">
-          <span class="project-tag">Rockwell</span>
-          <span class="project-tag">Safety</span>
+          <span class="project-tag">Siemens TIA Portal</span>
+          <span class="project-tag">Rockwell Studio 5000</span>
+          <span class="project-tag">GCCS</span>
           <span class="project-tag">FANUC</span>
           <span class="project-tag">PowerFlex</span>
+          <span class="project-tag">OEE</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
+            <li data-pt="Programação e start-up do CLP para o novo modelo GEM" data-en="PLC programming and start-up for the new GEM model">Programação e start-up do CLP para o novo modelo GEM</li>
             <li data-pt="Programação PLC Rockwell Safety (Studio 5000)" data-en="Rockwell Safety PLC programming (Studio 5000)">Programação PLC Rockwell Safety (Studio 5000)</li>
             <li data-pt="Configuração de IHM Siemens (Tia Portal 14.1)" data-en="Siemens HMI configuration (Tia Portal 14.1)">Configuração de IHM Siemens (Tia Portal 14.1)</li>
             <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
             <li data-pt="Startup de inversores PowerFlex" data-en="PowerFlex inverter startup">Startup de inversores PowerFlex</li>
             <li data-pt="Otimização produtiva" data-en="Production optimization">Otimização produtiva</li>
+            <li data-pt="Otimização de tempo de ciclo e aumento do OEE da linha" data-en="Cycle time optimization and line OEE improvement">Otimização de tempo de ciclo e aumento do OEE da linha</li>
+            <li data-pt="Identificação e eliminação das causas raiz de microparadas recorrentes" data-en="Identification and elimination of root causes of recurring microstoppages">Identificação e eliminação das causas raiz de microparadas recorrentes</li>
           </ul>
         </div>
       </div>
 
+      <!-- Latapack -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/latapack.jpg" alt="Latapack" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
         <h3 data-pt="Latapack — Suporte Especializado" data-en="Latapack — Specialized Support">Latapack — Suporte Especializado</h3>
         <p class="project-client">Markez</p>
-        <p class="project-description" data-pt="Diagnóstico e melhoria de sistemas de automação." data-en="Diagnosis and improvement of automation systems.">Diagnóstico e melhoria de sistemas de automação.</p>
+        <p class="project-description" data-pt="Diagnóstico de falhas em sistemas Siemens com foco em redes Profinet, implementação de melhorias contínuas e padronização operacional com treinamento técnico da equipe da planta." data-en="Failure diagnosis in Siemens systems focused on Profinet networks, continuous improvement implementation, and operational standardization with plant team technical training.">Diagnóstico de falhas em sistemas Siemens com foco em redes Profinet, implementação de melhorias contínuas e padronização operacional com treinamento técnico da equipe da planta.</p>
+        <div class="card-meta">
+          <p class="project-client">Markez</p>
+          <span class="project-dates">jun/2019 — jul/2019</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
           <span class="project-tag">Profinet</span>
@@ -1536,34 +1611,193 @@
         </div>
       </div>
 
+      <!-- Onix - GM Gravatai -->
+      <div class="project-card" onclick="this.classList.toggle('expanded')">
+        <img src="img/onix.jpg" alt="Onix" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="Projeto Onix — Integração de Subconjuntos e Buffers (GM)" data-en="Project Onix — Subassembly and Buffer Integration (GM)">Projeto GEM — Integração de Subconjuntos e Buffers (GM)</h3>
+        <p class="project-client">Markez Robotics</p>
+        <p class="project-description" data-pt="Comissionamento e sincronização de portas, capôs e liftgates com a linha principal; implementação de sistemas de visão Matrox para inspeção de cola; e programação de buffers ODD/FIFO para fluxo contínuo de componentes." data-en="Commissioning and synchronization of doors, hoods, and liftgates with the main line; Matrox vision system implementation for glue inspection; and ODD/FIFO buffer programming for continuous component flow.">Comissionamento e sincronização de portas, capôs e liftgates com a linha principal; implementação de sistemas de visão Matrox para inspeção de cola; e programação de buffers ODD/FIFO para fluxo contínuo de componentes.</p>
+          
+        <div class="card-meta">
+          <p class="project-client">GM — Gravataí, RS</p>
+          <span class="project-dates">jul/2019 – out/2019</span>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Siemens TIA Portal</span>
+          <span class="project-tag">Rockwell Studio 5000</span>
+          <span class="project-tag">Matrox Vision</span>
+          <span class="project-tag">GCCS</span>
+          <span class="project-tag">RFID</span>
+        </div>
+        <div class="project-details">
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
+          <ul>
+           <li data-pt="Setup e calibração de Trommels e Part Elevators" data-en="Setup and calibration of Trommels and Part Elevators">Setup e calibração de Trommels e Part Elevators</li>
+            <li data-pt="Configuração de câmeras Matrox para inspeção de aplicação de cola" data-en="Matrox camera configuration for glue application inspection">Configuração de câmeras Matrox para inspeção de aplicação de cola</li>
+            <li data-pt="Programação de buffers ODD e FIFO para sequenciamento da linha" data-en="ODD and FIFO buffer programming for line sequencing">Programação de buffers ODD e FIFO para sequenciamento da linha</li>
+            <li data-pt="Integração de máquina Tucker ao padrão GCCS da GM" data-en="Tucker machine integration to GM's GCCS standard">Integração de máquina Tucker ao padrão GCCS da GM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Tracker - GM São Caetano 2018 -->
+      <div class="project-card" onclick="this.classList.toggle('expanded')">
+        <img src="img/tracker.jpg" alt="Tracker" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="Projeto Tracker — Integração de Novo Modelo no Body Shop (GM)" data-en="Project Tracker — New Model Integration in Body Shop (GM)">Projeto GEM — Integração de Novo Modelo no Body Shop (GM)</h3>
+        <p class="project-client">Markez Robotics</p>
+        <p class="project-description" data-pt="Programação e start-up do software de CLP para integração do modelo GEM nas células robóticas existentes, com suporte ao SOP e otimização de tempo de ciclo em conformidade com o padrão GCCS da GM." data-en="PLC software programming and start-up for GEM model integration in existing robotic cells, with SOP support and cycle time optimization compliant with GM's GCCS standard.">Programação e start-up do software de CLP para integração do modelo GEM nas células robóticas existentes, com suporte ao SOP e otimização de tempo de ciclo em conformidade com o padrão GCCS da GM.</p>
+        <div class="card-meta">
+          <p class="project-client">GM — São Caetano do Sul, SP</p>
+          <span class="project-dates">nov/2019 – mar/2020</span>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Siemens TIA Portal</span>
+          <span class="project-tag">Rockwell Studio 5000</span>
+          <span class="project-tag">GCCS</span>
+          <span class="project-tag">FANUC</span>
+          <span class="project-tag">PowerFlex</span>
+          <span class="project-tag">FAT / SAT</span>
+        </div>
+        <div class="project-details">
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
+          <ul>
+            <li data-pt="Programação e start-up do CLP para o novo modelo GEM" data-en="PLC programming and start-up for the new GEM model">Programação e start-up do CLP para o novo modelo GEM</li>
+            <li data-pt="Programação PLC Rockwell Safety (Studio 5000)" data-en="Rockwell Safety PLC programming (Studio 5000)">Programação PLC Rockwell Safety (Studio 5000)</li>
+            <li data-pt="Configuração de IHM Siemens (Tia Portal 14.1)" data-en="Siemens HMI configuration (Tia Portal 14.1)">Configuração de IHM Siemens (Tia Portal 14.1)</li>
+            <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
+            <li data-pt="Gestão de checklists FAT e SAT" data-en="FAT and SAT checklist management">Gestão de checklists FAT e SAT</li>
+            <li data-pt="Suporte técnico durante o SOP e otimização de tempo de ciclo" data-en="Technical support during SOP and cycle time optimization">Suporte técnico durante o SOP e otimização de tempo de ciclo</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <!-- COMMANDER - CMA PERNAMBUCO -->
+      <div class="project-card" onclick="this.classList.toggle('expanded')">
+        <img src="img/commander.jpg" alt="Commander" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="Projeto Commander — Comissionamento Virtual e Start-up em Campo" data-en="Project Commander — Virtual Commissioning and Field Start-up">Projeto 598 — Comissionamento Virtual e Start-up em Campo</h3>
+        <p class="project-client">Markez Robotics</p>
+        <p class="project-description" data-pt="Condução completa do projeto desde a análise de diagramas até a entrega final, com uso de comissionamento virtual (S7-PLCSIM Advanced) para validar toda a célula — incluindo robôs ABB e sistemas Trommel — antes da instalação física." data-en="Led the full project from diagram analysis to final delivery, using virtual commissioning (S7-PLCSIM Advanced) to validate the complete cell — including ABB robots and Trommel systems — prior to physical installation.">Condução completa do projeto desde a análise de diagramas até a entrega final, com uso de comissionamento virtual (S7-PLCSIM Advanced) para validar toda a célula — incluindo robôs ABB e sistemas Trommel — antes da instalação física.</p>
+        <div class="card-meta">
+          <p class="project-client">CMA — Goiana, PE</p>
+          <span class="project-dates">abr/2020 – fev/2021</span>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Siemens TIA Portal</span>
+          <span class="project-tag">S7-PLCSIM Advanced</span>
+          <span class="project-tag">ABB</span>
+          <span class="project-tag">Virtual Commissioning</span>
+        </div>
+        <div class="project-details">
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
+          <ul>
+            <li data-pt="Desenvolvimento offline completo da lógica de controle (TIA Portal)" data-en="Complete offline control logic development (TIA Portal)">Desenvolvimento offline completo da lógica de controle (TIA Portal)</li>
+            <li data-pt="Comissionamento virtual com S7-PLCSIM Advanced — robôs ABB e sistemas Trommel" data-en="Virtual commissioning with S7-PLCSIM Advanced — ABB robots and Trommel systems">Comissionamento virtual com S7-PLCSIM Advanced — robôs ABB e sistemas Trommel</li>
+            <li data-pt="Start-up rápido e preciso em campo com programa pré-validado" data-en="Fast and precise field start-up with pre-validated program">Start-up rápido e preciso em campo com programa pré-validado</li>
+            <li data-pt="Entrega completa com documentação técnica (as-built, manuais e descrições funcionais)" data-en="Full delivery with technical documentation (as-built, manuals and functional descriptions)">Entrega completa com documentação técnica (as-built, manuais e descrições funcionais)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- CC24 - PSA Resende -->
+      <div class="project-card" onclick="this.classList.toggle('expanded')">
+        <img src="img/aircross.jpg" alt="Aircross" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="Aircross — Recuperação de Cronograma e Comissionamento" data-en="Aircross — Schedule Recovery and Commissioning">Aircross — Recuperação de Cronograma e Comissionamento</h3>
+        <p class="project-client">Markez Robotics</p>
+        <p class="project-description" data-pt="Atuação como reforço de engenharia para mitigar atrasos causados por entrega tardia de hardware, realizando diagnóstico completo entre instalação elétrica e software, e conduzindo o comissionamento integral da célula robótica até plena operação." data-en="Acted as engineering reinforcement to mitigate delays from late hardware delivery, performing full diagnosis between electrical installation and software, and leading complete commissioning of the robotic cell to full operation.">Atuação como reforço de engenharia para mitigar atrasos causados por entrega tardia de hardware, realizando diagnóstico completo entre instalação elétrica e software, e conduzindo o comissionamento integral da célula robótica até plena operação.</p>
+        <div class="card-meta">
+          <p class="project-client">PSA — Resende, RJ</p>
+          <span class="project-dates">abr/2021 – jun/2021</span>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Rockwell ControlLogix</span>
+          <span class="project-tag">FactoryTalk View</span>
+          <span class="project-tag">FANUC</span>
+          <span class="project-tag">DeviceNet</span>
+        </div>
+        <div class="project-details">
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
+          <ul>
+            <li data-pt="Diagnóstico de divergências entre cabeamento, I/O e configuração de dispositivos" data-en="Diagnosis of discrepancies between wiring, I/O mapping, and device configuration">Diagnóstico de divergências entre cabeamento, I/O e configuração de dispositivos</li>
+            <li data-pt="Comissionamento completo: energização, rede industrial, validação de I/Os e testes" data-en="Full commissioning: energization, industrial network, I/O validation and testing">Comissionamento completo: energização, rede industrial, validação de I/Os e testes</li>
+            <li data-pt="Definição e otimização do tempo de ciclo base para o novo modelo" data-en="Definition and optimization of base cycle time for the new model">Definição e otimização do tempo de ciclo base para o novo modelo</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Gestamp Betim -->
+      <div class="project-card" onclick="this.classList.toggle('expanded')">
+        <img src="" alt="" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="Gestamp — Comissionamento de Células Robóticas ABB" data-en="Gestamp — ABB Robotic Cell Commissioning">Gestamp — Comissionamento de Células Robóticas ABB</h3>
+        <p class="project-client">Markez Robotics</p>
+        <p class="project-description" data-pt="Programação e otimização de múltiplas linhas robóticas de pequeno porte com células duplas ABB, resolução de falhas críticas de comunicação Profinet e suporte técnico junto à equipe elétrica da planta." data-en="Programming and optimization of multiple small robotic lines with dual ABB cells, resolution of critical Profinet communication failures, and technical support to the plant's electrical team.">Programação e otimização de múltiplas linhas robóticas de pequeno porte com células duplas ABB, resolução de falhas críticas de comunicação Profinet e suporte técnico junto à equipe elétrica da planta.</p>
+       
+        <div class="card-meta">
+          <p class="project-client">Gestamp — Betim, MG</p>
+          <span class="project-dates">jun/2021 – out/2021</span>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Siemens TIA Portal</span>
+          <span class="project-tag">ABB</span>
+          <span class="project-tag">Profinet</span>
+          <span class="project-tag">GSDML</span>
+        </div>
+        <div class="project-details">
+          <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
+          <ul>
+           <li data-pt="Programação, comissionamento e otimização de tempo de ciclo de linhas robóticas" data-en="Programming, commissioning and cycle time optimization of robotic lines">Programação, comissionamento e otimização de tempo de ciclo de linhas robóticas</li>
+            <li data-pt="Diagnóstico e solução de falha crítica de comunicação Profinet (GSDML)" data-en="Diagnosis and resolution of critical Profinet communication failure (GSDML)">Diagnóstico e solução de falha crítica de comunicação Profinet (GSDML)</li>
+            <li data-pt="Suporte técnico a painéis de controle junto à equipe elétrica" data-en="Technical support to control panels alongside the electrical team">Suporte técnico a painéis de controle junto à equipe elétrica</li>
+            <li data-pt="Coordenação entre CLP e robôs ABB para redução de tempo de ciclo" data-en="PLC and ABB robot coordination for cycle time reduction">Coordenação entre CLP e robôs ABB para redução de tempo de ciclo</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Ferbasa -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/ferbasa.jpg" alt="Ferbasa" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Ferbasa — Fornos e Abastecimento" data-en="Ferbasa — Furnaces and Supply">Ferbasa — Fornos e Abastecimento</h3>
+        <h3 data-pt="Ferbasa — Automação, SCADA e Arquitetura de Dados Industriais" data-en="Ferbasa — Automation, SCADA and Industrial Data Architecture">Ferbasa — Automação, SCADA e Arquitetura de Dados Industriais</h3>
         <p class="project-client">JMF</p>
-        <p class="project-description" data-pt="Arquitetura de dados e supervisão de processos industriais." data-en="Data architecture and supervision of industrial processes.">Arquitetura de dados e supervisão de processos industriais.</p>
+        <p class="project-description" data-pt="Implementação completa de sistemas de automação multi-fornecedor, desenvolvimento de SCADA com banco de dados SQL para historização, e criação de ferramentas internas de gestão financeira e CAPEX/OPEX." data-en="Full implementation of multi-vendor automation systems, SCADA development with SQL database for historization, and creation of internal financial management tools for CAPEX/OPEX.">Implementação completa de sistemas de automação multi-fornecedor, desenvolvimento de SCADA com banco de dados SQL para historização, e criação de ferramentas internas de gestão financeira e CAPEX/OPEX.</p>
+        
+        <div class="card-meta">
+          <p class="project-client">Ferbasa — Pojuca, BA</p>
+          <span class="project-dates">out/2021 – jun/2023</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Schneider</span>
+          <span class="project-tag">Allen-Bradley</span>
           <span class="project-tag">Elipse SCADA</span>
           <span class="project-tag">SQL</span>
-          <span class="project-tag">Grafana</span>
+          <span class="project-tag">PID</span>
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">Inversor WEG</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
             <li data-pt="Programação PLC Schneider (Control Expert e EcoStruxure)" data-en="Schneider PLC programming (Control Expert and EcoStruxure)">Programação PLC Schneider (Control Expert e EcoStruxure)</li>
+            <li data-pt="Integração de inversores e soft-starters WEG" data-en="WEG inverter and soft-starter integration">Integração de inversores e soft-starters WEG</li>
+            <li data-pt="Desenvolvimento do supervisório Elipse E3 com banco de dados SQL" data-en="Elipse E3 SCADA development with SQL database">Desenvolvimento do supervisório Elipse E3 com banco de dados SQL</li>
+            <li data-pt="Criação de ferramenta Excel para controle de custos por colaborador/atividade" data-en="Excel tool for cost tracking by employee/activity">Criação de ferramenta Excel para controle de custos por colaborador/atividade</li>
             <li data-pt="Configuração de IHM Weg e Delta" data-en="Weg and Delta HMI configuration">Configuração de IHM Weg e Delta</li>
-            <li data-pt="Integração Elipse SCADA" data-en="Elipse SCADA integration">Integração Elipse SCADA</li>
+             <li data-pt="Desenvolvimento de aplicação web (Node.js) para gestão CAPEX/OPEX" data-en="Web application development (Node.js) for CAPEX/OPEX management">Desenvolvimento de aplicação web (Node.js) para gestão CAPEX/OPEX</li>
             <li data-pt="Controle PID" data-en="PID control">Controle PID</li>
             <li data-pt="Arquitetura de dados industriais" data-en="Industrial data architecture">Arquitetura de dados industriais</li>
           </ul>
         </div>
       </div>
 
+      <!-- ENGENHARIA - M -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/gm.jpg" alt="General Motors" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
         <h3 data-pt="General Motors — Suporte à Engenharia" data-en="General Motors — Engineering Support">General Motors — Suporte à Engenharia</h3>
         <p class="project-client">Markez</p>
         <p class="project-description" data-pt="Supervisão técnica e validação de projetos." data-en="Technical supervision and project validation.">Supervisão técnica e validação de projetos.</p>
+        
+        <div class="card-meta">
+          <p class="project-client">GM — São Caetano, SP</p>
+          <span class="project-dates">jun/2023 – jul/2023</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag" data-pt="Supervisão" data-en="Supervision">Supervisão</span>
           <span class="project-tag" data-pt="Validação" data-en="Validation">Validação</span>
@@ -1581,13 +1815,20 @@
         </div>
       </div>
 
+      <!-- VW336 - Volkswagen México -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/jetta.jpg" alt="Jetta" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Jetta — Startup de Linha" data-en="Jetta — Line Startup">Jetta — Startup de Linha</h3>
+        <h3 data-pt="Projeto VW336 — Coordenação Técnica e Produção Multi-Modelo" data-en="Project VW336 — Technical Coordination and Multi-Model Production">Projeto VW336 — Coordenação Técnica e Produção Multi-Modelo</h3>
         <p class="project-client">Markez Robotics</p>
-        <p class="project-description" data-pt="Implementação de linha de produção automotiva." data-en="Implementation of automotive production line.">Implementação de linha de produção automotiva.</p>
+        <p class="project-description" data-pt="Promovido a coordenador de equipe de CLPs, liderando 5 programadores na implementação do padrão VASS 6 e na reestruturação completa da lógica de troca de modelos para viabilizar produção multi-modelo na planta." data-en="Promoted to PLC team coordinator, leading 5 programmers in implementing the VASS 6 standard and fully restructuring the model change logic to enable multi-model production.">Promovido a coordenador de equipe de CLPs, liderando 5 programadores na implementação do padrão VASS 6 e na reestruturação completa da lógica de troca de modelos para viabilizar produção multi-modelo na planta.</p>
+        
+        <div class="card-meta">
+          <p class="project-client">Volkswagen — Puebla, México</p>
+          <span class="project-dates">jul/2023 – fev/2024</span>
+        </div>
         <div class="project-tags">
           <span class="project-tag">Siemens</span>
+          <span class="project-tag">VASS 6</span>
           <span class="project-tag">TIA Portal</span>
           <span class="project-tag">FANUC</span>
           <span class="project-tag">Profinet</span>
@@ -1595,6 +1836,9 @@
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
+            <li data-pt="Gestão técnica e distribuição de tarefas para equipe de 5 programadores" data-en="Technical management and task distribution for a team of 5 programmers">Gestão técnica e distribuição de tarefas para equipe de 5 programadores</li>
+            <li data-pt="Implementação do padrão VASS 6 na primeira linha da planta" data-en="Implementation of VASS 6 standard on the plant's first line">Implementação do padrão VASS 6 na primeira linha da planta</li>
+            <li data-pt="Reestruturação completa da lógica de model change para produção multi-modelo" data-en="Complete restructuring of model change logic for multi-model production">Reestruturação completa da lógica de model change para produção multi-modelo</li>
             <li data-pt="Programação PLC Siemens (Step 7 e Tia Portal 16)" data-en="Siemens PLC programming (Step 7 and Tia Portal 16)">Programação PLC Siemens (Step 7 e Tia Portal 16)</li>
             <li data-pt="Configuração de IHM WinCC e TIA Portal 16" data-en="WinCC and TIA Portal 16 HMI configuration">Configuração de IHM WinCC e TIA Portal 16</li>
             <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
@@ -1604,39 +1848,51 @@
         </div>
       </div>
 
+      <!-- CC22 - PSA Resende -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
-        <img src="img/bassalt.jpg" alt="Basalt" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="Basalt — Startup de Linha" data-en="Basalt — Line Startup">Basalt — Startup de Linha</h3>
+        <img src="img/bassalt.jpg" alt="Bassalt" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
+        <h3 data-pt="Projeto Bassalt — Automação Greenfield de Linhas Manuais" data-en="Project Bassalt — Greenfield Automation of Manual Lines">Projeto Bassalt — Automação Greenfield de Linhas Manuais</h3>
         <p class="project-client">PSA - Resende</p>
-        <p class="project-description" data-pt="Adequação da linha produtiva para novo modelo." data-en="Adaptation of production line for new model.">Adequação da linha produtiva para novo modelo.</p>
+        <p class="project-description" data-pt="Liderança na automação completa de duas linhas originalmente manuais, substituindo operações de retirada, soldagem e posicionamento de peças por células totalmente automatizadas com robôs industriais e CLPs Rockwell, dentro do novo padrão global STLA da Stellantis." data-en="Led complete automation of two originally manual lines, replacing manual part handling, welding, and positioning with fully automated cells using industrial robots and Rockwell PLCs, following the new Stellantis global STLA standard.">Liderança na automação completa de duas linhas originalmente manuais, substituindo operações de retirada, soldagem e posicionamento de peças por células totalmente automatizadas com robôs industriais e CLPs Rockwell, dentro do novo padrão global STLA da Stellantis.</p>
+        
+        <div class="card-meta">
+          <p class="project-client">PSA — Resende, RJ</p>
+          <span class="project-dates">mar/2024 – out/2024</span>
+        </div>
         <div class="project-tags">
-          <span class="project-tag">Rockwell</span>
-          <span class="project-tag">FANUC</span>
+           <span class="project-tag">Rockwell ControlLogix</span>
+          <span class="project-tag">FactoryTalk View</span>
+          <span class="project-tag">STLA Standard</span>
           <span class="project-tag">DeviceNet</span>
+          <span class="project-tag">FANUC</span>
           <span class="project-tag">SMC</span>
         </div>
         <div class="project-details">
           <strong data-pt="Atividades:" data-en="Activities:">Atividades:</strong>
           <ul>
+            <li data-pt="Desenvolvimento, integração e comissionamento do sistema de controle completo" data-en="Full control system development, integration and commissioning">Desenvolvimento, integração e comissionamento do sistema de controle completo</li>
             <li data-pt="Programação PLC Rockwell" data-en="Rockwell PLC programming">Programação PLC Rockwell</li>
             <li data-pt="Configuração FactoryTalk" data-en="FactoryTalk configuration">Configuração FactoryTalk</li>
             <li data-pt="Integração FANUC" data-en="FANUC integration">Integração FANUC</li>
             <li data-pt="Configuração DeviceNet" data-en="DeviceNet configuration">Configuração DeviceNet</li>
             <li data-pt="Integração pneumática SMC/Festo" data-en="SMC/Festo pneumatic integration">Integração pneumática SMC/Festo</li>
+            <li data-pt="Validação de tempo de ciclo, testes funcionais e checklists de comissionamento" data-en="Cycle time validation, functional testing and commissioning checklists">Validação de tempo de ciclo, testes funcionais e checklists de comissionamento</li>
           </ul>
         </div>
       </div>
 
+      <!-- J4U - Stellantis -->
       <div class="project-card" onclick="this.classList.toggle('expanded')">
         <img src="img/j4u.jpg" alt="J4U" style="width: 100%; height: 200px; object-fit: cover; border-radius: 0.75rem 0.75rem 0 0; margin: -2rem -2rem 1rem -2rem;">
-        <h3 data-pt="J4U New Model Launch & Production Support" data-en="J4U New Model Launch & Production Support">J4U New Model Launch & Production Support</h3>
+        <h3 data-pt="J4U — Lançamento de Novo Modelo &amp; Suporte à Produção" data-en="J4U — New Model Launch &amp; Production Support">J4U — Lançamento de Novo Modelo &amp; Suporte à Produção</h3>
         <p class="project-client">STELLANTIS (Pernambuco)</p>
         <p class="project-description" data-pt="Suporte crítico à produção 24/7 e resolução de falhas crônicas em linhas de produção." data-en="24/7 critical production support and resolution of chronic failures in production lines.">Suporte crítico à produção 24/7 e resolução de falhas crônicas em linhas de produção.</p>
         <div class="project-tags">
-          <span class="project-tag">Siemens</span>
+          <span class="project-tag">Siemens TIA Portal</span>
           <span class="project-tag">SCADA WinCC</span>
           <span class="project-tag">MES</span>
           <span class="project-tag">CARs</span>
+          <span class="project-tag">Lenze / SEW</span>
           <span class="project-tag">OEE</span>
         </div>
         <div class="project-details">
@@ -1644,6 +1900,7 @@
           <ul>
             <li data-pt="Suporte crítico à produção 24/7 com resolução de falhas recorrentes" data-en="24/7 critical production support with resolution of recurring failures">Suporte crítico à produção 24/7 com resolução de falhas recorrentes</li>
             <li data-pt="Otimização de produtividade e OEE das linhas" data-en="Productivity and OEE optimization of production lines">Otimização de produtividade e OEE das linhas</li>
+            <li data-pt="Configuração e operação do SCADA WinCC Explorer (padrão CARs)" data-en="WinCC Explorer SCADA configuration and operation (CARs standard)">Configuração e operação do SCADA WinCC Explorer (padrão CARs)</li>
             <li data-pt="Participação no lançamento do modelo J4U" data-en="Participation in J4U model launch">Participação no lançamento do modelo J4U</li>
             <li data-pt="Comissionamento e ramp-up da produção" data-en="Commissioning and production ramp-up">Comissionamento e ramp-up da produção</li>
             <li data-pt="Programação PLC Siemens (TIA Portal)" data-en="Siemens PLC programming (TIA Portal)">Programação PLC Siemens (TIA Portal)</li>
