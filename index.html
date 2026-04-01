@@ -390,7 +390,60 @@
       font-weight: 600;
       transition: all 0.3s ease;
     }
-
+    /* Seção de Competências Técnicas - Versão Melhorada */
+    #skills {
+      padding: 4rem 0;
+    }
+    
+    #skills .section-header {
+      margin-bottom: 2.5rem;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    
+    .skill-row {
+      padding: 1.75rem 1.5rem;
+      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+      margin-left: -4px;
+      padding-left: calc(1.5rem + 4px);
+    }
+    
+    .skill-row:hover {
+      background-color: #f9f9f9;
+      border-left-color: #00d4cc;
+      padding-left: calc(1.5rem + 4px);
+    }
+    
+    .skill-row:last-child {
+      border-bottom: none;
+    }
+    
+    .skill-row h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #00d4cc;
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.3px;
+    }
+    
+    .skill-row p {
+      font-size: 0.95rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+      font-weight: 400;
+    }
     .skill-tag:hover {
       background-color: #e0f9f6;
       color: #00d9a3;
@@ -999,110 +1052,71 @@
     </div>
   </section>
 
-  <section id="skills" class="bg-light">
+  <section id="skills">
     <div class="section-header">
       <h2 data-pt="Competências Técnicas" data-en="Technical Skills">Competências Técnicas</h2>
       <div class="divider"></div>
     </div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3 data-pt="Programação de CLPs" data-en="PLC Programming">Programação de CLPs</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Siemens Step 7</span>
-          <span class="skill-tag">Siemens TIA Portal</span>
-          <span class="skill-tag">Rockwell Studio 5000</span>
-          <span class="skill-tag">Schneider Control Expert</span>
-        </div>
+  
+    <div class="skills-list">
+      <!-- CLPs / PLC -->
+      <div class="skill-row">
+        <h3 data-pt="CLPs / PLC" data-en="PLCs / PLC">CLPs / PLC</h3>
+        <p>Siemens S7/TIA Portal, Rockwell Studio 5000/500, Schneider Control Expert/EcoStruxure</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="Sistemas SCADA" data-en="SCADA Systems">Sistemas SCADA</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">WinCC</span>
-          <span class="skill-tag">FactoryTalk</span>
-          <span class="skill-tag">Elipse SCADA</span>
-          <span class="skill-tag" data-pt="Supervisão Industrial" data-en="Industrial Supervision">Supervisão Industrial</span>
-        </div>
+  
+      <!-- SCADA / HMI -->
+      <div class="skill-row">
+        <h3 data-pt="SCADA / HMI" data-en="SCADA / HMI">SCADA / HMI</h3>
+        <p>Elipse E3/SCADA, WinCC (Explorer/TIA), FactoryTalk View, iFix, Delta EasyBuilder, Weg</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="Integração de Robôs" data-en="Robot Integration">Integração de Robôs</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">KUKA</span>
-          <span class="skill-tag">ABB</span>
-          <span class="skill-tag">FANUC</span>
-          <span class="skill-tag" data-pt="Integração Robótica" data-en="Robotic Integration">Integração Robótica</span>
-        </div>
+  
+      <!-- Robótica Industrial -->
+      <div class="skill-row">
+        <h3 data-pt="Robótica Industrial" data-en="Industrial Robotics">Robótica Industrial</h3>
+        <p>Fanuc, ABB, KUKA, Comau, Yaskawa — integração, comissionamento e sincronização</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="Programação" data-en="Programming">Programação</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Ladder/ST</span>
-        </div>
-      </div>
-      <div class="skill-card">
+  
+      <!-- Redes Industriais -->
+      <div class="skill-row">
         <h3 data-pt="Redes Industriais" data-en="Industrial Networks">Redes Industriais</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Profibus</span>
-          <span class="skill-tag">Profinet</span>
-          <span class="skill-tag">DeviceNet</span>
-          <span class="skill-tag">Fieldbus</span>
-        </div>
+        <p>Profinet, Profibus, Ethernet/IP, DeviceNet, OPC-UA, MQTT</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="Banco de Dados" data-en="Databases">Banco de Dados</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">SQL Server</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag" data-pt="Arquitetura de Dados" data-en="Data Architecture">Arquitetura de Dados</span>
-          <span class="skill-tag">OEE</span>
-        </div>
+  
+      <!-- Padrões OEM -->
+      <div class="skill-row">
+        <h3 data-pt="Padrões OEM" data-en="OEM Standards">Padrões OEM</h3>
+        <p>GCCS GM, DCP Ford, VASS 5/6 VW, STLA/CARs Stellantis, GEM Gestamp</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="IIoT & Monitoramento" data-en="IIoT & Monitoring">IIoT & Monitoramento</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Node-RED</span>
-          <span class="skill-tag">Grafana</span>
-          <span class="skill-tag">MQTT</span>
-          <span class="skill-tag">Dashboards</span>
-        </div>
+  
+      <!-- IIoT & Dados -->
+      <div class="skill-row">
+        <h3 data-pt="IIoT & Dados" data-en="IIoT & Data">IIoT & Dados</h3>
+        <p>Node-RED, n8n, MQTT, Grafana, Prometheus, InfluxDB, SQL Server, PostgreSQL</p>
       </div>
-      <div class="skill-card">
+  
+      <!-- Programação -->
+      <div class="skill-row">
+        <h3 data-pt="Programação" data-en="Programming">Programação</h3>
+        <p>Python, JavaScript, Node.js, SQL, VBA, Ladder (LAD), SCL, Graph 7</p>
+      </div>
+  
+      <!-- Automação Residencial -->
+      <div class="skill-row">
         <h3 data-pt="Automação Residencial" data-en="Home Automation">Automação Residencial</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Home Assistant</span>
-          <span class="skill-tag">Zigbee</span>
-          <span class="skill-tag">Z-Wave</span>
-          <span class="skill-tag">ESP32</span>
-        </div>
+        <p>Home Assistant, Zigbee, Z-Wave, KNX, Matter, ESP32, Raspberry Pi, Arduino</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="Hardware IoT" data-en="IoT Hardware">Hardware IoT</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Arduino</span>
-          <span class="skill-tag">Raspberry Pi</span>
-          <span class="skill-tag" data-pt="Sensores" data-en="Sensors">Sensores</span>
-          <span class="skill-tag" data-pt="Atuadores" data-en="Actuators">Atuadores</span>
-        </div>
+  
+      <!-- Ferramentas -->
+      <div class="skill-row">
+        <h3 data-pt="Ferramentas" data-en="Tools">Ferramentas</h3>
+        <p>EPLAN, AutoCAD, Draw.io, S7-PLCSIM Advanced, MS Project</p>
       </div>
-      <div class="skill-card">
-        <h3 data-pt="Documentação" data-en="Documentation">Documentação</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">EPLAN</span>
-          <span class="skill-tag">Draw.io</span>
-          <span class="skill-tag" data-pt="Projetos Elétricos" data-en="Electrical Projects">Projetos Elétricos</span>
-          <span class="skill-tag" data-pt="Manuais Técnicos" data-en="Technical Manuals">Manuais Técnicos</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3 data-pt="Gestão" data-en="Management">Gestão</h3>
-        <div class="skill-tags">
-          <span class="skill-tag" data-pt="Liderança Técnica" data-en="Technical Leadership">Liderança Técnica</span>
-          <span class="skill-tag" data-pt="Gestão de Projetos" data-en="Project Management">Gestão de Projetos</span>
-          <span class="skill-tag" data-pt="Startups de Linhas" data-en="Line Startups">Startups de Linhas</span>
-          <span class="skill-tag" data-pt="Treinamento" data-en="Training">Treinamento</span>
-        </div>
+  
+      <!-- Idiomas -->
+      <div class="skill-row">
+        <h3 data-pt="Idiomas" data-en="Languages">Idiomas</h3>
+        <p>Português (Nativo) | Inglês (Básico) | Espanhol (Básico)</p>
       </div>
     </div>
   </section>
